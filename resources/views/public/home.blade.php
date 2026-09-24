@@ -55,7 +55,10 @@
             </div>
 
             <div class="col-lg-7">
-                
+                <img
+                        src="{{ asset('assets/hero-dahsboard.png') }}"
+                        alt="Dashboard Akunta"
+                        class="img-fluid hero-dashboard-img">
             </div>
 
         </div>
@@ -106,7 +109,7 @@
 
             <div class="dashboard-center">
                 <img
-                    src="{{ asset('assets/feature-dashboard.png') }}"
+                    src="{{ asset('assets/tengah-dashboard.png') }}"
                     alt="Fitur Dashboard Akunta"
                     class="img-fluid">
             </div>
@@ -227,6 +230,11 @@
             <h5>
                 Dipercaya oleh 10.000+ bisnis di Indonesia
             </h5>
+
+            <img
+                src="{{ asset('assets/dipercayaa.png') }}"
+                alt="Perusahaan yang menggunakan Akunta"
+                class="img-fluid trusted-img">
         </div>
 
     </div>
@@ -273,6 +281,12 @@
 
             <div class="col-lg-7">
 
+                <div class="about-home-image">
+                    <img
+                        src="{{ asset('assets/about-team.png') }}"
+                        alt="Tim Akunta"
+                        class="img-fluid">
+                </div>
 
             </div>
 
@@ -300,6 +314,10 @@
                 <div class="testimonial-card">
 
                     <div class="testimonial-head">
+                    <img
+                            src="{{ asset('assets/testi-andi.png') }}"
+                            alt="Andi Pratama">
+
                         <div>
                             <h6>Andi Pratama</h6>
                             <small>CEO, Kopi Senja</small>
@@ -323,6 +341,10 @@
                 <div class="testimonial-card">
 
                     <div class="testimonial-head">
+                    <img
+                            src="{{ asset('assets/testi-sari.png') }}"
+                            alt="Sari Melati">
+
                         <div>
                             <h6>Sari Melati</h6>
                             <small>Founder, Bloom Studio</small>
@@ -347,6 +369,9 @@
                 <div class="testimonial-card">
 
                     <div class="testimonial-head">
+                    <img
+                            src="{{ asset('assets/testi-budi.png') }}"
+                            alt="Budi Santoso">
                         <div>
                             <h6>Budi Santoso</h6>
                             <small>Owner, Santoso Teknik</small>
