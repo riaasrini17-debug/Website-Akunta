@@ -1,0 +1,34 @@
+:root{--navy:#0b2b78;--orange:#ff4b12;--orange2:#ff7a1a;--soft:#fff3ec;--line:#e7ebf2;--text:#24426f}*{box-sizing:border-box}body{font-family:Inter,sans-serif;color:var(--text);background:#fff}h1,h2,h3,h4,h5,h6{color:var(--navy);font-weight:800}.brand-a{color:var(--orange)}.brand-kunta{color:var(--navy)}.navbar .nav-link{color:var(--navy);padding:.75rem .65rem}.active-akunta{color:var(--orange)!important;border-bottom:2px solid var(--orange)}.btn-akunta{background:linear-gradient(90deg,var(--orange),var(--orange2));border:0;color:#fff;border-radius:12px;font-weight:700;padding:.7rem 1.25rem}.btn-akunta:hover{color:#fff;filter:brightness(.96)}.btn-outline-akunta{border:1.5px solid var(--orange);color:var(--orange);border-radius:12px;font-weight:700;padding:.65rem 1.2rem}.btn-outline-akunta:hover{background:var(--orange);color:#fff}.hero-akunta,.hero-simple{background:radial-gradient(circle at 92% 12%,#ffd8c3 0 8%,transparent 9%),radial-gradient(circle at 4% 24%,#ffe5d6 0 10%,transparent 11%),linear-gradient(90deg,#fff7f2,#fff0e7)}.hero-akunta h1,.hero-simple h1{font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.05}.hero-akunta h1 span,.text-akunta{color:var(--orange)}.lead{color:#3f5d88}.eyebrow{font-weight:800;color:var(--orange);margin-bottom:.4rem}.hero-points{display:flex;gap:1rem;flex-wrap:wrap;font-size:.9rem}.hero-points span{color:var(--navy)}.mockup-card{background:#f7f8fa;border-radius:30px;padding:18px;box-shadow:0 24px 70px rgba(12,43,120,.13)}.mockup-window{display:flex;min-height:360px;border-radius:20px;background:#fff;overflow:hidden;border:1px solid #eee}.mockup-sidebar{width:20%;background:#f8f1ed}.mockup-main{flex:1;padding:28px}.mockup-top{height:40px;background:#f4f6f8;border-radius:10px;margin-bottom:20px}.stat{padding:14px;border-radius:14px;font-size:.75rem}.stat.green{background:#e9fbf1}.stat.orange{background:#fff0e8}.chart-placeholder{height:170px;border-radius:16px;background:linear-gradient(180deg,#fff,#fff7f2);position:relative;overflow:hidden}.chart-placeholder:after{content:"";position:absolute;left:4%;right:4%;bottom:35%;height:4px;background:linear-gradient(90deg,var(--orange),#ff9b5f);transform:skewY(-5deg);box-shadow:60px -30px 0 -1px var(--orange)}.section-sub{color:#64799b}.feature-card,.metric-card,.step-card,.form-card,.price-card,.case-card,.article-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 32px rgba(12,43,120,.05)}.feature-card{height:100%}.icon-pill{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#fff0e8;color:var(--orange);font-size:1.5rem;margin-bottom:14px}.soft-section{background:#fffaf7}.step-card{text-align:center}.step-card b{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;margin-bottom:10px}.cta-banner{background:linear-gradient(90deg,#ff4b12,#ff831e);border-radius:18px;color:#fff;padding:28px 34px;display:flex;justify-content:space-between;align-items:center;gap:24px}.cta-banner h3{color:#fff;margin:0 0 6px}.cta-banner p{margin:0}.footer-akunta{border-top:1px solid var(--line);background:#fff}.footer-akunta h6{font-weight:800}.footer-akunta a{display:block;color:#516a91;text-decoration:none;font-size:.88rem;margin:.4rem 0}.people-placeholder,.screen-placeholder,.case-img,.article-img,.article-hero{background:linear-gradient(135deg,#ffe5d8,#f7f8fb);border-radius:24px;display:grid;place-items:center;color:var(--navy);font-size:2rem;font-weight:800;min-height:330px;text-align:center}.small-box{min-height:260px}.feature-row{padding:48px 0;border-bottom:1px solid #f0f2f6}.screen-placeholder{min-height:320px}.check-list{list-style:none;padding:0}.check-list li{margin:.75rem 0}.check-list li:before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;background:var(--orange);color:#fff;border-radius:50%;margin-right:10px;font-size:.75rem}.link-akunta{color:var(--orange);font-weight:800;text-decoration:none}.price-card{display:flex;flex-direction:column;min-height:480px}.price-card:nth-child(2){border-color:var(--orange)}.price{font-size:2rem;color:var(--orange);font-weight:800;margin:18px 0}.case-img{min-height:170px;font-size:1.3rem;margin:-24px -24px 18px;border-radius:18px 18px 0 0}.article-card{position:relative;height:100%}.article-img{min-height:180px;margin:-24px -24px 18px;border-radius:18px 18px 0 0}.badge-soft{display:inline-block;padding:.4rem .7rem;background:#fff0e8;color:var(--orange);border-radius:999px;font-size:.8rem;font-weight:700}.article-detail{max-width:980px}.article-detail h1{font-size:clamp(2.3rem,5vw,4rem);margin-top:14px}.meta{color:#6d7f9f}.article-hero{min-height:420px}.content-prose{font-size:1.03rem;line-height:1.75}.content-prose h3{margin-top:26px}.accordion-item{border:1px solid var(--line)!important;border-radius:14px!important;overflow:hidden;margin-bottom:12px}.accordion-button{font-weight:700;color:var(--navy)}.accordion-button:not(.collapsed){background:#fff4ed;color:var(--orange);box-shadow:none}.form-control,.form-select{border-radius:12px;padding:.8rem 1rem;border-color:#dbe1ea}.auth-wrap{min-height:72vh;display:grid;place-items:center;background:linear-gradient(135deg,#fff8f4,#fff)}.auth-card{width:min(440px,92vw);background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 20px 60px rgba(12,43,120,.08)}@media(max-width:991.98px){.cta-banner{flex-direction:column;align-items:flex-start}.navbar-collapse{padding-top:1rem}.navbar .d-flex{padding-bottom:.6rem}.hero-akunta h1,.hero-simple h1{font-size:2.8rem}}@media(max-width:575.98px){.hero-akunta h1,.hero-simple h1{font-size:2.25rem}.mockup-window{min-height:260px}.mockup-sidebar{display:none}.mockup-main{padding:16px}.stat{font-size:.62rem}.cta-banner{padding:22px}.article-hero{min-height:230px}.people-placeholder,.screen-placeholder{min-height:230px}}
+
+
+
+.floating-wa{
+
+position:fixed;
+right:30px;
+bottom:30px;
+
+width:60px;
+height:60px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+z-index:9999;
+
+}
+
+
+.floating-wa img{
+
+width:35px;
+height:35px;
+
+}
