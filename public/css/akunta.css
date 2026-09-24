@@ -1162,3 +1162,1107 @@ height:35px;
 
 }
 
+/* =================================
+   HARGA / PRICING PAGE
+================================= */
+
+
+/* HERO HARGA */
+
+.hero-akunta{
+    background:
+    radial-gradient(circle at right top, rgba(255,120,50,.20), transparent 35%),
+    radial-gradient(circle at left bottom, rgba(255,120,50,.12), transparent 30%),
+    linear-gradient(180deg,#fff3eb,#ffffff);
+
+    overflow:hidden;
+    position:relative;
+}
+
+
+.hero-akunta .eyebrow{
+    color:#ff5b1a;
+    font-weight:700;
+    font-size:18px;
+}
+
+
+.hero-akunta h1{
+    color:#12377d;
+    font-size:52px;
+    font-weight:800;
+    line-height:1.2;
+    max-width:650px;
+}
+
+
+.hero-akunta h1 span{
+    color:#ff5b1a;
+}
+
+
+.hero-akunta .lead{
+    color:#526b96;
+    font-size:20px;
+    line-height:1.6;
+}
+
+
+
+/* SECTION TITLE */
+
+.container h2{
+    color:#12377d;
+    font-size:40px;
+    font-weight:800;
+}
+
+
+.container h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:5px;
+    background:#ff5b1a;
+    margin:20px auto;
+    border-radius:20px;
+}
+
+
+
+/* PRICE CARD */
+
+.price-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid #f1e5dd;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+.price-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+/* CARD TENGAH */
+
+.price-card:nth-child(2){
+
+    border:3px solid #ff5b1a;
+
+}
+
+
+
+.price-card:nth-child(2)::before{
+
+    content:"Paling Populer";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#ff5b1a;
+
+    color:white;
+
+    padding:8px 30px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+
+
+
+.price-card h3{
+
+    color:#12377d;
+
+    font-size:30px;
+
+    font-weight:800;
+
+}
+
+
+
+.price{
+
+    color:#ff5b1a;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin:25px 0;
+
+}
+
+
+
+/* LIST */
+
+.check-list{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+.check-list li{
+
+    color:#526b96;
+
+    margin:18px 0;
+
+    font-size:16px;
+
+}
+
+
+.check-list li::before{
+
+    content:"✓";
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:#ff6422;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    margin-right:12px;
+
+}
+
+
+
+/* BUTTON */
+
+.btn-akunta{
+
+    background:#ff5b1a;
+
+    border:none;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+
+
+.btn-akunta:hover{
+
+    background:#e94d10;
+
+    color:white;
+
+}
+
+
+
+/* CTA AREA */
+
+.cta-akunta{
+
+    margin-top:60px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.hero-akunta h1{
+
+    font-size:36px;
+
+}
+
+
+.container h2{
+
+    font-size:30px;
+
+}
+
+
+.price-card{
+
+    margin-bottom:30px;
+
+}
+
+
+.price{
+
+    font-size:34px;
+
+}
+
+
+}
+
+/* =========================
+   HERO HARGA
+========================= */
+
+.hero-akunta {
+    background: linear-gradient(
+        135deg,
+        #fff7f2,
+        #ffffff
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero-akunta::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 94, 0, 0.08);
+    border-radius: 50%;
+    right: -100px;
+    top: -100px;
+}
+
+
+
+.hero-akunta h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #16377a;
+}
+
+
+.hero-akunta h1 span {
+    color: #ff5a16;
+}
+
+
+
+.hero-akunta .lead {
+    color: #536b95;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.eyebrow {
+    color: #ff5a16;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+
+.hero-check {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+
+.hero-check span {
+    color: #29477e;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+/* ==================================================
+   HARGA AKUNTA PAGE
+================================================== */
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-akunta {
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff7f2,
+        #ffffff
+    );
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+
+.hero-akunta::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    right:-150px;
+    top:-150px;
+
+    background:rgba(255,90,22,.10);
+
+    border-radius:50%;
+
+}
+
+
+
+
+.hero-akunta h1 {
+
+    font-size:56px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    color:#16377a;
+
+}
+
+
+
+.hero-akunta h1 span {
+
+    color:#ff5a16;
+
+}
+
+
+
+
+.hero-akunta .lead {
+
+    color:#536b95;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+.hero-akunta img {
+
+    width:100%;
+
+    max-width:650px;
+
+}
+
+
+
+
+
+.eyebrow {
+
+    color:#ff5a16;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.hero-check {
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+
+
+.hero-check span {
+
+    color:#29477e;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+/* =========================
+   PRICING TITLE
+========================= */
+
+
+.pricing-section h2 {
+
+    color:#16377a;
+
+    font-size:42px;
+
+    font-weight:800;
+
+}
+
+
+
+.pricing-section > div > p {
+
+    color:#6278a5;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* =========================
+   TOGGLE
+========================= */
+
+
+.pricing-toggle {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+.price-toggle {
+
+
+    border:none;
+
+    background:white;
+
+    color:#16377a;
+
+    padding:14px 45px;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+.price-toggle:hover {
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+.price-toggle.active {
+
+
+    background:#ff5a16;
+
+    color:white;
+
+
+}
+
+
+
+
+.pricing-toggle span {
+
+
+    background:#ddf7dd;
+
+    color:#20a044;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   PRICE CARD
+========================= */
+
+
+.price-card {
+
+
+    background:white;
+
+
+    border-radius:22px;
+
+
+    padding:40px 30px;
+
+
+    min-height:560px;
+
+
+    border:1px solid #eeeeee;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.06);
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.price-card:hover {
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+.price-card.popular {
+
+
+    border:3px solid #ff5a16;
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+.price-card.popular:hover {
+
+
+    transform:translateY(-15px);
+
+
+}
+
+
+
+
+
+/* BADGE */
+
+
+.popular-badge {
+
+
+    position:absolute;
+
+
+    top:-22px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+
+    background:#ff5a16;
+
+
+    color:white;
+
+
+    padding:10px 35px;
+
+
+    border-radius:40px;
+
+
+    font-weight:700;
+
+
+    white-space:nowrap;
+
+
+}
+
+
+
+
+
+
+/* TITLE */
+
+
+.price-card h3 {
+
+
+    color:#16377a;
+
+
+    font-size:30px;
+
+
+    font-weight:800;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+.package-desc {
+
+
+    color:#6278a5;
+
+
+    min-height:55px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+/* PRICE */
+
+
+.price {
+
+
+    margin:40px 0 30px;
+
+
+    color:#ff5a16;
+
+
+    font-size:36px;
+
+
+    font-weight:800;
+
+
+    white-space:nowrap;
+
+
+}
+
+
+
+.price span:not(.monthly-price):not(.yearly-price) {
+
+
+    color:#6578a0;
+
+
+    font-size:16px;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+
+
+
+.monthly-price,
+.yearly-price {
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.d-none {
+
+
+    display:none!important;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   LIST FEATURE
+========================= */
+
+
+.check-list {
+
+
+    list-style:none;
+
+
+    padding:0;
+
+
+    margin:0 0 35px;
+
+
+    flex:1;
+
+
+}
+
+
+
+
+.check-list li {
+
+
+    color:#506895;
+
+
+    margin-bottom:18px;
+
+
+    padding-left:35px;
+
+
+    position:relative;
+
+
+}
+
+
+
+.check-list li::before {
+
+
+    content:"✓";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    width:23px;
+
+
+    height:23px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    background:#ff5a16;
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    font-size:13px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+/* =========================
+ BUTTON
+========================= */
+
+
+.btn-akunta {
+
+
+    background:#ff5a16;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:15px;
+
+
+    border-radius:35px;
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-akunta:hover {
+
+
+    background:#e84c0d;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* =========================
+ RESPONSIVE
+========================= */
+
+
+@media(max-width:992px){
+
+
+.hero-akunta h1 {
+
+    font-size:42px;
+
+}
+
+
+
+.price {
+
+    font-size:34px;
+
+}
+
+
+.price-card.popular {
+
+    transform:none;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+.hero-akunta h1 {
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.pricing-section h2 {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+.hero-check {
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.pricing-toggle {
+
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.price-toggle {
+
+
+    padding:12px 25px;
+
+
+}
+
+
+
+.price {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+}
