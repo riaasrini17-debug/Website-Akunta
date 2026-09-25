@@ -2889,3 +2889,508 @@ grid-template-columns:1fr;
 
 
 }
+
+/* =====================================
+   BLOG HERO
+===================================== */
+
+/* =====================================
+   BLOG HERO
+===================================== */
+
+.blog-hero {
+
+    background:
+    radial-gradient(circle at right,
+    rgba(255,120,50,.15),
+    transparent 35%),
+
+    linear-gradient(
+    120deg,
+    #fff7f1,
+    #ffffff
+    );
+
+    padding:45px 0;
+
+}
+
+
+.blog-hero h1 {
+
+    font-size:42px;
+    font-weight:800;
+    line-height:1.2;
+    color:#16377a;
+
+}
+
+
+.blog-hero h1 span {
+
+    color:#ff5a16;
+
+}
+
+
+.blog-hero .lead {
+
+    color:#526fa5;
+    font-size:16px;
+    line-height:1.6;
+    max-width:520px;
+
+}
+
+
+
+.blog-hero-image {
+
+    border-radius:25px;
+    max-height:320px;
+    object-fit:cover;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+ SEARCH
+===================================== */
+
+
+.blog-search {
+
+    margin-top:-25px;
+
+    background:white;
+
+    border-radius:40px;
+
+    padding:8px;
+
+    display:flex;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+.blog-search input {
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px 25px;
+
+    font-size:14px;
+
+}
+
+
+
+.blog-search button {
+
+    background:#ff5a16;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:12px 35px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+ CATEGORY
+===================================== */
+
+
+.blog-category {
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+
+}
+
+
+
+.blog-category button {
+
+    padding:10px 25px;
+
+    border-radius:25px;
+
+    border:1px solid #e8edf7;
+
+    background:white;
+
+    color:#16377a;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.blog-category button.active {
+
+    background:#ff5a16;
+
+    color:white;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+ ARTICLE CARD
+===================================== */
+
+
+.article-card {
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    border:1px solid #edf0f6;
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+
+
+.article-card:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+.article-card img {
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+}
+
+
+
+.article-card h4 {
+
+    color:#16377a;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    padding:12px 18px 0;
+
+}
+
+
+
+.article-card p {
+
+    padding:0 18px;
+
+    color:#6177a0;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+
+
+.badge-soft {
+
+    display:inline-block;
+
+    margin:12px 18px 0;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:#ffe8dd;
+
+    color:#ff5a16;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+
+.article-meta {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 18px 20px;
+
+    color:#7385a8;
+
+    font-size:12px;
+
+}
+
+
+
+/* ==========================
+ BLOG PAGINATION
+========================== */
+
+.blog-pagination{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:12px;
+
+    margin:60px 0 80px;
+
+}
+
+
+
+.page-btn{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    border:1px solid #e7edf7;
+
+    color:#16377a;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.page-btn:hover{
+
+    border-color:#ff5a16;
+
+    color:#ff5a16;
+
+}
+
+
+
+.page-btn.active{
+
+    background:#ff5a16;
+
+    color:white;
+
+    border-color:#ff5a16;
+
+}
+
+
+
+
+
+
+/* =====================================
+ CTA BLOG
+===================================== */
+
+
+/* =========================
+ BLOG ABOUT CTA SMALL
+========================= */
+
+.blog-about {
+
+    margin:50px auto;
+
+    padding:30px 40px;
+
+    background:#fff7f1;
+
+    border-radius:22px;
+
+}
+
+
+
+.blog-about h2 {
+
+    color:#16377a;
+
+    font-size:28px;
+
+    line-height:1.25;
+
+    font-weight:800;
+
+}
+
+
+
+.blog-about p {
+
+    color:#6077a0;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    max-width:550px;
+
+}
+
+
+
+.blog-about img {
+
+    max-height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+.blog-about .btn {
+
+    padding:12px 25px;
+
+    font-size:14px;
+
+}
+
+
+
+
+/* =====================================
+ RESPONSIVE
+===================================== */
+
+
+@media(max-width:992px){
+
+.blog-hero h1 {
+
+    font-size:36px;
+
+}
+
+
+}
+
+
+@media(max-width:576px){
+
+
+.blog-hero {
+
+    padding:35px 0;
+
+}
+
+
+.blog-hero h1 {
+
+    font-size:30px;
+
+}
+
+
+.blog-search {
+
+    flex-direction:column;
+
+}
+
+
+.blog-search button {
+
+    width:100%;
+
+}
+
+
+.blog-about {
+
+    padding:25px;
+
+}
+
+
+}
