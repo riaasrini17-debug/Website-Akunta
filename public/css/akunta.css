@@ -3394,3 +3394,405 @@ grid-template-columns:1fr;
 
 
 }
+
+/* =====================================
+        FAQ PAGE
+===================================== */
+
+
+/* HERO */
+
+.faq-hero{
+
+    background:
+    radial-gradient(
+        circle at right,
+        rgba(255,120,50,.15),
+        transparent 35%
+    ),
+    linear-gradient(
+        120deg,
+        #fff8f3,
+        #ffffff
+    );
+
+    padding:55px 0 45px;
+
+}
+
+
+.faq-hero .container{
+
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+
+}
+
+
+.faq-hero .eyebrow{
+
+    color:#ff5a16;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:10px;
+
+}
+
+
+
+.faq-hero h1{
+
+    color:#16377a;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.faq-hero h1 span{
+
+    color:#ff5a16;
+
+}
+
+
+
+.faq-hero .lead{
+
+    color:#6077a0;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    max-width:600px;
+    margin:0 auto;
+
+}
+
+
+
+
+
+
+/* SEARCH */
+
+.faq-search{
+
+    margin-top:25px;
+
+    width:840px;
+
+    height:50px;
+
+    background:white;
+
+    border-radius:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:5px 7px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    margin:35px auto 0;
+
+}
+
+
+
+.faq-search input{
+
+    flex:1;
+
+    height:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:0 20px;
+
+    font-size:14px;
+
+}
+
+
+
+.faq-search button{
+
+    height:38px;
+
+    width:100px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff5a16;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* CATEGORY */
+
+
+.faq-category{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:35px auto;
+
+}
+
+
+
+.faq-category button{
+
+
+    background:white;
+
+    border:1px solid #edf0f6;
+
+    color:#16377a;
+
+    padding:11px 22px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.faq-category button.active{
+
+
+    background:#ff5a16;
+
+    color:white;
+
+    border-color:#ff5a16;
+
+}
+
+
+
+
+
+
+/* ==========================
+ FAQ LIST STYLE SEARCH BAR
+========================== */
+
+#faqAcc{
+
+    max-width:1200px;
+    margin:40px auto;
+
+}
+
+
+#faqAcc .accordion-item{
+
+    border:none;
+
+    margin-bottom:15px;
+
+    background:transparent;
+
+}
+
+
+
+/* BAR PERTANYAAN */
+
+#faqAcc .accordion-button{
+
+
+    width:100%;
+
+    height:55px;
+
+
+    background:white !important;
+
+
+    border:1px solid #edf0f6;
+
+
+    border-radius:30px !important;
+
+
+    padding:0 25px;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    color:#16377a !important;
+
+
+    font-size:16px;
+
+    font-weight:600;
+
+
+    box-shadow:0 5px 15px rgba(0,0,0,.04) !important;
+
+
+}
+
+
+
+/* HILANGKAN ARROW */
+
+#faqAcc .accordion-button::after{
+
+    display:none;
+
+}
+
+
+
+/* NOMOR */
+
+.faq-number{
+
+    width:32px;
+
+    height:32px;
+
+    border-radius:50%;
+
+
+    background:#fff1e8;
+
+
+    color:#ff5a16;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:14px;
+
+    font-weight:700;
+
+
+    margin-right:18px;
+
+}
+
+
+
+/* TEXT */
+
+.faq-question-text{
+
+    flex:1;
+
+}
+
+
+
+/* PLUS */
+
+.faq-plus{
+
+    color:#ff5a16;
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+
+
+
+/* HOVER */
+
+#faqAcc .accordion-button:hover{
+
+    border-color:#ff5a16;
+
+}
+
+/* HILANGKAN BOX BELAKANG ACCORDION */
+
+#faqAcc .accordion-item{
+
+    background:transparent !important;
+
+    border:none !important;
+
+    margin-bottom:15px;
+
+    overflow:visible !important;
+
+}
+
+
+/* BUTTON JADI SATU-SATUNYA BOX */
+
+#faqAcc .accordion-button{
+
+    background:white !important;
+
+    border:1px solid #edf0f6 !important;
+
+    border-radius:35px !important;
+
+    height:55px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.04) !important;
+
+}
+
+
+/* HAPUS GARIS ORANGE */
+
+#faqAcc .accordion-button::before,
+#faqAcc .accordion-button::after{
+
+    display:none !important;
+
+}
