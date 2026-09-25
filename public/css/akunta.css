@@ -3796,3 +3796,194 @@ grid-template-columns:1fr;
     display:none !important;
 
 }
+/* =================================
+ LOGIN MODAL FIX
+================================= */
+
+
+#loginModal .modal-dialog{
+
+    max-width:420px;
+
+}
+
+
+
+#loginModal .modal-content{
+
+    border-radius:24px;
+
+    padding:10px 5px;
+
+}
+
+
+
+#loginModal .modal-body{
+
+    padding:20px 35px 30px;
+
+}
+
+
+
+/* LOGO */
+
+#loginModal .auth-logo{
+
+    text-align:center;
+
+    font-size:36px;
+
+    font-weight:800;
+
+}
+
+
+
+#loginModal .brand-a{
+
+    color:#ff5a16;
+
+}
+
+
+#loginModal .brand-kunta{
+
+    color:#16377a;
+
+}
+
+
+
+
+/* TITLE */
+
+
+#loginModal h2,
+#loginModal .modal-title{
+
+    color:#16377a;
+
+    font-weight:800;
+
+}
+
+
+
+
+
+#loginModal .auth-desc{
+
+    text-align:center;
+
+    color:#6077a0;
+
+    font-size:14px;
+
+}
+
+
+
+
+/* LABEL */
+
+
+#loginModal label{
+
+    display:block;
+
+    color:#16377a;
+
+    font-weight:600;
+
+    margin-bottom:7px;
+
+}
+
+
+
+
+/* INPUT FIX */
+
+
+#loginModal input.form-control{
+
+    width:100% !important;
+
+    height:48px;
+
+    border-radius:12px;
+
+    border:1px solid #dfe6f2;
+
+    padding:0 15px;
+
+    box-sizing:border-box;
+
+}
+
+
+
+#loginModal input.form-control:focus{
+
+    border-color:#ff5a16;
+
+    box-shadow:none;
+
+}
+
+
+
+
+/* BUTTON */
+
+
+#loginModal .btn-akunta{
+
+    width:100%;
+
+    height:50px;
+
+    border-radius:30px;
+
+    background:#ff5a16;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+
+
+/* DEMO TEXT */
+
+#loginModal .demo-info{
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:#6077a0;
+
+    line-height:1.5;
+
+}
+
+
+
+
+.auth-link{
+
+    color:#ff5a16;
+
+    font-weight:700;
+
+    border:none;
+
+    background:none;
+
+}
+
