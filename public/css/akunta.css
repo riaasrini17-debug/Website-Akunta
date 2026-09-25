@@ -3987,3 +3987,226 @@ grid-template-columns:1fr;
 
 }
 
+/* =========================
+   REGISTER MODAL COMPACT
+========================= */
+
+#registerModal .modal-dialog{
+    max-width: 480px;
+}
+
+
+#registerModal .auth-modal{
+
+    border-radius:25px;
+    overflow:hidden;
+
+}
+
+
+/* HEADER */
+
+#registerModal .modal-header{
+
+    padding:12px 25px 0;
+
+}
+
+
+
+/* BODY */
+
+#registerModal .modal-body{
+
+    padding:10px 25px 20px;
+
+}
+
+
+/* LOGO */
+
+#registerModal .auth-logo{
+
+    font-size:22px !important;
+    margin-bottom:8px !important;
+
+}
+
+
+/* DESKRIPSI */
+
+#registerModal .auth-desc{
+
+    font-size:14px;
+    margin-bottom:15px;
+
+}
+
+
+
+/* LABEL */
+
+#registerModal label{
+
+    font-size:14px;
+    margin-bottom:4px;
+    color:#16377a;
+    font-weight:600;
+
+}
+
+
+
+/* INPUT */
+
+#registerModal .form-control{
+
+    height:38px;
+    border-radius:10px;
+    font-size:14px;
+
+}
+
+
+
+/* JARAK FIELD */
+
+#registerModal .mb-3{
+
+    margin-bottom:9px !important;
+
+}
+
+
+
+/* BUTTON DAFTAR */
+
+#registerModal .btn-akunta{
+
+    height:42px;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:700;
+
+}
+
+
+
+/* LOGIN LINK */
+
+#registerModal .auth-link{
+
+    border:none;
+    background:none;
+    color:#ff5a16;
+    font-weight:700;
+    padding:0;
+
+}
+
+
+#registerModal p.text-center{
+
+    margin-top:12px !important;
+
+}
+
+/* =================================
+   DEMO MODAL COMPACT
+================================= */
+
+#demoModal .modal-dialog{
+    max-width:500px;
+}
+
+
+#demoModal .modal-content{
+
+    border-radius:25px;
+    overflow:hidden;
+
+}
+
+
+/* HEADER */
+
+#demoModal .modal-header{
+
+    padding:18px 25px 5px;
+
+}
+
+
+#demoModal .modal-title{
+
+    color:#16377a;
+    font-size:24px;
+    font-weight:800;
+
+}
+
+
+/* BODY */
+
+#demoModal .modal-body{
+
+    padding:5px 25px;
+
+}
+
+
+/* LABEL */
+
+#demoModal label{
+
+    color:#16377a;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:4px;
+
+}
+
+
+
+/* INPUT */
+
+#demoModal .form-control,
+#demoModal .form-select{
+
+    height:40px;
+    border-radius:10px;
+    font-size:14px;
+
+}
+
+
+
+/* JARAK FIELD */
+
+#demoModal .mb-3{
+
+    margin-bottom:10px !important;
+
+}
+
+
+
+/* FOOTER */
+
+#demoModal .modal-footer{
+
+    padding:5px 25px 20px;
+
+}
+
+
+/* BUTTON */
+
+#demoModal .btn-akunta{
+
+    height:52px;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:700;
+
+}
