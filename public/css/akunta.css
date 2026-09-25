@@ -4210,3 +4210,27 @@ grid-template-columns:1fr;
     font-weight:700;
 
 }
+
+/* FIX HERO KONTAK CENTER */
+
+.hero-akunta .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+
+.hero-akunta h1{
+    font-size:48px;
+    max-width:800px;
+    margin:0 auto 15px;
+    line-height:1.05;
+}
+
+
+.hero-akunta .lead{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
