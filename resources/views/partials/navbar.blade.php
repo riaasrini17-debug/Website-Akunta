@@ -15,8 +15,21 @@
           <a href="{{ session('auth.role')==='admin' ? route('admin.dashboard') : route('user.dashboard') }}" class="btn btn-outline-akunta">Dashboard</a>
           <form action="{{ route('logout') }}" method="POST">@csrf<button class="btn btn-akunta">Logout</button></form>
         @else
-          <a href="{{ route('login') }}" class="btn btn-outline-akunta">Login</a>
-          <button class="btn btn-akunta" data-bs-toggle="modal" data-bs-target="#demoModal">Coba Gratis</button>
+          <button
+            type="button"
+            class="btn btn-outline-akunta"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+            Login
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-akunta"
+            data-bs-toggle="modal"
+            data-bs-target="#demoModal">
+            Coba Gratis
+          </button>
         @endif
       </div>
     </div>

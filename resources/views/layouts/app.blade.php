@@ -15,8 +15,11 @@
 @if(session('success'))<div class="container pt-3"><div class="alert alert-success">{{ session('success') }}</div></div>@endif
 @yield('content')
 @include('partials.footer')
+@include('partials.login-modal')
+@include('partials.register-modal')
 @include('partials.demo-modal')
+@include('partials.whatsapp')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('js/akunta.js') }}"></script>
-@include('partials.whatsapp')
+
 </body></html>
