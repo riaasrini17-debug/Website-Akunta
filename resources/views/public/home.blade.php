@@ -549,153 +549,79 @@
 
 
 
-{{-- =====================================================
-    TESTIMONIAL
-===================================================== --}}
-
 <section class="ak-testimonial-section">
-
     <div class="container">
-
-        <div class="section-heading text-center">
-
+        <div class="ak-section-heading text-center">
             <h2>Apa Kata Mereka?</h2>
-
-            <p>
-                Ribuan bisnis di Indonesia telah merasakan
-                kemudahan bersama Akunta.
-            </p>
-
+            <span class="ak-heading-line"></span>
+            <p>Ribuan bisnis di Indonesia telah merasakan kemudahan bersama Akunta.</p>
         </div>
 
+        @php
+            $testimonials = [
+                [
+                    'name' => 'Andi Pratama',
+                    'role' => 'CEO, Kopi Senja',
+                    'photo' => 'assets/testi-andi.png',
+                    'quote' => '“Akunta sangat membantu kami dalam mengelola keuangan. Laporannya lengkap dan mudah dipahami.”',
+                ],
+                [
+                    'name' => 'Sari Melati',
+                    'role' => 'Founder, Bloom Studio',
+                    'photo' => 'assets/testi-sari.png',
+                    'quote' => '“Tampilannya simpel dan fiturnya lengkap. Akunta benar-benar menjadi solusi pembukuan yang kami butuhkan.”',
+                ],
+                [
+                    'name' => 'Budi Santoso',
+                    'role' => 'Owner, Santoso Teknik',
+                    'photo' => 'assets/testi-budi.png',
+                    'quote' => '“Tim support-nya responsif dan sangat membantu. Bisnis kami sekarang jauh lebih teratur dan efisien.”',
+                ],
+            ];
+        @endphp
 
-        <div class="row g-4 mt-2">
+        <div class="ak-testimonial-slider">
+            <div class="ak-testimonial-track">
+                {{-- set asli --}}
+                <div class="ak-testimonial-group">
+                    @foreach ($testimonials as $item)
+                        <div class="ak-testimonial-card">
+                            <div class="ak-testimonial-top">
+                                <img src="{{ asset($item['photo']) }}" alt="{{ $item['name'] }}">
+                                <div>
+                                    <h4>{{ $item['name'] }}</h4>
+                                    <span>{{ $item['role'] }}</span>
+                                </div>
+                            </div>
 
+                            <p class="ak-testimonial-quote">{{ $item['quote'] }}</p>
 
-            {{-- TESTIMONIAL 1 --}}
-            <div class="col-lg-4">
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-head">
-
-                        <img
-                            src="{{ asset('assets/testi-andi.png') }}"
-                            alt="Andi Pratama">
-
-                        <div>
-
-                            <h6>Andi Pratama</h6>
-
-                            <small>
-                                CEO, Kopi Senja
-                            </small>
-
+                            <div class="ak-testimonial-stars">★★★★★</div>
                         </div>
-
-                    </div>
-
-
-                    <p>
-                        “Akunta sangat membantu kami dalam mengelola
-                        keuangan. Laporannya lengkap dan mudah dipahami.”
-                    </p>
-
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
+                    @endforeach
                 </div>
 
-            </div>
+                {{-- duplikat biar looping mulus --}}
+                <div class="ak-testimonial-group" aria-hidden="true">
+                    @foreach ($testimonials as $item)
+                        <div class="ak-testimonial-card">
+                            <div class="ak-testimonial-top">
+                                <img src="{{ asset($item['photo']) }}" alt="{{ $item['name'] }}">
+                                <div>
+                                    <h4>{{ $item['name'] }}</h4>
+                                    <span>{{ $item['role'] }}</span>
+                                </div>
+                            </div>
 
+                            <p class="ak-testimonial-quote">{{ $item['quote'] }}</p>
 
-
-            {{-- TESTIMONIAL 2 --}}
-            <div class="col-lg-4">
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-head">
-
-                        <img
-                            src="{{ asset('assets/testi-sari.png') }}"
-                            alt="Sari Melati">
-
-                        <div>
-
-                            <h6>Sari Melati</h6>
-
-                            <small>
-                                Founder, Bloom Studio
-                            </small>
-
+                            <div class="ak-testimonial-stars">★★★★★</div>
                         </div>
-
-                    </div>
-
-
-                    <p>
-                        “Tampilannya simpel dan fiturnya lengkap.
-                        Akunta benar-benar menjadi solusi pembukuan
-                        yang kami butuhkan.”
-                    </p>
-
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
+                    @endforeach
                 </div>
-
             </div>
-
-
-
-            {{-- TESTIMONIAL 3 --}}
-            <div class="col-lg-4">
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-head">
-
-                        <img
-                            src="{{ asset('assets/testi-budi.png') }}"
-                            alt="Budi Santoso">
-
-                        <div>
-
-                            <h6>Budi Santoso</h6>
-
-                            <small>
-                                Owner, Santoso Teknik
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        “Tim support-nya responsif dan sangat membantu.
-                        Bisnis kami sekarang jauh lebih teratur
-                        dan efisien.”
-                    </p>
-
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
 
 

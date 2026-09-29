@@ -526,63 +526,403 @@ body {
 }
 
 
-/* =========================
-   TESTIMONIAL
-========================= */
+/* =========================================================
+   HOME - TESTIMONIAL AUTO SLIDER FINAL
+========================================================= */
 
 .ak-testimonial-section {
-    padding: 40px 0 58px;
-    background: #fff;
+    padding: 72px 0 78px;
+    background: #ffffff;
+    overflow: hidden;
 }
 
-.testimonial-card {
-    height: 100%;
-    padding: 21px;
-    border: 1px solid #e7ebf2;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 8px 25px rgba(11, 43, 120, .04);
+/* HEADING */
+.ak-testimonial-section .ak-section-heading {
+    max-width: 760px;
+    margin: 0 auto 38px;
 }
 
-.testimonial-head {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 13px;
-}
-
-.testimonial-head img {
-    display: block;
-    width: 52px;
-    height: 52px;
-    flex: 0 0 52px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.testimonial-head h6 {
-    margin: 0 0 2px;
-    color: var(--navy);
-    font-size: 13px;
+.ak-testimonial-section .ak-section-heading h2 {
+    margin: 0;
+    color: #16377a;
+    font-size: 42px;
+    line-height: 1.15;
     font-weight: 800;
 }
 
-.testimonial-head small {
-    color: #7d8ca5;
-    font-size: 11px;
+.ak-heading-line {
+    display: block;
+    width: 72px;
+    height: 5px;
+    margin: 18px auto;
+    border-radius: 999px;
+    background: #ff5a16;
 }
 
-.testimonial-card p {
-    margin-bottom: 12px;
-    color: #546d91;
-    font-size: 12.5px;
-    line-height: 1.55;
+.ak-testimonial-section .ak-section-heading p {
+    margin: 0;
+    color: #667b9d;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.stars {
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.ak-testimonial-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    /* ruang supaya shadow card tidak kepotong */
+    padding: 12px 0 20px;
+}
+
+
+/* FADE KIRI */
+.ak-testimonial-slider::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 70px;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            rgba(255,255,255,.92) 30%,
+            rgba(255,255,255,0) 100%
+        );
+}
+
+
+/* FADE KANAN */
+.ak-testimonial-slider::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 70px;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            270deg,
+            #ffffff 0%,
+            rgba(255,255,255,.92) 30%,
+            rgba(255,255,255,0) 100%
+        );
+}
+
+
+/* TRACK BERGERAK */
+.ak-testimonial-track {
+    display: flex;
+    width: max-content;
+
+    animation:
+        akTestimonialSlide 42s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* PAUSE SAAT HOVER */
+.ak-testimonial-slider:hover .ak-testimonial-track {
+    animation-play-state: paused;
+}
+
+
+/* GROUP */
+.ak-testimonial-group {
+    display: flex;
+    align-items: stretch;
+
+    gap: 24px;
+    padding-right: 24px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ak-testimonial-card {
+    width: 395px;
+    min-height: 285px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(11, 43, 120, .055);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+.ak-testimonial-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #ffd0bc;
+
+    box-shadow:
+        0 15px 35px rgba(11, 43, 120, .10);
+}
+
+
+/* PROFIL */
+.ak-testimonial-top {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 23px;
+}
+
+
+.ak-testimonial-top img {
+    display: block;
+
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.ak-testimonial-top h4 {
+    margin: 0 0 4px;
+
+    color: #16377a;
+
+    font-size: 16px;
+    line-height: 1.3;
+
+    font-weight: 800;
+}
+
+
+.ak-testimonial-top span {
+    display: block;
+
+    color: #7c8ca6;
+
+    font-size: 13px;
+}
+
+
+/* TESTIMONI */
+.ak-testimonial-quote {
+    flex: 1;
+
+    margin: 0 0 20px;
+
+    color: #526b96;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* BINTANG */
+.ak-testimonial-stars {
     color: #ff8a00;
-    font-size: 15px;
-    letter-spacing: 1px;
+
+    font-size: 18px;
+    line-height: 1;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes akTestimonialSlide {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .ak-testimonial-section {
+        padding: 60px 0 65px;
+    }
+
+    .ak-testimonial-section .ak-section-heading h2 {
+        font-size: 36px;
+    }
+
+    .ak-testimonial-section .ak-section-heading p {
+        font-size: 15px;
+    }
+
+    .ak-testimonial-card {
+        width: 330px;
+        min-height: 270px;
+
+        padding: 24px;
+    }
+
+    .ak-testimonial-slider::before,
+    .ak-testimonial-slider::after {
+        width: 45px;
+    }
+
+    .ak-testimonial-track {
+        animation-duration: 38s;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .ak-testimonial-section {
+        padding: 48px 0 55px;
+    }
+
+    .ak-testimonial-section .ak-section-heading {
+        margin-bottom: 25px;
+    }
+
+    .ak-testimonial-section .ak-section-heading h2 {
+        font-size: 29px;
+    }
+
+    .ak-heading-line {
+        width: 55px;
+        height: 4px;
+
+        margin: 13px auto;
+    }
+
+    .ak-testimonial-section .ak-section-heading p {
+        padding: 0 15px;
+
+        font-size: 14px;
+    }
+
+
+    .ak-testimonial-group {
+        gap: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    /* SATU CARD DOMINAN DI MOBILE */
+    .ak-testimonial-card {
+        width: calc(100vw - 58px);
+        max-width: 330px;
+
+        min-height: 255px;
+
+        padding: 21px 19px;
+
+        border-radius: 16px;
+    }
+
+
+    .ak-testimonial-top {
+        gap: 11px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .ak-testimonial-top img {
+        width: 50px;
+        height: 50px;
+
+        flex-basis: 50px;
+    }
+
+
+    .ak-testimonial-top h4 {
+        font-size: 15px;
+    }
+
+
+    .ak-testimonial-top span {
+        font-size: 12px;
+    }
+
+
+    .ak-testimonial-quote {
+        margin-bottom: 17px;
+
+        font-size: 13.5px;
+        line-height: 1.7;
+    }
+
+
+    .ak-testimonial-stars {
+        font-size: 17px;
+    }
+
+
+    /* Fade lebih kecil agar card mobile tetap terlihat */
+    .ak-testimonial-slider::before,
+    .ak-testimonial-slider::after {
+        width: 20px;
+    }
+
+
+    /* mobile sedikit lebih cepat */
+    .ak-testimonial-track {
+        animation-duration: 34s;
+    }
+
 }
 
 
