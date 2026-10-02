@@ -533,7 +533,7 @@
                 <div class="about-home-image">
 
                     <img
-                        src="{{ asset('assets/about-team.png') }}"
+                        src="{{ asset('assets/tentangkami.png') }}"
                         alt="Tim Akunta"
                         class="img-fluid">
 
