@@ -1105,67 +1105,10 @@ body {
 }
 
 
-/* =========================
-   CTA BAWAH
-========================= */
-
-.ak-home-cta {
-    padding: 0 0 38px;
-    background: #fff;
-}
-
-.home-cta-box {
-    display: grid;
-    grid-template-columns: 1.35fr .7fr auto;
-    align-items: center;
-    gap: 30px;
-
-    padding: 29px 32px;
-
-    border-radius: 14px;
-    background: linear-gradient(100deg, #ff4813, #ff961c);
-    color: #fff;
-}
-
-.home-cta-box h2 {
-    margin: 0;
-    color: #fff;
-    font-size: 24px;
-    line-height: 1.15;
-    font-weight: 800;
-}
-
-.home-cta-box p {
-    margin: 0;
-    color: #fff;
-    font-size: 12px;
-    line-height: 1.55;
-}
-
-.cta-white-btn {
-    padding: 12px 19px;
-    border: none;
-    border-radius: 9px;
-    background: #fff;
-    color: var(--orange);
-    font-size: 12px;
-    font-weight: 800;
-    white-space: nowrap;
-}
-
-.cta-white-btn:hover {
-    background: #fff7f2;
-    color: var(--orange);
-}
 
 
-/* =========================
-   FOOTER HOME
-========================= */
 
-.footer-akunta {
-    margin-top: 0 !important;
-}
+
 
 
 /* =========================
@@ -1279,13 +1222,7 @@ body {
     object-position: center;
 }
 
-    /* CTA */
-
-    .home-cta-box {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 16px;
-    }
+   
 }
 /* =========================
    MOBILE
@@ -1428,15 +1365,7 @@ body {
     font-size: 13px;
 }
 
-    /* CTA */
 
-    .home-cta-box {
-        padding: 22px 18px;
-    }
-
-    .home-cta-box h2 {
-        font-size: 20px;
-    }
 }
 
 /* TIMELINE */
@@ -5763,4 +5692,95 @@ grid-template-columns:1fr;
 
     }
 
+}
+
+/* =====================================================
+   FIX FOOTER GLOBAL AKUNTA
+===================================================== */
+
+.footer-akunta {
+    margin-top: 12px;
+    padding: 14px 0 10px;
+    background: #ffffff;
+    border-top: 1px solid var(--line);
+}
+
+.footer-akunta .footer-inner {
+    width: 100%;
+}
+
+.footer-akunta .row {
+    row-gap: 20px;
+}
+
+/* BRAND */
+.footer-akunta .fw-bold.fs-3 {
+    font-size: 24px !important;
+    line-height: 1.1;
+}
+
+/* JUDUL KOLOM */
+.footer-akunta h6 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* SEMUA LINK FOOTER */
+.footer-akunta a {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    margin: 0 0 5px;
+
+    color: #516a91 !important;
+    font-size: 11px;
+    line-height: 1.4;
+
+    text-decoration: none !important;
+}
+
+.footer-akunta a:hover {
+    color: var(--orange) !important;
+}
+
+/* WARNA LOGO TETAP */
+.footer-akunta .brand-a {
+    color: var(--orange) !important;
+}
+
+.footer-akunta .brand-kunta {
+    color: var(--navy) !important;
+}
+
+/* PARAGRAF */
+.footer-akunta p {
+    margin: 6px 0 0;
+    color: #516a91;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+/* PEMBATAS BAWAH */
+.footer-akunta hr {
+    margin: 8px 0 6px;
+    border: 0;
+    border-top: 1px solid var(--line);
+    opacity: 1;
+}
+
+/* COPYRIGHT */
+.footer-akunta .footer-bottom {
+    color: #516a91;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.navbar .btn-akunta,
+.navbar .btn-outline-akunta {
+    padding: 8px 28px;
+    font-size: 13px;
+    border-radius: 10px;
 }
