@@ -39,8 +39,15 @@
                             Coba Gratis <span>→</span>
                         </button>
 
-                        <a href="{{ route('contact') }}" class="btn btn-outline-akunta">
+                        <a
+                            href="https://wa.me/6281234567890?text={{ urlencode('Halo Akunta, saya ingin mengetahui lebih lanjut mengenai layanan Akunta.') }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-akunta">
+
+                            <i class="bi bi-whatsapp me-1"></i>
                             Hubungi Kami
+
                         </a>
                     </div>
 
@@ -166,7 +173,7 @@
         </div>
 
         <div class="text-center">
-            <a href="{{ url('/fitur') }}" class="ak-text-button">
+            <a href="{{ route('features') }}" class="ak-text-button">
                 Lihat Semua Fitur <span>→</span>
             </a>
         </div>
