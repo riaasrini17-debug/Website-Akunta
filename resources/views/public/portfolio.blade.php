@@ -1,421 +1,693 @@
 @extends('layouts.app')
 
-@section('title','Portofolio - Akunta')
+@section('title', 'Portofolio - Akunta')
+@section('meta', 'Lihat berbagai bisnis dan industri yang telah menggunakan Akunta untuk membantu pengelolaan keuangan dan operasional bisnis.')
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/portofolio.css') }}">
+@endpush
 
 @section('content')
 
+@php
 
-<!-- ================= HERO PORTFOLIO ================= -->
-
-<section class="portfolio-hero">
-
-<div class="container">
-
-<div class="row align-items-center">
-
-
-<div class="col-lg-6">
-
-
-<span class="eyebrow">
-Portofolio
-</span>
-
-
-<h1>
-Bisnis yang Tumbuh
-<br>
-<span>Bersama Akunta</span>
-</h1>
-
-
-<p>
-Ribuan bisnis di Indonesia telah mempercayai Akunta
-untuk menyederhanakan pengelolaan keuangan mereka
-dan melangkah lebih jauh.
-</p>
-
-
-
-<div class="hero-btn">
-
-<a href="#" class="btn-primary-akunta">
-Coba Gratis →
-</a>
-
-
-<a href="#client" class="btn-outline-akunta">
-Lihat Semua Client
-</a>
-
-</div>
-
+    $clients = [
+        [
+            'logo' => 'luxe.png',
+            'name' => 'Luxe Fashion',
+        ],
+        [
+            'logo' => 'karya-indah.png',
+            'name' => 'Karya Indah',
+        ],
+        [
+            'logo' => 'solusi-kreatif.png',
+            'name' => 'Solusi Kreatif',
+        ],
+        [
+            'logo' => 'maju-bersama.png',
+            'name' => 'Maju Bersama',
+        ],
+        [
+            'logo' => 'kopi-senja.png',
+            'name' => 'Kopi Senja',
+        ],
+        [
+            'logo' => 'chuyu.png',
+            'name' => 'Chuyu',
+        ],
+        [
+            'logo' => 'bali.png',
+            'name' => 'Bali District',
+        ],
+        [
+            'logo' => 'oris.png',
+            'name' => 'Oris Cake',
+        ],
+        [
+            'logo' => 'getup.jpg',
+            'name' => 'Get Up',
+        ],
+        [
+            'logo' => 'roti.png',
+            'name' => 'Roti Manis',
+        ],
+    ];
 
 
-<div class="hero-check">
+    $industries = [
 
-<span>
-✓ Nyata dan Terukur
-</span>
+        [
+            'icon' => 'bi-shop-window',
+            'title' => 'Retail',
+            'text' => 'Toko retail & fashion',
+        ],
 
-<span>
-✓ Dari Berbagai Industri
-</span>
+        [
+            'icon' => 'bi-cup-hot-fill',
+            'title' => 'F&B',
+            'text' => 'Restoran, cafe & catering',
+        ],
 
-<span>
-✓ Bersama Menuju Lebih Besar
-</span>
+        [
+            'icon' => 'bi-hospital-fill',
+            'title' => 'Kesehatan',
+            'text' => 'Klinik, apotek & layanan kesehatan',
+        ],
+
+        [
+            'icon' => 'bi-buildings-fill',
+            'title' => 'Manufaktur',
+            'text' => 'Produksi & distribusi',
+        ],
+
+        [
+            'icon' => 'bi-briefcase-fill',
+            'title' => 'Jasa',
+            'text' => 'Konsultan, agensi & layanan profesional',
+        ],
+
+        [
+            'icon' => 'bi-mortarboard-fill',
+            'title' => 'Pendidikan',
+            'text' => 'Sekolah, kursus & lembaga pendidikan',
+        ],
+
+        [
+            'icon' => 'bi-three-dots',
+            'title' => 'Lainnya',
+            'text' => 'Berbagai industri lainnya',
+        ],
+
+    ];
 
 
-</div>
+    $stats = [
+
+        [
+            'icon' => 'bi-people-fill',
+            'number' => '10.000+',
+            'text' => 'Bisnis telah menggunakan Akunta',
+        ],
+
+        [
+            'icon' => 'bi-shield-check',
+            'number' => '4+',
+            'text' => 'Tahun pengalaman melayani bisnis',
+        ],
+
+        [
+            'icon' => 'bi-star-fill',
+            'number' => '98%',
+            'text' => 'Tingkat kepuasan pelanggan',
+        ],
+
+        [
+            'icon' => 'bi-headset',
+            'number' => '24/7',
+            'text' => 'Dukungan untuk kebutuhan bisnis',
+        ],
+
+    ];
+
+
+    $testimonials = [
+        [
+            'name' => 'Andi Pratama',
+            'role' => 'CEO, Kopi Senja',
+            'image' => 'testi-andi.png',
+            'text' => 'Akunta sangat membantu kami dalam mengelola keuangan. Laporannya lengkap dan mudah dipahami.',
+        ],
+        [
+            'name' => 'Sari Melati',
+            'role' => 'Founder, Bloom Studio',
+            'image' => 'testi-sari.png',
+            'text' => 'Tampilannya simpel dan fiturnya lengkap. Proses pencatatan keuangan menjadi jauh lebih mudah dan efisien.',
+        ],
+        [
+            'name' => 'Budi Santoso',
+            'role' => 'Owner, Santoso Teknik',
+            'image' => 'testi-budi.png',
+            'text' => 'Tim support-nya responsif dan sangat membantu. Bisnis kami sekarang jauh lebih teratur dan efisien.',
+        ],
+        [
+            'name' => 'Dewi Ayu',
+            'role' => 'Owner, Bali District',
+            'image' => 'testi-ratna.png',
+            'text' => 'Pengelolaan bisnis menjadi lebih mudah dan informasi keuangan kami sekarang lebih gampang dipahami.',
+        ],
+    ];
+
+@endphp
+
+
+{{-- =====================================================
+    HERO PORTFOLIO
+===================================================== --}}
+
+<section class="ak-portfolio-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center g-4 g-lg-5">
+
+
+            {{-- LEFT --}}
+            <div class="col-lg-5">
+
+                <div class="ak-portfolio-hero-copy">
+
+                    <span class="ak-portfolio-eyebrow">
+                        PORTOFOLIO
+                    </span>
+
+
+                    <h1>
+                        Solusi Akunta Dipercaya
+                        <span>
+                            Berbagai Bisnis Indonesia
+                        </span>
+                    </h1>
+
+
+                    <p>
+                        Berbagai bisnis dari beragam industri telah mempercayai
+                        Akunta untuk membantu pengelolaan keuangan mereka dengan
+                        lebih mudah, efisien, dan terstruktur.
+                    </p>
+
+
+                    <div class="ak-portfolio-actions">
+
+                        <a
+                            href="{{ url('/register') }}"
+                            class="ak-btn-primary">
+
+                            Coba Gratis Sekarang
+                            <span>→</span>
+
+                        </a>
+
+
+                        <a
+                            href="{{ url('/kontak') }}"
+                            class="ak-btn-outline">
+
+                            Hubungi Kami
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="ak-portfolio-points">
+
+                        <span>
+                            <b>✓</b>
+                            Berbagai Industri
+                        </span>
+
+                        <span>
+                            <b>✓</b>
+                            Solusi Fleksibel
+                        </span>
+
+                        <span>
+                            <b>✓</b>
+                            Mudah Digunakan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
 
-</div>
+            {{-- RIGHT --}}
+            <div class="col-lg-7">
+
+                <div class="ak-portfolio-hero-visual">
+
+                    <span class="hero-blob hero-blob-main"></span>
+                    <span class="hero-blob hero-blob-small"></span>
+
+                    <span
+                        class="hero-dots"
+                        aria-hidden="true">
+                    </span>
 
 
+                    <img
+                        src="{{ asset('assets/portofolio-hero.png') }}"
+                        alt="Bisnis yang menggunakan Akunta"
+                        class="ak-portfolio-hero-image">
 
 
-<div class="col-lg-6">
+                    <div class="portfolio-float-card float-one">
 
-<img 
-src="{{ asset('assets/portofolio-hero.png') }}"
-class="img-fluid"
-alt="Portfolio Akunta">
+                        <span class="float-mark">
+                            <i class="bi bi-people-fill"></i>
+                        </span>
 
-</div>
+                        <div>
+                            <strong>
+                                10.000+
+                            </strong>
+
+                            <small>
+                                Bisnis menggunakan Akunta
+                            </small>
+                        </div>
+
+                    </div>
 
 
-</div>
+                    <div class="portfolio-float-card float-two">
 
-</div>
+                        <span class="float-mark">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </span>
+
+                        <div>
+                            <strong>
+                                Beragam
+                            </strong>
+
+                            <small>
+                                Industri yang dilayani
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="portfolio-float-card float-three">
+
+                        <span class="float-mark">
+                            <i class="bi bi-star-fill"></i>
+                        </span>
+
+                        <div>
+                            <strong>
+                                98%
+                            </strong>
+
+                            <small>
+                                Tingkat kepuasan pengguna
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 
+{{-- =====================================================
+    CLIENT LOGO - 2 ROW SLIDER
+===================================================== --}}
+
+<section
+    class="ak-client-section"
+    id="client">
+
+    <div class="container">
 
 
-<!-- ================= CLIENT ================= -->
+        <div class="ak-section-heading text-center">
+
+            <span class="ak-portfolio-eyebrow">
+                DIPERCAYA BERBAGAI BISNIS
+            </span>
 
 
-<section class="client-section" id="client">
-
-<div class="container">
-
-
-<div class="section-title text-center">
-
-<h2>
-Client yang Telah Menggunakan Akunta
-</h2>
+            <h2>
+                Client yang Telah Menggunakan Akunta
+            </h2>
 
 
-<p>
-Dari UMKM hingga perusahaan berkembang,
-berbagai bisnis di Indonesia telah memilih Akunta.
-</p>
+            <p>
+                Dari UMKM hingga perusahaan berkembang, berbagai bisnis
+                telah memilih Akunta sebagai partner dalam mengelola
+                bisnis mereka.
+            </p>
 
-
-</div>
-
-
-
-
-<div class="client-grid">
-
-
-@foreach([
-
-['logo'=>'kopi-senja.png','name'=>'Kopi Senja'],
-['logo'=>'luxe.png','name'=>'Luxe Fashion'],
-['logo'=>'karya-indah.png','name'=>'Karya Indah'],
-['logo'=>'solusi-kreatif.png','name'=>'Solusi Kreatif'],
-['logo'=>'maju-bersama.png','name'=>'Maju Bersama'],
-
-['logo'=>'chuyu.png','name'=>'Chuyu'],
-['logo'=>'bali.png','name'=>'Bali District'],
-['logo'=>'oris.png','name'=>'Oris Cake'],
-['logo'=>'getup.jpg','name'=>'Get Up'],
-['logo'=>'roti.png','name'=>'Roti Manis'],
+        </div>
 
 
 
-] as $client)
+        <div class="ak-client-slider-wrapper">
 
 
-<div class="client-card">
+            {{-- =====================================
+                ROW 1 - KANAN KE KIRI
+            ====================================== --}}
+
+            <div class="ak-client-slider">
+
+                <div class="ak-client-track ak-client-track-left">
+
+                    @for ($copy = 0; $copy < 2; $copy++)
+
+                        <div
+                            class="ak-client-group"
+                            @if($copy === 1) aria-hidden="true" @endif>
 
 
-<img 
-src="{{asset('assets/'.$client['logo'])}}"
-alt="{{$client['name']}}">
+                            @foreach ($clients as $client)
+
+                                <article class="ak-client-card">
+
+                                    <img
+                                        src="{{ asset('assets/logo/' . $client['logo']) }}"
+                                        alt="{{ $client['name'] }}"
+                                        loading="lazy">
 
 
-<h3>
-{{$client['name']}}
-</h3>
+                                    <h3>
+                                        {{ $client['name'] }}
+                                    </h3>
+
+                                </article>
+
+                            @endforeach
+
+                        </div>
+
+                    @endfor
+
+                </div>
+
+            </div>
 
 
-</div>
+
+            {{-- =====================================
+                ROW 2 - KIRI KE KANAN
+            ====================================== --}}
+
+            <div class="ak-client-slider">
+
+                <div class="ak-client-track ak-client-track-right">
+
+                    @for ($copy = 0; $copy < 2; $copy++)
+
+                        <div
+                            class="ak-client-group"
+                            @if($copy === 1) aria-hidden="true" @endif>
 
 
-@endforeach
+                            @foreach (array_reverse($clients) as $client)
+
+                                <article class="ak-client-card">
+
+                                    <img
+                                        src="{{ asset('assets/logo/' . $client['logo']) }}"
+                                        alt="{{ $client['name'] }}"
+                                        loading="lazy">
 
 
-</div>
+                                    <h3>
+                                        {{ $client['name'] }}
+                                    </h3>
+
+                                </article>
+
+                            @endforeach
+
+                        </div>
+
+                    @endfor
+
+                </div>
+
+            </div>
 
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
 
 
+{{-- =====================================================
+    INDUSTRIES
+===================================================== --}}
+
+<section class="ak-industries-section">
+
+    <div class="container">
+
+
+        <div class="ak-section-heading text-center">
+
+            <span class="ak-portfolio-eyebrow">
+                FLEKSIBEL UNTUK BERBAGAI KEBUTUHAN
+            </span>
+
+
+            <h2>
+                Berbagai Industri, Satu Solusi Terpercaya
+            </h2>
+
+
+            <p>
+                Akunta dapat digunakan oleh beragam jenis bisnis
+                dengan kebutuhan pengelolaan yang berbeda.
+            </p>
+
+        </div>
 
 
 
+        <div class="ak-industry-grid">
 
-<!-- ================= EXPERIENCE ================= -->
+            @foreach ($industries as $industry)
 
-<section class="experience-section">
+                <article class="ak-industry-card">
 
-
-<div class="container">
-
-
-<div class="section-title text-center">
-
-<h2>
-Pengalaman Akunta
-</h2>
-
-<p>
-Kepercayaan dari ribuan bisnis adalah bukti komitmen kami.
-</p>
-
-</div>
+                    <div class="ak-industry-icon">
+                        <i class="bi {{ $industry['icon'] }}"></i>
+                    </div>
 
 
-
-<div class="experience-grid">
-
-
-@foreach([
-
-['icon'=>'👥','title'=>'10.000+','desc'=>'bisnis mempercayai Akunta'],
-
-['icon'=>'📅','title'=>'4+ tahun','desc'=>'pengalaman di Indonesia'],
-
-['icon'=>'🏢','title'=>'Beragam industri','desc'=>'dari UMKM hingga perusahaan'],
-
-['icon'=>'🎧','title'=>'Pendampingan profesional','desc'=>'tim yang selalu siap membantu'],
-
-['icon'=>'⚡','title'=>'Solusi mudah','desc'=>'diimplementasikan untuk semua bisnis']
+                    <h3>
+                        {{ $industry['title'] }}
+                    </h3>
 
 
-] as $exp)
+                    <p>
+                        {{ $industry['text'] }}
+                    </p>
 
+                </article>
 
-<div class="experience-card">
+            @endforeach
 
-<div class="exp-icon">
-{{$exp['icon']}}
-</div>
+        </div>
 
-
-<h3>
-{{$exp['title']}}
-</h3>
-
-
-<p>
-{{$exp['desc']}}
-</p>
-
-
-</div>
-
-
-@endforeach
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
 
+{{-- =====================================================
+    EXPERIENCE / TRUST
+===================================================== --}}
 
+<section class="ak-experience-section">
 
+    <div class="container">
 
+        <div class="ak-experience-grid">
 
-<!-- ================= TESTIMONIAL ================= -->
 
+            @foreach ($stats as $stat)
 
-<div class="testimonial-track">
+                <article class="ak-experience-card">
 
 
-<div class="testimonial-group">
+                    <div class="ak-experience-icon">
+                        <i class="bi {{ $stat['icon'] }}"></i>
+                    </div>
 
 
-@foreach([
+                    <div>
 
-[
-'name'=>'Andi Pratama',
-'role'=>'CEO, Kopi Senja',
-'text'=>'Akunta sangat membantu kami dalam mengelola keuangan.'
-],
+                        <h3>
+                            {{ $stat['number'] }}
+                        </h3>
 
 
-[
-'name'=>'Sari Melati',
-'role'=>'Founder, Roti Manis',
-'text'=>'Tim support sangat responsif dan membantu bisnis kami.'
-],
+                        <p>
+                            {{ $stat['text'] }}
+                        </p>
 
+                    </div>
 
-[
-'name'=>'Budi Santoso',
-'role'=>'Direktur, Maju Bersama',
-'text'=>'Fitur Akunta lengkap dan mudah digunakan.'
-],
+                </article>
 
+            @endforeach
 
-[
-'name'=>'Dewi Ayu',
-'role'=>'Owner Bali District',
-'text'=>'Pengelolaan bisnis menjadi lebih mudah dengan Akunta.'
-]
 
+        </div>
 
-] as $testi)
-
-
-<div class="testimonial-card">
-
-<div class="quote">
-“
-</div>
-
-
-<p>
-{{$testi['text']}}
-</p>
-
-
-<h4>
-{{$testi['name']}}
-</h4>
-
-
-<span>
-{{$testi['role']}}
-</span>
-
-
-<div class="stars">
-★★★★★
-</div>
-
-
-</div>
-
-
-@endforeach
-
-
-</div>
-
-
-
-<!-- DUPLIKAT UNTUK LOOP -->
-
-<div class="testimonial-group">
-
-
-@foreach([
-
-[
-'name'=>'Andi Pratama',
-'role'=>'CEO, Kopi Senja',
-'text'=>'Akunta sangat membantu kami dalam mengelola keuangan.'
-],
-
-
-[
-'name'=>'Sari Melati',
-'role'=>'Founder, Roti Manis',
-'text'=>'Tim support sangat responsif dan membantu bisnis kami.'
-],
-
-
-[
-'name'=>'Budi Santoso',
-'role'=>'Direktur, Maju Bersama',
-'text'=>'Fitur Akunta lengkap dan mudah digunakan.'
-],
-
-
-[
-'name'=>'Dewi Ayu',
-'role'=>'Owner Bali District',
-'text'=>'Pengelolaan bisnis menjadi lebih mudah dengan Akunta.'
-]
-
-] as $testi)
-
-
-<div class="testimonial-card">
-
-<div class="quote">
-“
-</div>
-
-
-<p>
-{{$testi['text']}}
-</p>
-
-
-<h4>
-{{$testi['name']}}
-</h4>
-
-
-<span>
-{{$testi['role']}}
-</span>
-
-
-<div class="stars">
-★★★★★
-</div>
-
-
-</div>
-
-
-@endforeach
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
+
+{{-- =====================================================
+    TESTIMONIAL SLIDER
+===================================================== --}}
+
+<section class="ak-testimonial-section">
+
+
+    <div class="container">
+
+        <div class="ak-testimonial-header">
+
+            <span class="ak-portfolio-eyebrow">
+                APA KATA MEREKA?
+            </span>
+
+
+            <h2>
+                Dipercaya dan Memberikan Dampak Nyata
+            </h2>
+
+
+            <p>
+                Pengalaman pengguna yang telah merasakan kemudahan
+                mengelola bisnis bersama Akunta.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="ak-testimonial-slider">
+
+
+        <div class="ak-testimonial-track">
+
+
+            @for ($copy = 0; $copy < 2; $copy++)
+
+
+                <div
+                    class="ak-testimonial-group"
+                    @if($copy === 1) aria-hidden="true" @endif>
+
+
+                    @foreach ($testimonials as $testi)
+
+
+                        <article class="ak-testimonial-card">
+
+
+                            <div class="testimonial-top">
+
+
+                                <img
+                                    src="{{ asset('assets/testi/' . $testi['image']) }}"
+                                    alt="{{ $testi['name'] }}"
+                                    loading="lazy">
+
+
+                                <div>
+
+                                    <h3>
+                                        {{ $testi['name'] }}
+                                    </h3>
+
+
+                                    <span>
+                                        {{ $testi['role'] }}
+                                    </span>
+
+                                </div>
+
+
+                                <div class="testimonial-quote">
+                                    ”
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="testimonial-stars">
+                                ★★★★★
+                            </div>
+
+
+
+                            <p>
+                                “{{ $testi['text'] }}”
+                            </p>
+
+
+                        </article>
+
+
+                    @endforeach
+
+
+                </div>
+
+
+            @endfor
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
 
 
 
 @include('public.partials.cta')
-
 
 @endsection

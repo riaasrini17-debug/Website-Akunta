@@ -1,0 +1,1883 @@
+/* =========================================================
+   AKUNTA PORTFOLIO
+   MODERN COMPANY PROFILE
+========================================================= */
+
+:root {
+    --portfolio-navy: #0b2b78;
+    --portfolio-orange: #ff4b12;
+    --portfolio-orange-2: #ff7a1a;
+
+    --portfolio-text: #24426f;
+    --portfolio-muted: #667b9d;
+
+    --portfolio-line: #e5ebf3;
+
+    --portfolio-soft: #fff7f2;
+    --portfolio-blue-soft: #f6f9ff;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.ak-portfolio-hero *,
+.ak-client-section *,
+.ak-industries-section *,
+.ak-experience-section *,
+.ak-testimonial-section * {
+    box-sizing: border-box;
+}
+
+
+.ak-portfolio-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: var(--portfolio-orange);
+
+    font-size: 10px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+}
+
+
+.ak-section-heading {
+    max-width: 720px;
+
+    margin:
+        0 auto 26px;
+}
+
+
+.ak-section-heading h2,
+.ak-testimonial-header h2 {
+    margin:
+        0 0 7px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        clamp(27px, 2.3vw, 34px);
+
+    line-height:
+        1.12;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -.55px;
+}
+
+
+.ak-section-heading h2::after,
+.ak-testimonial-header h2::after {
+    display:
+        none !important;
+
+    content:
+        none !important;
+}
+
+
+.ak-section-heading p,
+.ak-testimonial-header p {
+    margin:
+        0;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ak-portfolio-hero {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        46px 0 42px;
+
+    background:
+        radial-gradient(
+            circle at 93% 18%,
+            rgba(255, 122, 26, .12),
+            transparent 26%
+        ),
+
+        radial-gradient(
+            circle at 6% 75%,
+            rgba(255, 122, 26, .055),
+            transparent 17%
+        ),
+
+        linear-gradient(
+            105deg,
+            #fffaf7,
+            #fff3ec
+        );
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.ak-portfolio-hero-copy {
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    max-width:
+        525px;
+}
+
+
+.ak-portfolio-hero-copy h1 {
+    margin:
+        0 0 15px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        clamp(38px, 3.2vw, 48px);
+
+    line-height:
+        1.04;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1.05px;
+}
+
+
+.ak-portfolio-hero-copy h1 span {
+    display:
+        block;
+
+    color:
+        var(--portfolio-orange);
+}
+
+
+.ak-portfolio-hero-copy > p {
+    max-width:
+        500px;
+
+    margin:
+        0;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        13.5px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.ak-portfolio-actions {
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        21px;
+}
+
+
+.ak-btn-primary,
+.ak-btn-outline {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        41px;
+
+    padding:
+        8px 18px;
+
+    border-radius:
+        999px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+    transition:
+        .2s ease;
+}
+
+
+.ak-btn-primary {
+    gap:
+        8px;
+
+    border:
+        1px solid
+        var(--portfolio-orange);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--portfolio-orange),
+            var(--portfolio-orange-2)
+        );
+
+    color:
+        #fff;
+
+    box-shadow:
+        0 8px 20px
+        rgba(255,75,18,.16);
+}
+
+
+.ak-btn-primary:hover {
+    transform:
+        translateY(-1px);
+
+    color:
+        #fff;
+}
+
+
+.ak-btn-outline {
+    border:
+        1px solid #ff8e67;
+
+    background:
+        #fff;
+
+    color:
+        var(--portfolio-orange);
+}
+
+
+.ak-btn-outline:hover {
+    background:
+        #fff4ee;
+
+    color:
+        var(--portfolio-orange);
+}
+
+
+/* =========================================================
+   HERO POINTS
+========================================================= */
+
+.ak-portfolio-points {
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px 17px;
+
+    margin-top:
+        19px;
+}
+
+
+.ak-portfolio-points span {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+.ak-portfolio-points b {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        18px;
+
+    height:
+        18px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--portfolio-orange);
+
+    color:
+        #fff;
+
+    font-size:
+        8px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.ak-portfolio-hero-visual {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        330px;
+}
+
+
+.ak-portfolio-hero-image {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        block;
+
+    width:
+        84%;
+
+    max-width:
+        555px;
+
+    height:
+        295px;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    border-radius:
+        24px;
+
+    box-shadow:
+        0 18px 38px
+        rgba(11,43,120,.09);
+}
+
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.hero-blob {
+    position:
+        absolute;
+
+    z-index:
+        0;
+
+    pointer-events:
+        none;
+}
+
+
+.hero-blob-main {
+    width:
+        390px;
+
+    height:
+        275px;
+
+    top:
+        7%;
+
+    right:
+        12%;
+
+    border-radius:
+        46% 54% 52% 48%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,174,118,.24),
+            rgba(255,122,26,.09)
+        );
+
+    transform:
+        rotate(-7deg);
+}
+
+
+.hero-blob-small {
+    width:
+        135px;
+
+    height:
+        135px;
+
+    left:
+        2%;
+
+    bottom:
+        6%;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,169,110,.16);
+}
+
+
+.hero-dots {
+    position:
+        absolute;
+
+    z-index:
+        1;
+
+    width:
+        68px;
+
+    height:
+        68px;
+
+    top:
+        8%;
+
+    left:
+        5%;
+
+    opacity:
+        .55;
+
+    background-image:
+        radial-gradient(
+            var(--portfolio-orange) 1.4px,
+            transparent 1.4px
+        );
+
+    background-size:
+        11px 11px;
+}
+
+
+/* =========================================================
+   HERO FLOATING CARDS
+========================================================= */
+
+.portfolio-float-card {
+    position:
+        absolute;
+
+    z-index:
+        4;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    width:
+        155px;
+
+    padding:
+        10px 11px;
+
+    border:
+        1px solid
+        rgba(229,235,243,.85);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255,255,255,.96);
+
+    box-shadow:
+        0 10px 25px
+        rgba(11,43,120,.09);
+}
+
+
+.portfolio-float-card .float-mark {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        33px;
+
+    height:
+        33px;
+
+    flex:
+        0 0 33px;
+
+    border-radius:
+        50%;
+
+    background:
+        #fff0e7;
+
+    color:
+        var(--portfolio-orange);
+
+    font-size:
+        16px;
+
+    font-weight:
+        800;
+}
+
+
+.portfolio-float-card strong {
+    display:
+        block;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.05;
+
+    font-weight:
+        800;
+}
+
+
+.portfolio-float-card small {
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        7.8px;
+
+    line-height:
+        1.35;
+}
+
+
+.float-one {
+    top:
+        8px;
+
+    left:
+        6%;
+}
+
+
+.float-two {
+    top:
+        84%;
+
+    right:
+        70%;
+        
+}
+
+
+.float-three {
+    right:
+        3%;
+
+    bottom:
+        0px;
+}
+
+
+/* =========================================================
+   CLIENT SECTION
+========================================================= */
+
+.ak-client-section {
+    padding:
+        48px 0 52px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff,
+            #fafcff
+        );
+}
+
+
+/* =========================================================
+   CLIENT 2 ROW SLIDER
+========================================================= */
+
+.ak-client-slider-wrapper {
+    margin-top:
+        27px;
+}
+
+
+.ak-client-slider {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    padding:
+        5px 0;
+}
+
+
+.ak-client-slider + .ak-client-slider {
+    margin-top:
+        11px;
+}
+
+
+/* FADE LEFT RIGHT */
+
+.ak-client-slider::before,
+.ak-client-slider::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    top:
+        0;
+
+    width:
+        65px;
+
+    height:
+        100%;
+
+    pointer-events:
+        none;
+}
+
+
+.ak-client-slider::before {
+    left:
+        0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            rgba(255,255,255,0)
+        );
+}
+
+
+.ak-client-slider::after {
+    right:
+        0;
+
+    background:
+        linear-gradient(
+            -90deg,
+            #fff,
+            rgba(255,255,255,0)
+        );
+}
+
+
+/* TRACK */
+
+.ak-client-track {
+    display:
+        flex;
+
+    width:
+        max-content;
+
+    will-change:
+        transform;
+}
+
+
+/* GROUP */
+
+.ak-client-group {
+    display:
+        flex;
+
+    gap:
+        11px;
+
+    padding-right:
+        11px;
+
+    flex-shrink:
+        0;
+}
+
+
+/* =========================================================
+   ROW 1 = RIGHT TO LEFT
+========================================================= */
+
+.ak-client-track-left {
+    animation:
+        akClientMoveLeft
+        32s
+        linear
+        infinite;
+}
+
+
+@keyframes akClientMoveLeft {
+
+    from {
+        transform:
+            translateX(0);
+    }
+
+    to {
+        transform:
+            translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   ROW 2 = LEFT TO RIGHT
+========================================================= */
+
+.ak-client-track-right {
+    transform:
+        translateX(-50%);
+
+    animation:
+        akClientMoveRight
+        32s
+        linear
+        infinite;
+}
+
+
+@keyframes akClientMoveRight {
+
+    from {
+        transform:
+            translateX(-50%);
+    }
+
+    to {
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* PAUSE HOVER */
+
+.ak-client-track:hover {
+    animation-play-state:
+        paused;
+}
+
+
+/* =========================================================
+   CLIENT CARD
+========================================================= */
+
+.ak-client-card {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+
+    width:
+        155px;
+
+    height:
+        95px;
+
+    padding:
+        12px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        var(--portfolio-line);
+
+    border-radius:
+        13px;
+
+    background:
+        #fff;
+
+    box-shadow:
+        0 7px 20px
+        rgba(11,43,120,.035);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+.ak-client-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #ffc7b1;
+
+    box-shadow:
+        0 11px 25px
+        rgba(11,43,120,.07);
+}
+
+
+.ak-client-card img {
+    width:
+        66px;
+
+    height:
+        66px;
+
+    margin-bottom:
+        6px;
+
+    object-fit:
+        contain;
+}
+
+
+.ak-client-card h3 {
+    margin:
+        0;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        700;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.ak-industries-section {
+    padding:
+        50px 0;
+
+    background:
+        radial-gradient(
+            circle at 12% 40%,
+            rgba(255,122,26,.055),
+            transparent 20%
+        ),
+
+        linear-gradient(
+            105deg,
+            #fffaf7,
+            #fff5ef
+        );
+}
+
+
+.ak-industry-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    gap:
+        10px;
+}
+
+
+.ak-industry-card {
+    min-height:
+        125px;
+
+    padding:
+        20px 10px;
+
+    border:
+        1px solid
+        #f0e6df;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    text-align:
+        center;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.ak-industry-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #ffc8b2;
+
+    box-shadow:
+        0 10px 24px
+        rgba(255,75,18,.06);
+}
+
+
+.ak-industry-icon {
+
+    display: grid;
+    place-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 9px;
+
+    border-radius: 50%;
+
+    background: #fff0e7;
+
+    color: var(--portfolio-orange);
+}
+
+.ak-industry-icon i {
+
+    font-size: 21px;
+    line-height: 1;
+
+    color: var(--portfolio-orange);
+
+}
+
+
+.ak-industry-card h3 {
+    margin:
+        0 0 4px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+.ak-industry-card p {
+    margin:
+        0;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        8.5px;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.ak-experience-section {
+    padding:
+        22px 0 46px;
+
+    background:
+        #fff;
+}
+
+
+.ak-experience-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        12px;
+}
+
+
+.ak-experience-card {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    min-height:
+        90px;
+
+    padding:
+        15px 17px;
+
+    border:
+        1px solid
+        var(--portfolio-line);
+
+    border-radius:
+        13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #f9fbff
+        );
+
+    box-shadow:
+        0 8px 22px
+        rgba(11,43,120,.035);
+}
+
+
+.ak-experience-icon {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    flex:
+        0 0 43px;
+
+    border-radius:
+        50%;
+
+    background:
+        #fff0e7;
+
+    color:
+        var(--portfolio-orange);
+
+    font-size:
+        17px;
+}
+
+
+.ak-experience-card:nth-child(even)
+.ak-experience-icon {
+    background:
+        #eef5ff;
+
+    color:
+        #1769d2;
+}
+
+
+.ak-experience-card h3 {
+    margin:
+        0 0 3px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+}
+
+
+.ak-experience-card p {
+    margin:
+        0;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
+
+.ak-testimonial-section {
+    padding:
+        48px 0 55px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            105deg,
+            #f8fbff,
+            #fff
+        );
+}
+
+
+.ak-testimonial-header {
+    max-width:
+        570px;
+
+    margin-bottom:
+        25px;
+}
+
+
+/* =========================================================
+   TESTIMONIAL SLIDER
+========================================================= */
+
+.ak-testimonial-slider {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+}
+
+
+.ak-testimonial-slider::before,
+.ak-testimonial-slider::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    z-index:
+        6;
+
+    top:
+        0;
+
+    width:
+        95px;
+
+    height:
+        100%;
+
+    pointer-events:
+        none;
+}
+
+
+.ak-testimonial-slider::before {
+    left:
+        0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f8fbff,
+            rgba(248,251,255,0)
+        );
+}
+
+
+.ak-testimonial-slider::after {
+    right:
+        0;
+
+    background:
+        linear-gradient(
+            -90deg,
+            #fff,
+            rgba(255,255,255,0)
+        );
+}
+
+
+.ak-testimonial-track {
+    display:
+        flex;
+
+    width:
+        max-content;
+
+    animation:
+        akTestimonialMove
+        34s
+        linear
+        infinite;
+
+    will-change:
+        transform;
+}
+
+
+.ak-testimonial-track:hover {
+    animation-play-state:
+        paused;
+}
+
+
+.ak-testimonial-group {
+    display:
+        flex;
+
+    gap:
+        16px;
+
+    padding-right:
+        16px;
+
+    flex-shrink:
+        0;
+}
+
+
+@keyframes akTestimonialMove {
+
+    from {
+        transform:
+            translateX(0);
+    }
+
+    to {
+        transform:
+            translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   TESTIMONIAL CARD
+========================================================= */
+
+.ak-testimonial-card {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    width:
+        340px;
+
+    min-height:
+        205px;
+
+    padding:
+        20px 20px 18px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        var(--portfolio-line);
+
+    border-radius:
+        15px;
+
+    background:
+        #fff;
+
+    box-shadow:
+        0 10px 28px
+        rgba(11,43,120,.045);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
+}
+
+
+.ak-testimonial-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #ffc8b2;
+}
+
+
+.testimonial-top {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+}
+
+
+.testimonial-top img {
+    width:
+        44px;
+
+    height:
+        44px;
+
+    flex:
+        0 0 44px;
+
+    border-radius:
+        50%;
+
+    object-fit:
+        cover;
+}
+
+
+.testimonial-top h3 {
+    margin:
+        0 0 2px;
+
+    color:
+        var(--portfolio-navy);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+}
+
+
+.testimonial-top span {
+    display:
+        block;
+
+    color:
+        var(--portfolio-muted);
+
+    font-size:
+        8.5px;
+}
+
+
+.testimonial-quote {
+    margin-left:
+        auto;
+
+    color:
+        var(--portfolio-orange);
+
+    font-size:
+        38px;
+
+    line-height:
+        .7;
+
+    font-weight:
+        800;
+}
+
+
+.testimonial-stars {
+    margin-top:
+        12px;
+
+    color:
+        #ff8500;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+}
+
+
+.ak-testimonial-card > p {
+    margin:
+        9px 0 0;
+
+    color:
+        #526b96;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE - LARGE
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .ak-portfolio-hero-image {
+        max-width:
+            575px;
+
+        height:
+            305px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - LAPTOP
+========================================================= */
+
+@media
+(min-width: 992px)
+and
+(max-width: 1399.98px) {
+
+    .ak-portfolio-hero {
+        padding:
+            40px 0 38px;
+    }
+
+
+    .ak-portfolio-hero-copy h1 {
+        font-size:
+            42px;
+    }
+
+
+    .ak-portfolio-hero-image {
+        width:
+            82%;
+
+        max-width:
+            500px;
+
+        height:
+            275px;
+    }
+
+
+    .ak-portfolio-hero-visual {
+        min-height:
+            305px;
+    }
+
+
+    .float-one {
+        left:
+            2%;
+    }
+
+
+    .ak-industry-grid {
+        gap:
+            8px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .ak-portfolio-hero-copy {
+        max-width:
+            670px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .ak-portfolio-hero-copy > p {
+        margin-inline:
+            auto;
+    }
+
+
+    .ak-portfolio-actions,
+    .ak-portfolio-points {
+        justify-content:
+            center;
+    }
+
+
+    .ak-portfolio-hero-visual {
+        max-width:
+            680px;
+
+        margin:
+            22px auto 0;
+    }
+
+
+    .ak-industry-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+
+    .ak-experience-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .ak-portfolio-hero {
+        padding:
+            34px 0;
+    }
+
+
+    .ak-portfolio-hero-copy h1 {
+        font-size:
+            34px;
+    }
+
+
+    .ak-portfolio-hero-copy > p {
+        font-size:
+            13px;
+    }
+
+
+    .ak-portfolio-hero-image {
+        width:
+            94%;
+
+        height:
+            245px;
+    }
+
+
+    .portfolio-float-card {
+        width:
+            135px;
+
+        padding:
+            8px 9px;
+    }
+
+
+    .float-two {
+        display:
+            none;
+    }
+
+
+    .ak-client-section,
+    .ak-industries-section,
+    .ak-testimonial-section {
+        padding-top:
+            40px;
+
+        padding-bottom:
+            42px;
+    }
+
+
+    .ak-client-card {
+        width:
+            135px;
+
+        height:
+            88px;
+    }
+
+
+    .ak-industry-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .ak-experience-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .ak-testimonial-card {
+        width:
+            290px;
+
+        min-height:
+            195px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .ak-portfolio-hero-copy h1 {
+        font-size:
+            31px;
+    }
+
+
+    .ak-portfolio-actions {
+        flex-direction:
+            column;
+    }
+
+
+    .ak-portfolio-hero-image {
+        height:
+            220px;
+    }
+
+
+    .float-one,
+    .float-three {
+        transform:
+            scale(.9);
+    }
+
+
+    .float-one {
+        left:
+            -6px;
+    }
+
+
+    .float-three {
+        right:
+            -6px;
+    }
+
+
+    .ak-experience-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ak-experience-card {
+        min-height:
+            82px;
+    }
+
+
+    .ak-testimonial-slider::before,
+    .ak-testimonial-slider::after,
+    .ak-client-slider::before,
+    .ak-client-slider::after {
+        width:
+            35px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ak-client-track,
+    .ak-testimonial-track {
+        animation:
+            none;
+    }
+
+}
+
+.ak-experience-icon {
+
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    border-radius: 50%;
+
+    background: #fff0e7;
+
+    color: var(--portfolio-orange);
+}
+
+.ak-experience-icon i {
+
+    font-size: 21px;
+    line-height: 1;
+
+}
+
+
+/* CARD KE-2 DAN KE-4 BIRU */
+.ak-experience-card:nth-child(even) .ak-experience-icon {
+
+    background: #eef5ff;
+
+    color: #1769d2;
+}
+
+.portfolio-float-card .float-mark i {
+    font-size: 17px;
+    line-height: 1;
+}
