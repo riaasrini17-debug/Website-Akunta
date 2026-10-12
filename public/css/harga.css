@@ -1,0 +1,1826 @@
+/* =========================================================
+   AKUNTA - HARGA
+   Modern Company Profile Pricing Page
+========================================================= */
+
+:root {
+    --pricing-navy: #0b2b78;
+    --pricing-orange: #ff4b12;
+    --pricing-orange-2: #ff7a1a;
+
+    --pricing-text: #24426f;
+    --pricing-muted: #667b9d;
+
+    --pricing-line: #e4eaf2;
+
+    --pricing-soft:
+        #fff7f2;
+
+    --pricing-blue-soft:
+        #f5f9ff;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.ak-pricing-hero *,
+.ak-pricing-section *,
+.ak-comparison-section *,
+.ak-pricing-faq * {
+    box-sizing: border-box;
+}
+
+
+.ak-pricing-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--pricing-orange);
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ak-pricing-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        48px 0 42px;
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(255, 122, 26, .12),
+            transparent 26%
+        ),
+
+        radial-gradient(
+            circle at 5% 60%,
+            rgba(255, 122, 26, .06),
+            transparent 18%
+        ),
+
+        linear-gradient(
+            105deg,
+            #fffaf7,
+            #fff3ec
+        );
+}
+
+
+/* COPY */
+
+.ak-pricing-hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 520px;
+}
+
+
+.ak-pricing-hero-copy h1 {
+    margin:
+        0 0 16px;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        clamp(38px, 3.2vw, 48px);
+
+    line-height:
+        1.04;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1.1px;
+}
+
+
+.ak-pricing-hero-copy h1 span {
+    color:
+        var(--pricing-orange);
+}
+
+
+.ak-pricing-hero-copy > p {
+    max-width:
+        500px;
+
+    margin:
+        0;
+
+    color:
+        var(--pricing-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* BENEFITS */
+
+.ak-pricing-benefits {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap:
+        10px 18px;
+
+    margin-top:
+        22px;
+}
+
+
+.ak-pricing-benefits span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        10.5px;
+
+    font-weight:
+        700;
+}
+
+
+.ak-pricing-benefits b {
+    display: grid;
+
+    place-items: center;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background:
+        var(--pricing-orange);
+
+    color:
+        #fff;
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.ak-pricing-hero-visual {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 330px;
+}
+
+
+.ak-pricing-hero-image {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 82%;
+
+    max-width: 520px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 17px 28px
+            rgba(11, 43, 120, .10)
+        );
+}
+
+
+/* BLOBS */
+
+.ak-pricing-blob {
+    position: absolute;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.blob-one {
+    width: 340px;
+
+    height: 245px;
+
+    top: 12%;
+
+    right: 17%;
+
+    border-radius:
+        45% 55% 52% 48%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 166, 108, .24),
+            rgba(255, 122, 26, .11)
+        );
+
+    transform:
+        rotate(-8deg);
+}
+
+
+.blob-two {
+    width: 135px;
+
+    height: 135px;
+
+    right: 2%;
+
+    bottom: 10%;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            169,
+            110,
+            .16
+        );
+}
+
+
+.ak-pricing-dots {
+    position:
+        absolute;
+
+    z-index:
+        1;
+
+    top:
+        15%;
+
+    left:
+        6%;
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    opacity:
+        .55;
+
+    background-image:
+        radial-gradient(
+            var(--pricing-orange)
+            1.4px,
+            transparent
+            1.4px
+        );
+
+    background-size:
+        11px 11px;
+}
+
+
+/* FLOAT CARD */
+
+.ak-pricing-float-card {
+    position:
+        absolute;
+
+    z-index:
+        4;
+
+    top:
+        4px;
+
+    right:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    width:
+        160px;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid #edf0f5;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .96
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(11, 43, 120, .09);
+}
+
+
+.float-icon {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    flex:
+        0 0 34px;
+
+    border-radius:
+        50%;
+
+    background:
+        #fff0e7;
+
+    color:
+        var(--pricing-orange);
+
+    font-size:
+        17px;
+}
+
+
+.ak-pricing-float-card strong {
+    display:
+        block;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.05;
+
+    font-weight:
+        800;
+}
+
+
+.ak-pricing-float-card small {
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        var(--pricing-muted);
+
+    font-size:
+        8px;
+
+    line-height:
+        1.35;
+}
+
+
+/* NOTE */
+
+.ak-pricing-note {
+    position:
+        absolute;
+
+    z-index:
+        3;
+
+    right:
+        0;
+
+    bottom:
+        2px;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.35;
+
+    font-style:
+        italic;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+.ak-pricing-note span {
+    display:
+        block;
+
+    margin-left:
+        15px;
+
+    color:
+        var(--pricing-orange);
+
+    font-size:
+        20px;
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.ak-pricing-section {
+    padding:
+        52px 0 38px;
+
+    background:
+        #fff;
+}
+
+
+.ak-pricing-heading {
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+}
+
+
+.ak-pricing-heading h2 {
+    margin:
+        0 0 8px;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        clamp(
+            29px,
+            2.5vw,
+            36px
+        );
+
+    line-height:
+        1.1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -.6px;
+}
+
+
+.ak-pricing-heading h2::after {
+    display:
+        none !important;
+
+    content:
+        none !important;
+}
+
+
+.ak-pricing-heading p {
+    max-width:
+        590px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--pricing-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.ak-pricing-toggle {
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-top:
+        22px;
+}
+
+
+.price-toggle {
+    min-width:
+        95px;
+
+    min-height:
+        37px;
+
+    padding:
+        8px 16px;
+
+    border:
+        1px solid #edf0f5;
+
+    border-radius:
+        999px;
+
+    background:
+        #fff;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        10.5px;
+
+    font-weight:
+        700;
+
+    transition:
+        .2s ease;
+}
+
+
+.price-toggle.active {
+    border-color:
+        var(--pricing-orange);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pricing-orange),
+            var(--pricing-orange-2)
+        );
+
+    color:
+        #fff;
+
+    box-shadow:
+        0 7px 17px
+        rgba(255, 75, 18, .15);
+}
+
+
+.discount-pill {
+    padding:
+        9px 14px;
+
+    border-radius:
+        999px;
+
+    background:
+        #e7f8ea;
+
+    color:
+        #26a44f;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.ak-pricing-cards {
+    margin-top:
+        28px;
+}
+
+
+.ak-price-card {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    height:
+        100%;
+
+    min-height:
+        470px;
+
+    padding:
+        23px 21px 20px;
+
+    border:
+        1px solid
+        var(--pricing-line);
+
+    border-radius:
+        16px;
+
+    background:
+        #fff;
+
+    box-shadow:
+        0 14px 34px
+        rgba(11, 43, 120, .045);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.ak-price-card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(11, 43, 120, .07);
+}
+
+
+.ak-price-card.is-popular {
+    border:
+        1.5px solid
+        var(--pricing-orange);
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf7,
+            #ffffff 25%
+        );
+}
+
+
+.ak-popular-badge {
+    position:
+        absolute;
+
+    top:
+        -15px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    padding:
+        7px 15px;
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pricing-orange),
+            var(--pricing-orange-2)
+        );
+
+    color:
+        #fff;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+    box-shadow:
+        0 7px 17px
+        rgba(255, 75, 18, .16);
+}
+
+
+/* CARD HEADER */
+
+.ak-package-head {
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        12px;
+}
+
+
+.ak-package-icon {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    flex:
+        0 0 43px;
+
+    border-radius:
+        50%;
+
+    background:
+        #fff0e7;
+
+    color:
+        var(--pricing-orange);
+
+    font-size:
+        18px;
+}
+
+
+.is-popular
+.ak-package-icon {
+    background:
+        #eef5ff;
+
+    color:
+        var(--pricing-navy);
+}
+
+
+.ak-package-head h3 {
+    margin:
+        1px 0 4px;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.05;
+
+    font-weight:
+        800;
+}
+
+
+.ak-package-head p {
+    margin:
+        0;
+
+    color:
+        var(--pricing-muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+}
+
+
+/* PRICE */
+
+.ak-package-price {
+    margin:
+        22px 0 19px;
+
+    color:
+        var(--pricing-orange);
+}
+
+
+.ak-package-price strong {
+    font-size:
+        27px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+}
+
+
+.ak-package-price span {
+    margin-left:
+        3px;
+
+    color:
+        var(--pricing-muted);
+
+    font-size:
+        10px;
+
+    font-weight:
+        500;
+}
+
+
+/* FEATURE LIST */
+
+.ak-package-list {
+    flex:
+        1;
+
+    margin:
+        0 0 20px;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+.ak-package-list li {
+    position:
+        relative;
+
+    margin-bottom:
+        9px;
+
+    padding-left:
+        25px;
+
+    color:
+        #526b91;
+
+    font-size:
+        11.5px;
+
+    line-height:
+        1.45;
+}
+
+
+.ak-package-list li::before {
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--pricing-orange);
+
+    color:
+        #fff;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+}
+
+
+/* BUTTON */
+
+.ak-package-button {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        39px;
+
+    padding:
+        8px 15px;
+
+    border:
+        1px solid
+        var(--pricing-orange);
+
+    border-radius:
+        10px;
+
+    background:
+        #fff;
+
+    color:
+        var(--pricing-orange);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+}
+
+
+.ak-package-button:hover {
+    color:
+        var(--pricing-orange);
+
+    background:
+        #fff8f4;
+}
+
+
+.ak-package-button.button-filled {
+    background:
+        linear-gradient(
+            135deg,
+            var(--pricing-orange),
+            var(--pricing-orange-2)
+        );
+
+    color:
+        #fff;
+}
+
+
+/* =========================================================
+   COMPARISON
+========================================================= */
+
+.ak-comparison-section {
+    padding:
+        8px 0 54px;
+
+    background:
+        #fff;
+}
+
+
+.ak-comparison-header {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        12px;
+}
+
+
+.ak-comparison-header h2 {
+    margin:
+        0;
+
+    color:
+        var(--pricing-navy);
+
+    font-size:
+        25px;
+
+    line-height:
+        1.1;
+
+    font-weight:
+        800;
+}
+
+
+.ak-comparison-header h2::after {
+    display:
+        none !important;
+}
+
+
+.ak-comparison-header a {
+    color:
+        var(--pricing-orange);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+}
+
+
+.ak-comparison-table-wrap {
+    overflow-x:
+        auto;
+
+    border:
+        1px solid
+        var(--pricing-line);
+
+    border-radius:
+        10px;
+
+    background:
+        #fff;
+}
+
+
+.ak-comparison-table {
+    width:
+        100%;
+
+    min-width:
+        680px;
+
+    border-collapse:
+        collapse;
+
+    font-size:
+        10px;
+}
+
+
+.ak-comparison-table th,
+.ak-comparison-table td {
+    padding:
+        7px 14px;
+
+    border-bottom:
+        1px solid #edf1f6;
+
+    color:
+        #526b91;
+
+    text-align:
+        center;
+}
+
+
+.ak-comparison-table th:first-child,
+.ak-comparison-table td:first-child {
+    text-align:
+        left;
+}
+
+
+.ak-comparison-table th {
+    background:
+        #f3f7fc;
+
+    color:
+        var(--pricing-navy);
+
+    font-weight:
+        800;
+}
+
+
+.ak-comparison-table
+.highlight-column {
+    background:
+        #fff6f0;
+}
+
+
+/* =========================================================
+   COMPARISON TABLE - DENGAN SEKAT
+========================================================= */
+
+.ak-comparison-table-wrap {
+    overflow-x: auto;
+
+    border: 1px solid #dfe6ef;
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow: 0 8px 24px rgba(11, 43, 120, .035);
+}
+
+.ak-comparison-table {
+    width: 100%;
+    min-width: 680px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    font-size: 11px;
+}
+
+
+/* SEMUA CELL */
+.ak-comparison-table th,
+.ak-comparison-table td {
+    padding: 11px 16px;
+
+    color: #526b91;
+
+    text-align: center;
+
+    /* garis horizontal */
+    border-bottom: 1px solid #e3e9f1;
+
+    /* garis vertikal */
+    border-right: 1px solid #e3e9f1;
+}
+
+
+/* KOLOM PERTAMA */
+.ak-comparison-table th:first-child,
+.ak-comparison-table td:first-child {
+    text-align: left;
+}
+
+
+/* HAPUS GARIS PALING KANAN */
+.ak-comparison-table th:last-child,
+.ak-comparison-table td:last-child {
+    border-right: none;
+}
+
+
+/* HAPUS GARIS PALING BAWAH */
+.ak-comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* HEADER */
+.ak-comparison-table thead th {
+    background: #f4f7fb;
+
+    color: #0b2b78;
+
+    font-weight: 800;
+
+    border-bottom: 1px solid #d9e1ec;
+}
+
+
+/* KOLOM BISNIS */
+.ak-comparison-table .highlight-column {
+    background: #fff5ef;
+}
+
+
+/* HEADER KOLOM BISNIS */
+.ak-comparison-table thead .highlight-column {
+    background: #ffede3;
+
+    color: #ff4b12;
+}
+
+
+/* CHECK */
+.compare-check {
+    display: inline-grid;
+    place-items: center;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    background: #ff4b12;
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* STRIP */
+.compare-empty {
+    color: #aab7c7;
+}
+
+
+
+
+/* =========================================================
+   FAQ HARGA - REVISI LEBIH MIRIP DESIGN
+========================================================= */
+
+.ak-pricing-faq {
+    padding: 20px 0 52px;
+    background: #fff;
+}
+
+.ak-pricing-faq-copy {
+    max-width: 460px;
+}
+
+.ak-faq-copy-inner {
+    position: relative;
+    padding-right: 110px;
+}
+
+.ak-pricing-faq h2 {
+    margin: 0 0 10px;
+    color: #0b2b78;
+    font-size: 34px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.ak-pricing-faq h2::after {
+    display: none !important;
+    content: none !important;
+}
+
+.ak-pricing-faq-copy p {
+    margin: 0;
+    max-width: 430px;
+    color: #667b9d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ak-faq-icon-box {
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+    width: 78px;
+    height: 78px;
+
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #ffd8c7 0%, #ffb08a 100%);
+    box-shadow: 0 14px 30px rgba(255, 90, 22, 0.14);
+
+    transform: rotate(-6deg);
+}
+
+.ak-faq-icon-box span {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* SIDE */
+.ak-price-faq-side {
+    width: 100%;
+}
+
+.ak-price-faq-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.ak-price-faq-top a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #fff2ea 0%, #ffe3d3 100%);
+    color: #ff4b12;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.ak-price-faq-top a:hover {
+    background: linear-gradient(135deg, #ffede3 0%, #ffd5bf 100%);
+    color: #ff4b12;
+}
+
+
+/* LIST BOX */
+.ak-price-faq-list {
+    overflow: hidden;
+    border: 1px solid #e6ecf4;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(11, 43, 120, 0.05);
+}
+
+
+/* ITEM */
+.ak-price-faq-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    min-height: 68px;
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #edf2f7;
+
+    color: #0b2b78;
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.ak-price-faq-item:last-child {
+    border-bottom: none;
+}
+
+.ak-price-faq-item:hover {
+    background: linear-gradient(90deg, #fffaf7 0%, #fff3ec 100%);
+}
+
+.ak-price-faq-item span {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #0b2b78;
+}
+
+.ak-price-faq-item b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+
+    border-radius: 50%;
+    background: #f3f7fd;
+    color: #0b2b78;
+
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.ak-price-faq-item:hover b {
+    background: #ff4b12;
+    color: #fff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991.98px) {
+    .ak-pricing-faq-copy {
+        max-width: 100%;
+    }
+
+    .ak-faq-copy-inner {
+        padding-right: 95px;
+    }
+
+    .ak-price-faq-top {
+        justify-content: flex-start;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ak-pricing-faq {
+        padding: 10px 0 42px;
+    }
+
+    .ak-pricing-faq h2 {
+        font-size: 28px;
+    }
+
+    .ak-pricing-faq-copy p {
+        font-size: 13px;
+    }
+
+    .ak-faq-copy-inner {
+        padding-right: 0;
+        padding-top: 92px;
+    }
+
+    .ak-faq-icon-box {
+        top: 0;
+        left: 0;
+        right: auto;
+
+        width: 68px;
+        height: 68px;
+        border-radius: 20px;
+    }
+
+    .ak-faq-icon-box span {
+        font-size: 36px;
+    }
+
+    .ak-price-faq-item {
+        min-height: 62px;
+        padding: 16px 18px;
+    }
+
+    .ak-price-faq-item span {
+        font-size: 13px;
+    }
+}
+/* ================================
+   FAQ LIST - COMPACT
+================================ */
+
+.ak-price-faq-side {
+    max-width: 560px;
+    margin-left: auto;
+}
+
+.ak-price-faq-list {
+    border-radius: 14px;
+}
+
+.ak-price-faq-item {
+    min-height: 50px;
+
+    padding: 12px 16px;
+}
+
+.ak-price-faq-item span {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.ak-price-faq-item b {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+
+    font-size: 18px;
+}
+
+.ak-price-faq-top {
+    margin-bottom: 8px;
+}
+
+.ak-price-faq-top a {
+    padding: 6px 12px;
+
+    font-size: 10.5px;
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+    min-width: 1400px
+) {
+
+    .ak-pricing-hero-image {
+        max-width:
+            540px;
+    }
+
+}
+
+
+/* LAPTOP */
+
+@media (
+    min-width: 992px
+)
+and (
+    max-width: 1399.98px
+) {
+
+    .ak-pricing-hero {
+        padding:
+            42px 0 38px;
+    }
+
+
+    .ak-pricing-hero-copy h1 {
+        font-size:
+            42px;
+    }
+
+
+    .ak-pricing-hero-image {
+        width:
+            78%;
+
+        max-width:
+            475px;
+    }
+
+
+    .ak-pricing-hero-visual {
+        min-height:
+            300px;
+    }
+
+}
+
+
+/* TABLET */
+
+@media (
+    max-width: 991.98px
+) {
+
+    .ak-pricing-hero-copy {
+        max-width:
+            650px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .ak-pricing-hero-copy h1 {
+        font-size:
+            39px;
+    }
+
+
+    .ak-pricing-hero-copy > p {
+        margin-inline:
+            auto;
+    }
+
+
+    .ak-pricing-benefits {
+        justify-content:
+            center;
+    }
+
+
+    .ak-pricing-hero-visual {
+        max-width:
+            680px;
+
+        min-height:
+            0;
+
+        margin:
+            28px auto 0;
+    }
+
+
+    .ak-pricing-hero-image {
+        max-width:
+            500px;
+    }
+
+
+    .ak-pricing-note {
+        display:
+            none;
+    }
+
+
+    .ak-price-card {
+        min-height:
+            auto;
+    }
+
+
+    .faq-question-icon {
+        display:
+            none;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (
+    max-width: 767.98px
+) {
+
+    .ak-pricing-hero {
+        padding:
+            34px 0;
+    }
+
+
+    .ak-pricing-hero-copy h1 {
+        font-size:
+            33px;
+    }
+
+
+    .ak-pricing-hero-copy > p {
+        font-size:
+            13px;
+    }
+
+
+    .ak-pricing-benefits {
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .ak-pricing-hero-image {
+        width:
+            94%;
+
+        max-width:
+            420px;
+    }
+
+
+    .ak-pricing-float-card {
+        width:
+            140px;
+    }
+
+
+    .ak-pricing-section {
+        padding:
+            42px 0 30px;
+    }
+
+
+    .ak-pricing-heading h2 {
+        font-size:
+            29px;
+    }
+
+
+    .ak-pricing-toggle {
+        flex-wrap:
+            wrap;
+    }
+
+
+    .ak-comparison-header {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+
+    .ak-pricing-faq {
+        padding-bottom:
+            40px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (
+    max-width: 575.98px
+) {
+
+    .ak-pricing-hero-copy h1 {
+        font-size:
+            30px;
+    }
+
+
+    .ak-pricing-float-card {
+        transform:
+            scale(.90);
+
+        right:
+            -5px;
+    }
+
+
+    .ak-package-price strong {
+        font-size:
+            24px;
+    }
+
+
+    .ak-pricing-faq h2 {
+        font-size:
+            26px;
+    }
+
+}
+
+.ak-package-button {
+    gap: 7px;
+}
+
+.ak-package-button i {
+    font-size: 14px;
+}
