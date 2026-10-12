@@ -458,6 +458,7 @@
                     'title' => '5 Tips Mengelola Cash Flow untuk UMKM',
                     'date' => '12 Apr 2024',
                     'views' => '1.2K views',
+                    'slug' => '5-tips-mengelola-keuangan-bisnis-di-era-digital',
                 ],
                 [
                     'image' => 'artikel 2.png',
@@ -465,6 +466,7 @@
                     'title' => 'Pentingnya Laporan Keuangan untuk Pertumbuhan Bisnis',
                     'date' => '10 Apr 2024',
                     'views' => '950 views',
+                    'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
                 ],
                 [
                     'image' => 'artikel 3.png',
@@ -472,6 +474,7 @@
                     'title' => 'Cara Efektif Mengatur Pengeluaran Bisnis',
                     'date' => '08 Apr 2024',
                     'views' => '870 views',
+                    'slug' => 'panduan-lengkap-lapor-pajak-untuk-umkm-2024',
                 ],
             ];
         @endphp
@@ -480,7 +483,7 @@
             @foreach ($articles as $article)
                 <div class="col-md-4">
                     <article class="blog-card">
-                        <a href="{{ url('/blog') }}" class="blog-card-image">
+                        <a href="{{ route('blog.detail', ['slug' => $article['slug']]) }}" class="blog-card-image">
                             <img
                                 src="{{ asset('assets/blog/' . $article['image']) }}"
                                 alt="{{ $article['title'] }}">
@@ -489,7 +492,9 @@
                         <div class="blog-card-body">
                             <span class="blog-category">{{ $article['category'] }}</span>
                             <h3>
-                                <a href="{{ url('/blog') }}">{{ $article['title'] }}</a>
+                                <a href="{{ route('blog.detail', ['slug' => $article['slug']]) }}">
+                                    {{ $article['title'] }}
+                                </a>
                             </h3>
 
                             <div class="blog-meta">
