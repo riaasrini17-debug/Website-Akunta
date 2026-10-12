@@ -1,0 +1,1180 @@
+/* =========================================================
+   AKUNTA LOGIN MODAL
+========================================================= */
+
+#loginModal {
+
+    --login-navy: #0b2b78;
+    --login-orange: #ff4b12;
+    --login-orange-2: #ff7a1a;
+    --login-text: #526b96;
+    --login-muted: #8191ae;
+    --login-line: #dce5f1;
+
+}
+
+
+/* =========================================================
+   BACKDROP
+========================================================= */
+
+.modal-backdrop.show {
+
+    opacity: .52;
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+#loginModal .modal-dialog {
+
+    width: calc(100% - 28px);
+
+    max-width: 515px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#loginModal .auth-login-modal {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(220, 229, 241, .9);
+
+    border-radius: 28px;
+
+    background: #fff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(15, 31, 58, .22);
+
+}
+
+
+/* HILANGKAN HEADER BAWAAN */
+
+#loginModal .modal-header {
+
+    display: none;
+
+}
+
+
+/* BODY */
+
+#loginModal .modal-body {
+
+    padding: 58px 42px 38px;
+
+}
+
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+#loginModal .auth-login-close {
+
+    position: absolute;
+
+    z-index: 20;
+
+    top: 20px;
+    right: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #697386;
+
+    cursor: pointer;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+
+}
+
+
+#loginModal .auth-login-close:hover {
+
+    color: var(--login-orange);
+
+    transform: rotate(4deg);
+
+}
+
+
+#loginModal .auth-login-close svg {
+
+    width: 27px;
+    height: 27px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+}
+
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+#loginModal .auth-login-heading {
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+}
+
+
+#loginModal .auth-login-heading h2 {
+
+    margin: 0 0 1px;
+
+    color: var(--login-navy);
+
+    font-size: 29px;
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -.4px;
+
+}
+
+
+#loginModal .auth-login-brand {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    line-height: 1;
+
+}
+
+
+#loginModal .auth-login-brand .brand-a {
+
+    color: var(--login-orange);
+
+    font-size: 50px;
+
+    font-weight: 800;
+
+}
+
+
+#loginModal .auth-login-brand .brand-kunta {
+
+    color: var(--login-navy);
+
+    font-size: 50px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+#loginModal .auth-login-heading p {
+
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    color: #687da3;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+#loginModal .auth-login-field {
+
+    margin-bottom: 16px;
+
+}
+
+
+#loginModal .auth-login-input-wrap {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* ICON KIRI */
+
+#loginModal .auth-login-input-icon {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 17px;
+
+    top: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 23px;
+    height: 23px;
+
+    color: #667da5;
+
+    pointer-events: none;
+
+    transform: translateY(-50%);
+
+}
+
+
+#loginModal .auth-login-input-icon svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+
+/* INPUT */
+
+#loginModal .auth-login-input-wrap input.form-control {
+
+    width: 100% !important;
+
+    height: 56px;
+
+    padding:
+        0 50px
+        0 52px;
+
+    border:
+        1px solid
+        var(--login-line);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: var(--login-navy);
+
+    font-size: 13.5px;
+
+    font-weight: 500;
+
+    box-shadow: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+#loginModal
+.auth-login-input-wrap
+input.form-control::placeholder {
+
+    color: #98a6bf;
+
+    opacity: 1;
+
+}
+
+
+#loginModal
+.auth-login-input-wrap
+input.form-control:focus {
+
+    border-color:
+        rgba(255, 75, 18, .65);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 75, 18, .07);
+
+}
+
+
+#loginModal
+.auth-login-input-wrap
+input.form-control.is-invalid {
+
+    background-image: none;
+
+    border-color: #dc3545;
+
+}
+
+
+
+/* ERROR */
+
+#loginModal .auth-login-error {
+
+    margin:
+        6px 0 0
+        4px;
+
+    color: #dc3545;
+
+    font-size: 10.5px;
+
+}
+
+
+
+/* =========================================================
+   PASSWORD EYE
+========================================================= */
+
+#loginModal .auth-password-toggle {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+    right: 15px;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #64799f;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+}
+
+
+#loginModal .auth-password-toggle svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+#loginModal .auth-password-toggle .eye-open {
+
+    display: none;
+
+}
+
+
+#loginModal
+.auth-password-toggle.show-password
+.eye-open {
+
+    display: block;
+
+}
+
+
+#loginModal
+.auth-password-toggle.show-password
+.eye-closed {
+
+    display: none;
+
+}
+
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+#loginModal .auth-login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin:
+        5px 0
+        19px;
+
+}
+
+
+
+/* REMEMBER */
+
+#loginModal .auth-login-remember {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0;
+
+    color: #60759b;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+
+#loginModal .auth-login-remember input {
+
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+#loginModal .auth-custom-checkbox {
+
+    position: relative;
+
+    display: block;
+
+    width: 19px;
+    height: 19px;
+
+    flex: 0 0 19px;
+
+    border:
+        1.5px solid
+        #8798b5;
+
+    border-radius: 4px;
+
+    background: #fff;
+
+    transition: .2s ease;
+
+}
+
+
+#loginModal
+.auth-login-remember
+input:checked
++
+.auth-custom-checkbox {
+
+    border-color:
+        var(--login-orange);
+
+    background:
+        var(--login-orange);
+
+}
+
+
+#loginModal
+.auth-login-remember
+input:checked
++
+.auth-custom-checkbox::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+    top: 2px;
+
+    width: 5px;
+    height: 10px;
+
+    border:
+        solid #fff;
+
+    border-width:
+        0 2px 2px 0;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+
+/* FORGOT */
+
+#loginModal .auth-forgot-link {
+
+    color: var(--login-orange);
+
+    font-size: 11.5px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+#loginModal .auth-forgot-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+#loginModal .auth-login-submit {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 11px 20px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            105deg,
+            #ff4b12 0%,
+            #ff6418 55%,
+            #ff8a22 100%
+        );
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 22px
+        rgba(255, 75, 18, .18);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+#loginModal .auth-login-submit:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 13px 27px
+        rgba(255, 75, 18, .24);
+
+}
+
+
+#loginModal .auth-login-submit svg {
+
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+#loginModal .auth-login-divider {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin:
+        26px 0
+        20px;
+
+}
+
+
+#loginModal .auth-login-divider span {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        #dce4ef;
+
+}
+
+
+#loginModal .auth-login-divider p {
+
+    margin: 0;
+
+    color: #61769a;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+}
+
+
+
+/* =========================================================
+   GOOGLE
+========================================================= */
+
+#loginModal .auth-google-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 10px 20px;
+
+    border:
+        1px solid
+        #dce5f1;
+
+    border-radius: 14px;
+
+    background: #fff;
+
+    color: var(--login-navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+#loginModal .auth-google-button:hover {
+
+    border-color:
+        #bac9df;
+
+    background:
+        #fbfcff;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+#loginModal .auth-google-icon {
+
+    width: 23px;
+    height: 23px;
+
+}
+
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+#loginModal .auth-login-register {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+    color: #667b9f;
+
+    font-size: 12.5px;
+
+}
+
+
+#loginModal .auth-login-register-link {
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--login-orange);
+
+    font: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+#loginModal
+.auth-login-register-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media
+(max-width: 575.98px) {
+
+    #loginModal .modal-dialog {
+
+        width:
+            calc(100% - 20px);
+
+        margin:
+            10px auto;
+
+    }
+
+
+    #loginModal .auth-login-modal {
+
+        border-radius: 23px;
+
+    }
+
+
+    #loginModal .modal-body {
+
+        padding:
+            52px 22px 30px;
+
+    }
+
+
+    #loginModal .auth-login-close {
+
+        top: 15px;
+        right: 15px;
+
+    }
+
+
+    #loginModal
+    .auth-login-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    #loginModal
+    .auth-login-heading h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    #loginModal
+    .auth-login-brand
+    .brand-a,
+    #loginModal
+    .auth-login-brand
+    .brand-kunta {
+
+        font-size: 42px;
+
+    }
+
+
+    #loginModal
+    .auth-login-heading p {
+
+        font-size: 12px;
+
+    }
+
+
+    #loginModal
+    .auth-login-input-wrap
+    input.form-control {
+
+        height: 52px;
+
+        font-size: 12.5px;
+
+    }
+
+
+    #loginModal
+    .auth-login-options {
+
+        gap: 10px;
+
+    }
+
+
+    #loginModal
+    .auth-login-remember {
+
+        font-size: 11px;
+
+    }
+
+
+    #loginModal
+    .auth-forgot-link {
+
+        font-size: 10.5px;
+
+    }
+
+
+    #loginModal
+    .auth-login-submit {
+
+        min-height: 51px;
+
+        font-size: 15px;
+
+    }
+
+
+    #loginModal
+    .auth-login-divider {
+
+        margin:
+            22px 0 18px;
+
+    }
+
+
+    #loginModal
+    .auth-google-button {
+
+        min-height: 49px;
+
+    }
+
+}
+
+/* =========================================================
+   LOGIN MODAL - COMPACT OVERRIDE
+   tempel paling bawah login.css
+========================================================= */
+
+#loginModal .modal-dialog {
+    max-width: 440px;
+    width: calc(100% - 30px);
+}
+
+
+/* BODY */
+#loginModal .modal-body {
+    padding: 36px 32px 24px;
+}
+
+
+/* HEADING */
+#loginModal .auth-login-heading {
+    margin-bottom: 20px;
+}
+
+#loginModal .auth-login-heading h2 {
+    font-size: 24px;
+}
+
+
+/* AKUNTA */
+#loginModal .auth-login-brand {
+    margin-bottom: 11px;
+}
+
+#loginModal .auth-login-brand .brand-a,
+#loginModal .auth-login-brand .brand-kunta {
+    font-size: 42px;
+}
+
+
+/* DESKRIPSI */
+#loginModal .auth-login-heading p {
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* JARAK INPUT */
+#loginModal .auth-login-field {
+    margin-bottom: 12px;
+}
+
+
+/* INPUT */
+#loginModal .auth-login-input-wrap input.form-control {
+    height: 48px;
+
+    border-radius: 13px;
+
+    font-size: 12px;
+
+    padding-left: 48px;
+    padding-right: 45px;
+}
+
+
+/* ICON KIRI */
+#loginModal .auth-login-input-icon {
+    left: 15px;
+
+    width: 20px;
+    height: 20px;
+}
+
+#loginModal .auth-login-input-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* ICON MATA */
+#loginModal .auth-password-toggle {
+    right: 11px;
+
+    width: 29px;
+    height: 29px;
+}
+
+#loginModal .auth-password-toggle svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* INGAT SAYA + FORGOT */
+#loginModal .auth-login-options {
+    margin: 2px 0 13px;
+}
+
+#loginModal .auth-login-remember {
+    font-size: 10.5px;
+}
+
+#loginModal .auth-custom-checkbox {
+    width: 17px;
+    height: 17px;
+
+    flex: 0 0 17px;
+}
+
+#loginModal .auth-forgot-link {
+    font-size: 10.5px;
+}
+
+
+/* LOGIN BUTTON */
+#loginModal .auth-login-submit {
+    min-height: 48px;
+
+    font-size: 14px;
+}
+
+#loginModal .auth-login-submit svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* DIVIDER */
+#loginModal .auth-login-divider {
+    margin: 17px 0 13px;
+
+    gap: 10px;
+}
+
+#loginModal .auth-login-divider p {
+    font-size: 10px;
+}
+
+
+/* GOOGLE */
+#loginModal .auth-google-button {
+    min-height: 46px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+}
+
+#loginModal .auth-google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* DAFTAR */
+#loginModal .auth-login-register {
+    margin-top: 14px;
+
+    font-size: 11px;
+}
+
+
+/* CLOSE */
+#loginModal .auth-login-close {
+    top: 14px;
+    right: 14px;
+
+    width: 30px;
+    height: 30px;
+}
+
+#loginModal .auth-login-close svg {
+    width: 23px;
+    height: 23px;
+}
+
