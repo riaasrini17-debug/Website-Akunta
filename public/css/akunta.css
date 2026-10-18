@@ -36,6 +36,97 @@ height:35px;
 
 }
 
+/* =====================================================
+   CTA BUTTON ACTIONS
+===================================================== */
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+/* WHATSAPP BUTTON */
+.cta-wa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 11px 18px !important;
+
+    border: 1px solid #25D366 !important;
+    border-radius: 9px;
+
+    background: #ffffff !important;
+    color: #16a34a !important;
+
+    font-size: 12px !important;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
+}
+
+.cta-wa-btn i {
+    font-size: 16px;
+}
+
+.cta-wa-btn:hover {
+    background: #25D366 !important;
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 211, 102, .22);
+}
+
+
+/* BELI SEKARANG */
+.cta-buy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 11px 20px !important;
+
+    border: 1px solid #ffffff !important;
+    border-radius: 9px;
+
+    background: #ffffff !important;
+    color: var(--orange) !important;
+
+    font-size: 12px !important;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.cta-buy-btn:hover {
+    color: var(--orange) !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, .10);
+}
 
 
 

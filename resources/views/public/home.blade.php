@@ -51,11 +51,6 @@
                         </a>
                     </div>
 
-                    <div class="hero-benefits">
-                        <span><b>✓</b> Mudah digunakan</span>
-                        <span><b>✓</b> Aman & terpercaya</span>
-                        <span><b>✓</b> Didukung tim profesional</span>
-                    </div>
                 </div>
             </div>
 
@@ -206,8 +201,8 @@
                 ['logo' => 'karya-indah.png', 'name' => 'Karya Indah'],
                 ['logo' => 'solusi-kreatif.png', 'name' => 'Solusi Kreatif'],
                 ['logo' => 'maju-bersama.png', 'name' => 'Maju Bersama'],
-                ['logo' => 'chuyu.png', 'name' => 'Chuyu'],
-                ['logo' => 'bali.png', 'name' => 'Bali District'],
+                ['logo' => 'chuyu-logo.png', 'name' => 'Chuyu'],
+                ['logo' => 'bali-district-logo.png', 'name' => 'Bali District'],
                 ['logo' => 'oris.png', 'name' => 'Oris Cake'],
                 ['logo' => 'getup.jpg', 'name' => 'Get Up'],
                 ['logo' => 'roti.png', 'name' => 'Roti Manis'],
@@ -254,10 +249,6 @@
                         alt="Tim Akunta sedang berdiskusi"
                         class="img-fluid">
 
-                    <div class="about-floating-card">
-                        <span class="about-floating-icon">↗</span>
-                        <span>Membantu bisnis<br><strong>tumbuh lebih cepat</strong></span>
-                    </div>
                 </div>
             </div>
 
@@ -365,8 +356,13 @@
     <div class="container">
         <div class="ak-section-heading text-center">
             <span class="ak-eyebrow">APA KATA MEREKA?</span>
+
             <h2>Dipercaya oleh Banyak Pengguna</h2>
-            <p>Simak pengalaman mereka yang telah menggunakan Akunta.</p>
+
+            <p>
+                Simak pengalaman mereka yang telah menggunakan Akunta.
+            </p>
+
         </div>
 
         @php
@@ -429,6 +425,18 @@
                 </div>
             </div>
         </div>
+        <a
+                href="https://share.google/lebTiWo6BehcvA4Oa"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ak-google-review-btn">
+
+                <i class="bi bi-google"></i>
+
+                Lihat Review di Google
+
+                <span>→</span>
+            </a>
     </div>
 </section>
 
@@ -456,83 +464,355 @@
                     'image' => 'artikel 1.png',
                     'category' => 'Akuntansi',
                     'title' => '5 Tips Mengelola Cash Flow untuk UMKM',
+                    'excerpt' => 'Pelajari tips praktis mengelola arus kas agar keuangan bisnis tetap sehat dan terkontrol.',
                     'date' => '12 Apr 2024',
-                    'views' => '1.2K views',
                     'slug' => '5-tips-mengelola-keuangan-bisnis-di-era-digital',
                 ],
                 [
                     'image' => 'artikel 2.png',
                     'category' => 'Keuangan',
                     'title' => 'Pentingnya Laporan Keuangan untuk Pertumbuhan Bisnis',
+                    'excerpt' => 'Pahami pentingnya laporan keuangan dalam membantu bisnis berkembang secara lebih terarah.',
                     'date' => '10 Apr 2024',
-                    'views' => '950 views',
                     'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
                 ],
                 [
                     'image' => 'artikel 3.png',
                     'category' => 'Tips Bisnis',
                     'title' => 'Cara Efektif Mengatur Pengeluaran Bisnis',
+                    'excerpt' => 'Pelajari cara mengatur pengeluaran bisnis agar lebih efisien dan kondisi keuangan tetap stabil.',
                     'date' => '08 Apr 2024',
-                    'views' => '870 views',
                     'slug' => 'panduan-lengkap-lapor-pajak-untuk-umkm-2024',
                 ],
             ];
         @endphp
 
-        <div class="row g-3 g-lg-4">
+        <div class="row g-4">
+
             @foreach ($articles as $article)
-                <div class="col-md-4">
+
+                <div class="col-lg-4 col-md-6">
+
                     <article class="blog-card">
-                        <a href="{{ route('blog.detail', ['slug' => $article['slug']]) }}" class="blog-card-image">
+
+                        {{-- seluruh card clickable --}}
+                        <a
+                            href="{{ route('blog.detail', ['slug' => $article['slug']]) }}"
+                            class="blog-card-full-link"
+                            aria-label="Baca artikel {{ $article['title'] }}">
+                        </a>
+
+
+                        {{-- IMAGE --}}
+                        <div class="blog-card-image">
+
                             <img
                                 src="{{ asset('assets/blog/' . $article['image']) }}"
                                 alt="{{ $article['title'] }}">
-                        </a>
 
+                            <span class="blog-category">
+                                {{ $article['category'] }}
+                            </span>
+
+                        </div>
+
+
+                        {{-- CONTENT --}}
                         <div class="blog-card-body">
-                            <span class="blog-category">{{ $article['category'] }}</span>
+
                             <h3>
-                                <a href="{{ route('blog.detail', ['slug' => $article['slug']]) }}">
-                                    {{ $article['title'] }}
-                                </a>
+                                {{ $article['title'] }}
                             </h3>
 
-                            <div class="blog-meta">
-                                <span>◷ {{ $article['date'] }}</span>
-                                <span>•</span>
-                                <span>◉ {{ $article['views'] }}</span>
+                            <p class="blog-card-excerpt">
+                                {{ $article['excerpt'] }}
+                            </p>
+
+
+                            <div class="blog-card-footer">
+
+                                <div class="blog-meta">
+                                    <span>{{ $article['date'] }}</span>
+                                </div>
+
+                                <span class="blog-card-arrow">
+                                    →
+                                </span>
+
                             </div>
+
                         </div>
+
                     </article>
+
                 </div>
+
             @endforeach
+
         </div>
     </div>
 </section>
 
 
 {{-- =====================================================
-    FAQ TEASER
+    FAQ HOME
 ===================================================== --}}
-<section class="ak-faq-teaser">
-    <div class="container">
-        <div class="faq-teaser-card">
-            <div class="faq-teaser-icon" aria-hidden="true">?</div>
 
-            <div class="faq-teaser-copy">
-                <h2>Masih punya pertanyaan <span>tentang Akunta?</span></h2>
-                <p>
-                    Temukan jawaban seputar fitur, keamanan, paket, dan penggunaan Akunta.
-                </p>
+<section class="home-faq-section">
+
+    <div class="container">
+
+        <div class="home-faq-layout">
+
+
+            {{-- =================================================
+                LEFT CONTENT
+            ================================================= --}}
+
+            <div class="home-faq-left">
+
+                <span class="home-faq-eyebrow">
+                    PERTANYAAN SEPUTAR AKUNTA
+                </span>
+
+
+                <div class="home-faq-left-grid">
+
+
+                    {{-- COPY --}}
+                    <div class="home-faq-copy">
+
+                        <h2>
+                            Masih Punya
+                            <span>Pertanyaan?</span>
+                        </h2>
+
+
+                        <p>
+                            Temukan jawaban seputar fitur, harga,
+                            keamanan, pembayaran, dan penggunaan
+                            Akunta yang paling sering ditanyakan.
+                        </p>
+
+                    </div>
+
+
+
+                    {{-- DECORATION --}}
+                    <div
+                        class="home-faq-visual"
+                        aria-hidden="true">
+
+                        <span class="home-faq-orbit"></span>
+
+                        <span class="home-faq-dot home-faq-dot-one"></span>
+                        <span class="home-faq-dot home-faq-dot-two"></span>
+
+                        <span class="home-faq-line line-one"></span>
+                        <span class="home-faq-line line-two"></span>
+                        <span class="home-faq-line line-three"></span>
+
+
+                        <span class="home-faq-card-back"></span>
+
+
+                        <div class="home-faq-question-card">
+
+                            <span>?</span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
-            <a href="{{ url('/faq') }}" class="btn faq-teaser-btn">
-                Lihat FAQ <span>→</span>
-            </a>
-        </div>
-    </div>
-</section>
 
+
+            {{-- =================================================
+                RIGHT FAQ
+            ================================================= --}}
+
+            <div class="home-faq-right">
+
+
+                {{-- BUTTON --}}
+                <div class="home-faq-top">
+
+                    <a
+                        href="{{ route('faq') }}"
+                        class="home-faq-all">
+
+                        Lihat Semua FAQ
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+
+
+                {{-- FAQ LIST --}}
+                <div class="home-faq-list">
+
+
+                    {{-- FAQ 1 --}}
+                    <details class="home-faq-item">
+
+                        <summary>
+
+                            <span class="home-faq-question">
+                                Apa itu Akunta?
+                            </span>
+
+                            <span class="home-faq-plus">
+                                +
+                            </span>
+
+                        </summary>
+
+
+                        <div class="home-faq-answer">
+
+                            Akunta adalah solusi digital yang membantu
+                            bisnis mengelola kebutuhan administrasi dan
+                            keuangan secara lebih terstruktur, praktis,
+                            dan efisien.
+
+                        </div>
+
+                    </details>
+
+
+
+                    {{-- FAQ 2 --}}
+                    <details class="home-faq-item">
+
+                        <summary>
+
+                            <span class="home-faq-question">
+                                Bagaimana cara membuat akun di Akunta?
+                            </span>
+
+                            <span class="home-faq-plus">
+                                +
+                            </span>
+
+                        </summary>
+
+
+                        <div class="home-faq-answer">
+
+                            Anda dapat membuat akun melalui fitur
+                            pendaftaran yang tersedia. Lengkapi informasi
+                            yang dibutuhkan kemudian ikuti proses
+                            pendaftaran sampai selesai.
+
+                        </div>
+
+                    </details>
+
+
+
+                    {{-- FAQ 3 --}}
+                    <details class="home-faq-item">
+
+                        <summary>
+
+                            <span class="home-faq-question">
+                                Apakah Akunta bisa digunakan secara gratis?
+                            </span>
+
+                            <span class="home-faq-plus">
+                                +
+                            </span>
+
+                        </summary>
+
+
+                        <div class="home-faq-answer">
+
+                            Akunta menyediakan pilihan layanan yang dapat
+                            disesuaikan dengan kebutuhan bisnis. Informasi
+                            paket dan masa percobaan dapat dilihat pada
+                            halaman Harga.
+
+                        </div>
+
+                    </details>
+
+
+
+                    {{-- FAQ 4 --}}
+                    <details class="home-faq-item">
+
+                        <summary>
+
+                            <span class="home-faq-question">
+                                Fitur apa saja yang tersedia di Akunta?
+                            </span>
+
+                            <span class="home-faq-plus">
+                                +
+                            </span>
+
+                        </summary>
+
+
+                        <div class="home-faq-answer">
+
+                            Akunta menyediakan berbagai fitur seperti
+                            pencatatan keuangan, invoicing, laporan bisnis,
+                            pengelolaan transaksi, serta fitur pendukung
+                            operasional lainnya.
+
+                        </div>
+
+                    </details>
+
+
+
+                    {{-- FAQ 5 --}}
+                    <details class="home-faq-item">
+
+                        <summary>
+
+                            <span class="home-faq-question">
+                                Bagaimana cara membuat invoice di Akunta?
+                            </span>
+
+                            <span class="home-faq-plus">
+                                +
+                            </span>
+
+                        </summary>
+
+
+                        <div class="home-faq-answer">
+
+                            Invoice dapat dibuat melalui fitur invoicing
+                            dengan memasukkan informasi pelanggan,
+                            transaksi, nominal pembayaran, dan detail
+                            lainnya yang diperlukan.
+
+                        </div>
+
+                    </details>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 {{-- =====================================================
     CTA GLOBAL
