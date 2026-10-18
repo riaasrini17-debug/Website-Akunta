@@ -680,21 +680,7 @@
 }
 
 
-.ak-about-intro-card > span {
 
-    display: block;
-
-    width: 27px;
-    height: 3px;
-
-    margin-top: 12px;
-
-    border-radius: 10px;
-
-    background:
-        var(--about-orange);
-
-}
 
 
 
@@ -807,335 +793,375 @@
 
 
 
-/* =========================================================
-   VALUES
-========================================================= */
+/* =========================================
+   NILAI-NILAI KAMI
+========================================= */
 
 .ak-about-values {
-
     position: relative;
-
     overflow: hidden;
 
-    padding: 36px 0 43px;
+    padding: 48px 0 52px;
 
     background:
-        linear-gradient(
-            180deg,
-            #fff,
-            #fffdfc
-        );
-
+        radial-gradient(circle at 8% 30%, rgba(255, 122, 26, 0.10), transparent 18%),
+        radial-gradient(circle at 92% 78%, rgba(255, 122, 26, 0.09), transparent 20%),
+        linear-gradient(180deg, #fffdfb 0%, #fff8f4 100%);
 }
 
-
-.ak-about-section-heading {
-
-    position: relative;
-
-    z-index: 3;
-
-    max-width: 720px;
-
-    margin:
-        0 auto 24px;
-
-    text-align: center;
-
-}
-
-
-.ak-about-section-heading h2 {
-
-    margin: 0 0 9px;
-
-    color: var(--about-navy);
-
-    font-size: 27px;
-    line-height: 1.18;
-
-    font-weight: 800;
-
-}
-
-
-.ak-about-section-heading p {
-
-    max-width: 620px;
-
-    margin: 0 auto;
-
-    color: #637696;
-
-    font-size: 10.5px;
-    line-height: 1.55;
-
-}
-
-
-/* BACKGROUND SHAPES */
-
-.ak-values-decoration {
-
+.ak-about-values::before,
+.ak-about-values::after {
+    content: "";
     position: absolute;
-
-    width: 190px;
-    height: 255px;
-
     border-radius: 50%;
-
-    background:
-        rgba(255, 122, 26, .08);
-
+    pointer-events: none;
+    z-index: 0;
 }
 
-
-.ak-values-left {
-
-    left: -120px;
-
-    top: 55px;
-
+.ak-about-values::before {
+    width: 220px;
+    height: 220px;
+    left: -90px;
+    top: 90px;
+    background: rgba(255, 122, 26, 0.10);
 }
 
-
-.ak-values-right {
-
-    right: -115px;
-
-    top: 100px;
-
+.ak-about-values::after {
+    width: 260px;
+    height: 260px;
+    right: -110px;
+    bottom: 40px;
+    background: rgba(255, 122, 26, 0.08);
 }
 
-
-/* CARD */
-
-.ak-about-value-card {
-
+.ak-about-values .container {
     position: relative;
+    z-index: 2;
+}
 
-    z-index: 3;
+.ak-about-values .ak-about-section-head {
+    max-width: 900px;
+    margin: 0 auto 38px;
+}
+
+.ak-about-values .ak-about-section-head .ak-about-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ff5a1f;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.ak-about-values .ak-about-section-head h2 {
+    margin-bottom: 8px;
+    color: #0b2b78;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.ak-about-values .ak-about-section-head p {
+    max-width: 880px;
+    margin: 0 auto;
+    color: #5f7396;
+    font-size: 11.5px;
+    line-height: 1.5;
+}
+
+.ak-about-values-row {
+    margin-top: 10px;
+}
+
+/* CARD NILAI - COMPACT */
+.ak-about-value-card-wide {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 
     height: 100%;
+    min-height: 96px;
 
-    min-height: 170px;
+    padding: 16px 20px;
 
-    padding: 17px 19px;
-
-    border:
-        1px solid
-        #dde6f0;
-
-    border-radius: 11px;
+    border: 1px solid #dfe7f3;
+    border-radius: 16px;
 
     background: #fff;
-
-    box-shadow:
-        0 8px 22px
-        rgba(11, 43, 120, .035);
 
     transition:
         transform .2s ease,
         box-shadow .2s ease;
-
 }
 
-
-.ak-about-value-card:hover {
-
-    transform: translateY(-3px);
+.ak-about-value-card-wide:hover {
+    transform: translateY(-2px);
 
     box-shadow:
-        0 12px 28px
-        rgba(11, 43, 120, .07);
-
+        0 10px 24px rgba(11, 43, 120, .06);
 }
 
 
-.ak-about-value-icon {
-
+/* ICON */
+.ak-about-value-card-wide .ak-about-value-icon {
     display: grid;
-
     place-items: center;
 
-    width: 46px;
-    height: 46px;
+    width: 58px;
+    height: 58px;
 
-    margin-bottom: 11px;
+    flex: 0 0 58px;
+
+    margin: 0;
 
     border-radius: 50%;
 
     background: #fff0e8;
-
     color: var(--about-orange);
+}
 
+.ak-about-value-card-wide .ak-about-value-icon svg {
+    width: 27px;
+    height: 27px;
 }
 
 
-.ak-about-value-icon svg {
-
-    width: 24px;
-    height: 24px;
-
-    fill: none;
-
-    stroke: currentColor;
-
-    stroke-width: 1.9;
-
-    stroke-linecap: round;
-
-    stroke-linejoin: round;
-
+/* CONTENT */
+.ak-about-value-content {
+    flex: 1;
+    min-width: 0;
 }
 
 
-.ak-about-value-card h3 {
-
+/* TITLE */
+.ak-about-value-content h3 {
     margin: 0 0 6px;
 
     color: var(--about-navy);
 
-    font-size: 13px;
+    font-size: 19px;
+    line-height: 1.2;
 
     font-weight: 800;
-
 }
 
 
-.ak-about-value-card p {
-
+/* DESCRIPTION */
+.ak-about-value-content p {
     margin: 0;
 
     color: #5b7195;
 
-    font-size: 10px;
-    line-height: 1.5;
-
+    font-size: 12px;
+    line-height: 1.55;
 }
 
 
 
 /* =========================================================
-   TIMELINE
+   TIMELINE / PERJALANAN KAMI - FINAL
+   Heading tengah + timeline tengah + garis tersambung
 ========================================================= */
 
 .ak-about-timeline {
+    position: relative;
+    overflow: hidden;
 
-    padding: 36px 0 34px;
+    padding: 48px 0 52px;
 
-    background: #fff;
-
+    background: #ffffff;
 }
-
-
-.ak-about-timeline-copy {
-
-    max-width: 360px;
-
-}
-
-
-.ak-about-timeline-copy h2 {
-
-    max-width: 355px;
-
-    margin: 0 0 12px;
-
-    color: var(--about-navy);
-
-    font-size: 28px;
-    line-height: 1.12;
-
-    font-weight: 800;
-
-    letter-spacing: -.4px;
-
-}
-
-
-.ak-about-timeline-copy p {
-
-    max-width: 350px;
-
-    margin: 0;
-
-    color: #5c7194;
-
-    font-size: 10.5px;
-    line-height: 1.55;
-
-}
-
 
 
 /* =========================================================
-   TIMELINE RIGHT
+   HEADING
+========================================================= */
+
+.ak-about-timeline-copy {
+    width: 100%;
+    max-width: 820px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+
+/* EYEBROW */
+
+.ak-about-timeline-copy .ak-about-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--about-orange);
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+
+/* TITLE */
+
+.ak-about-timeline-copy h2 {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto 12px;
+
+    color: var(--about-navy);
+
+    font-size: 30px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+
+    text-align: center;
+}
+
+.ak-about-timeline-copy h2 span {
+    color: var(--about-orange);
+}
+
+
+/* DESCRIPTION */
+
+.ak-about-timeline-copy p {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: #5c7194;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TIMELINE WRAPPER
 ========================================================= */
 
 .ak-timeline {
-
     position: relative;
 
-    padding-top: 12px;
+    width: 100%;
+    max-width: 1440px;
 
+    margin: 0 auto;
+
+    padding-top: 8px;
 }
 
+
+/*
+   Garis lama dimatikan.
+   Garis sekarang dibuat dari masing-masing item
+   supaya pasti tersambung tepat antar titik.
+*/
 
 .ak-timeline-line {
-
-    position: absolute;
-
-    z-index: 1;
-
-    top: 20px;
-
-    left: 0;
-
-    right: 0;
-
-    height: 2px;
-
-    background:
-        #ff9f73;
-
+    display: none !important;
 }
 
 
+/* =========================================================
+   GRID
+========================================================= */
+
 .ak-timeline-grid {
-
     position: relative;
-
-    z-index: 2;
 
     display: grid;
 
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 38px;
 
+    width: 100%;
 }
 
+
+/* =========================================================
+   ITEM
+========================================================= */
 
 .ak-timeline-item {
-
     position: relative;
 
+    min-width: 0;
+
+    text-align: center;
 }
 
 
+/* =========================================================
+   GARIS ANTAR TITIK
+========================================================= */
+
+.ak-timeline-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 1;
+
+    /*
+       Tepat di tengah tinggi dot 17px
+    */
+    top: 8px;
+
+    /*
+       Mulai dari tengah item / tengah dot
+    */
+    left: 50%;
+
+    /*
+       Lebar 1 kolom + gap 38px,
+       sehingga berhenti tepat di tengah dot berikutnya
+    */
+    width: calc(100% + 38px);
+
+    height: 2px;
+
+    background: #ff9f73;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
 .ak-timeline-dot {
+    position: relative;
+
+    z-index: 3;
 
     display: block;
 
     width: 17px;
     height: 17px;
 
-    margin-bottom: 15px;
+    margin:
+        0 auto
+        16px;
 
-    border:
-        3px solid #fff;
+    border: 3px solid #ffffff;
 
     border-radius: 50%;
 
@@ -1145,73 +1171,296 @@
     box-shadow:
         0 0 0 2px
         var(--about-orange);
-
 }
 
 
-.ak-timeline-item h3 {
+/* =========================================================
+   YEAR
+========================================================= */
 
-    margin: 0 0 6px;
+.ak-timeline-item h3 {
+    margin: 0 0 5px;
 
     color: var(--about-orange);
 
     font-size: 18px;
+    line-height: 1.2;
 
     font-weight: 800;
 
+    text-align: center;
 }
 
 
-.ak-timeline-item h4 {
+/* =========================================================
+   ITEM TITLE
+========================================================= */
 
-    margin: 0 0 5px;
+.ak-timeline-item h4 {
+    margin: 0 0 6px;
 
     color: var(--about-navy);
 
-    font-size: 10.5px;
+    font-size: 11px;
+    line-height: 1.35;
 
     font-weight: 800;
 
+    text-align: center;
 }
 
 
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
 .ak-timeline-item p {
+    width: 100%;
+    max-width: 230px;
 
-    max-width: 170px;
-
-    margin: 0;
+    margin: 0 auto;
 
     color: #607494;
 
     font-size: 9.5px;
-    line-height: 1.45;
+    line-height: 1.55;
 
+    text-align: center;
 }
-
 
 
 /* =========================================================
-   1200 - 1399
+   LAPTOP
 ========================================================= */
 
 @media
-(min-width: 1200px)
+(min-width: 992px)
 and
-(max-width: 1399.98px) {
+(max-width: 1199.98px) {
 
-    .ak-about-hero-copy h1 {
-
-        font-size: 43px;
-
+    .ak-about-timeline {
+        padding:
+            44px 0 48px;
     }
 
-    .ak-about-hero-image {
 
-        width: 90%;
+    .ak-about-timeline-copy {
+        max-width: 720px;
 
+        margin-bottom: 38px;
+    }
+
+
+    .ak-about-timeline-copy h2 {
+        max-width: 680px;
+
+        font-size: 28px;
+    }
+
+
+    .ak-about-timeline-copy p {
+        font-size: 10.5px;
+    }
+
+
+    .ak-timeline-grid {
+        gap: 28px;
+    }
+
+
+    .ak-timeline-item:not(:last-child)::after {
+        width:
+            calc(100% + 28px);
+    }
+
+
+    .ak-timeline-item p {
+        max-width: 200px;
     }
 
 }
+
+
+/* =========================================================
+   TABLET / IPAD
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .ak-about-timeline {
+        padding:
+            40px 0 44px;
+    }
+
+
+    .ak-about-timeline-copy {
+        max-width: 650px;
+
+        margin-bottom: 34px;
+    }
+
+
+    .ak-about-timeline-copy h2 {
+        max-width: 600px;
+
+        font-size: 26px;
+    }
+
+
+    .ak-about-timeline-copy p {
+        max-width: 570px;
+
+        font-size: 10.5px;
+    }
+
+
+    .ak-timeline-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            32px 24px;
+    }
+
+
+    /*
+       Hilangkan garis 4 kolom desktop
+    */
+
+    .ak-timeline-item::after {
+        display: none;
+    }
+
+
+    /*
+       Buat garis antara item 1 -> 2
+       dan item 3 -> 4
+    */
+
+    .ak-timeline-item:nth-child(odd)::after {
+        content: "";
+
+        display: block;
+
+        position: absolute;
+
+        z-index: 1;
+
+        top: 8px;
+        left: 50%;
+
+        width:
+            calc(100% + 24px);
+
+        height: 2px;
+
+        background:
+            #ff9f73;
+
+        transform:
+            translateY(-50%);
+    }
+
+
+    .ak-timeline-item p {
+        max-width: 260px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .ak-about-timeline {
+        padding:
+            34px 0 38px;
+    }
+
+
+    .ak-about-timeline-copy {
+        margin-bottom: 30px;
+    }
+
+
+    .ak-about-timeline-copy .ak-about-eyebrow {
+        font-size: 9px;
+    }
+
+
+    .ak-about-timeline-copy h2 {
+        max-width: 360px;
+
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+
+    .ak-about-timeline-copy p {
+        max-width: 330px;
+
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+
+    .ak-timeline-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+
+    .ak-timeline-item {
+        position: relative;
+
+        padding-bottom: 0;
+
+        text-align: center;
+    }
+
+
+    /*
+       Di HP tidak memakai garis horizontal
+    */
+
+    .ak-timeline-item::after,
+    .ak-timeline-item:nth-child(odd)::after {
+        display: none;
+    }
+
+
+    .ak-timeline-dot {
+        margin:
+            0 auto
+            12px;
+    }
+
+
+    .ak-timeline-item h3 {
+        font-size: 17px;
+    }
+
+
+    .ak-timeline-item h4 {
+        font-size: 11px;
+    }
+
+
+    .ak-timeline-item p {
+        max-width: 290px;
+
+        font-size: 9.5px;
+    }
+
+}
+
+
 
 
 
