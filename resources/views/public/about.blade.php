@@ -312,8 +312,6 @@
                             lebih maju
                         </p>
 
-                        <span></span>
-
                     </div>
 
                 </div>
@@ -416,280 +414,191 @@
     NILAI KAMI
 ===================================================== --}}
 <section class="ak-about-values">
-
-    <span class="ak-values-decoration ak-values-left"></span>
-    <span class="ak-values-decoration ak-values-right"></span>
-
-
     <div class="container">
-
-        <div class="ak-about-section-heading">
-
-            <span class="ak-about-eyebrow">
-                NILAI-NILAI KAMI
-            </span>
-
-            <h2>
-                Prinsip yang Membimbing Setiap Langkah Kami
-            </h2>
-
+        <div class="ak-about-section-head text-center">
+            <span class="ak-about-eyebrow">Nilai-Nilai Kami</span>
+            <h2>Prinsip yang Membimbing Setiap Langkah Kami</h2>
             <p>
-                Nilai-nilai ini menjadi fondasi dalam setiap keputusan,
-                inovasi, dan layanan yang kami berikan untuk pelanggan,
-                tim, dan masyarakat.
+                Nilai-nilai ini menjadi fondasi dalam setiap keputusan, inovasi,
+                dan layanan yang kami berikan untuk pelanggan, tim, dan masyarakat.
             </p>
-
         </div>
 
+        <div class="row g-2 ak-about-values-row">
 
-        <div class="row g-4">
-
-
-            {{-- CUSTOMER FIRST --}}
-            <div class="col-xl-3 col-md-6">
-
-                <article class="ak-about-value-card">
-
+            {{-- Card 1 --}}
+            <div class="col-lg-6">
+                <div class="ak-about-value-card ak-about-value-card-wide">
                     <div class="ak-about-value-icon">
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="8" cy="8" r="3"></circle>
-                            <circle cx="17" cy="9" r="2"></circle>
-                            <path d="M3 20c0-4 2.3-7 5-7s5 3 5 7"></path>
-                            <path d="M14 14c3.5 0 6 2.2 6 5.5"></path>
-                        </svg>
-
+                        <i class="bi bi-people"></i>
                     </div>
-
-                    <h3>Customer First</h3>
-
-                    <p>
-                        Kami selalu menempatkan kebutuhan pelanggan
-                        sebagai prioritas utama.
-                    </p>
-
-                </article>
-
+                    <div class="ak-about-value-content">
+                        <h3>Customer First</h3>
+                        <p>
+                            Kami selalu menempatkan kebutuhan pelanggan sebagai
+                            prioritas utama.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-
-
-            {{-- INNOVATION --}}
-            <div class="col-xl-3 col-md-6">
-
-                <article class="ak-about-value-card">
-
+            {{-- Card 2 --}}
+            <div class="col-lg-6">
+                <div class="ak-about-value-card ak-about-value-card-wide">
                     <div class="ak-about-value-icon">
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M9 18h6"></path>
-                            <path d="M10 22h4"></path>
-                            <path d="M8 15c-2-1.3-3-3.3-3-5.5A7 7 0 0112 2a7 7 0 017 7.5c0 2.2-1 4.2-3 5.5-1 .7-1 1.6-1 3H9c0-1.4 0-2.3-1-3z"></path>
-                        </svg>
-
+                        <i class="bi bi-lightbulb"></i>
                     </div>
-
-                    <h3>Innovation</h3>
-
-                    <p>
-                        Kami terus berinovasi menghadirkan solusi
-                        yang lebih baik.
-                    </p>
-
-                </article>
-
+                    <div class="ak-about-value-content">
+                        <h3>Innovation</h3>
+                        <p>
+                            Kami terus berinovasi menghadirkan solusi yang lebih baik.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-
-
-            {{-- INTEGRITY --}}
-            <div class="col-xl-3 col-md-6">
-
-                <article class="ak-about-value-card">
-
+            {{-- Card 3 --}}
+            <div class="col-lg-6">
+                <div class="ak-about-value-card ak-about-value-card-wide">
                     <div class="ak-about-value-icon">
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-
+                        <i class="bi bi-shield-check"></i>
                     </div>
-
-                    <h3>Integrity</h3>
-
-                    <p>
-                        Kami menjunjung tinggi kejujuran dan tanggung
-                        jawab dalam setiap tindakan.
-                    </p>
-
-                </article>
-
+                    <div class="ak-about-value-content">
+                        <h3>Integrity</h3>
+                        <p>
+                            Kami menjunjung tinggi kejujuran dan tanggung jawab
+                            dalam setiap tindakan.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-
-
-            {{-- IMPACT --}}
-            <div class="col-xl-3 col-md-6">
-
-                <article class="ak-about-value-card">
-
+            {{-- Card 4 --}}
+            <div class="col-lg-6">
+                <div class="ak-about-value-card ak-about-value-card-wide">
                     <div class="ak-about-value-icon">
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M5 20v-5"></path>
-                            <path d="M10 20V10"></path>
-                            <path d="M15 20V6"></path>
-                            <path d="M20 20V3"></path>
-                        </svg>
-
+                        <i class="bi bi-bar-chart"></i>
                     </div>
-
-                    <h3>Impact</h3>
-
-                    <p>
-                        Kami berkomitmen memberikan dampak positif bagi bisnis,
-                        masyarakat, dan ekosistem di Indonesia.
-                    </p>
-
-                </article>
-
+                    <div class="ak-about-value-content">
+                        <h3>Impact</h3>
+                        <p>
+                            Kami berkomitmen memberikan dampak positif bagi bisnis,
+                            masyarakat, dan ekosistem di Indonesia.
+                        </p>
+                    </div>
+                </div>
             </div>
-
 
         </div>
-
     </div>
-
 </section>
 
 
 
 {{-- =====================================================
-    TIMELINE
+    TIMELINE / PERJALANAN KAMI
 ===================================================== --}}
+
 <section class="ak-about-timeline">
 
     <div class="container">
 
-        <div class="row align-items-start g-5">
+        {{-- HEADING --}}
+        <div class="ak-about-timeline-copy">
+
+            <span class="ak-about-eyebrow">
+                PERJALANAN KAMI
+            </span>
+
+            <h2>
+                Langkah Demi Langkah untuk
+                <span>Dampak yang Lebih Besar</span>
+            </h2>
+
+            <p>
+                Perjalanan Akunta adalah cerita tentang inovasi,
+                kepercayaan, dan komitmen untuk selalu memberikan
+                solusi terbaik bagi pelanggan kami.
+            </p>
+
+        </div>
 
 
-            {{-- LEFT --}}
-            <div class="col-lg-4">
+        {{-- TIMELINE --}}
+        <div class="ak-timeline">
 
-                <div class="ak-about-timeline-copy">
+            <span class="ak-timeline-line"></span>
 
-                    <span class="ak-about-eyebrow">
-                        PERJALANAN KAMI
-                    </span>
+            <div class="ak-timeline-grid">
 
-                    <h2>
-                        Langkah Demi Langkah
-                        untuk Dampak yang
-                        Lebih Besar
-                    </h2>
+                {{-- 2020 --}}
+                <article class="ak-timeline-item">
+
+                    <span class="ak-timeline-dot"></span>
+
+                    <h3>2020</h3>
+
+                    <h4>Awal Mula</h4>
 
                     <p>
-                        Perjalanan Akunta adalah cerita tentang inovasi,
-                        kepercayaan, dan komitmen untuk selalu memberikan
-                        solusi terbaik bagi pelanggan kami.
+                        Akunta didirikan dengan visi membantu bisnis
+                        Indonesia mengelola keuangan dengan lebih mudah.
                     </p>
 
-                </div>
+                </article>
+
+
+                {{-- 2021 --}}
+                <article class="ak-timeline-item">
+
+                    <span class="ak-timeline-dot"></span>
+
+                    <h3>2021</h3>
+
+                    <h4>Meluncurkan Produk</h4>
+
+                    <p>
+                        Versi pertama Akunta resmi diluncurkan dan mulai
+                        digunakan oleh ratusan bisnis UMKM.
+                    </p>
+
+                </article>
+
+
+                {{-- 2023 --}}
+                <article class="ak-timeline-item">
+
+                    <span class="ak-timeline-dot"></span>
+
+                    <h3>2023</h3>
+
+                    <h4>Tumbuh Lebih Besar</h4>
+
+                    <p>
+                        Dipercaya oleh lebih dari 10.000 bisnis
+                        di seluruh Indonesia.
+                    </p>
+
+                </article>
+
+
+                {{-- 2024 --}}
+                <article class="ak-timeline-item">
+
+                    <span class="ak-timeline-dot"></span>
+
+                    <h3>2024</h3>
+
+                    <h4>Terus Melangkah</h4>
+
+                    <p>
+                        Terus mengembangkan inovasi baru untuk memberikan
+                        dampak lebih besar bagi ekosistem bisnis.
+                    </p>
+
+                </article>
 
             </div>
-
-
-
-            {{-- RIGHT --}}
-            <div class="col-lg-8">
-
-                <div class="ak-timeline">
-
-                    <span class="ak-timeline-line"></span>
-
-
-                    <div class="ak-timeline-grid">
-
-
-                        {{-- 2020 --}}
-                        <article class="ak-timeline-item">
-
-                            <span class="ak-timeline-dot"></span>
-
-                            <h3>2020</h3>
-
-                            <h4>Awal Mula</h4>
-
-                            <p>
-                                Akunta didirikan dengan visi membantu bisnis
-                                Indonesia mengelola keuangan dengan lebih mudah.
-                            </p>
-
-                        </article>
-
-
-
-                        {{-- 2021 --}}
-                        <article class="ak-timeline-item">
-
-                            <span class="ak-timeline-dot"></span>
-
-                            <h3>2021</h3>
-
-                            <h4>Meluncurkan Produk</h4>
-
-                            <p>
-                                Versi pertama Akunta resmi diluncurkan dan
-                                mulai digunakan oleh ratusan bisnis UMKM.
-                            </p>
-
-                        </article>
-
-
-
-                        {{-- 2023 --}}
-                        <article class="ak-timeline-item">
-
-                            <span class="ak-timeline-dot"></span>
-
-                            <h3>2023</h3>
-
-                            <h4>Tumbuh Lebih Besar</h4>
-
-                            <p>
-                                Dipercaya oleh lebih dari 10.000 bisnis
-                                di seluruh Indonesia.
-                            </p>
-
-                        </article>
-
-
-
-                        {{-- 2024 --}}
-                        <article class="ak-timeline-item">
-
-                            <span class="ak-timeline-dot"></span>
-
-                            <h3>2024</h3>
-
-                            <h4>Terus Melangkah</h4>
-
-                            <p>
-                                Terus mengembangkan inovasi baru untuk memberikan
-                                dampak lebih besar bagi ekosistem bisnis.
-                            </p>
-
-                        </article>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
 
         </div>
 
