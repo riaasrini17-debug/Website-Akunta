@@ -392,38 +392,6 @@
 
 
 
-{{-- =====================================================
-    CATEGORY
-===================================================== --}}
-
-<section class="ak-feature-category">
-
-    <div class="container">
-
-        <div class="ak-feature-category-box">
-
-            @foreach($categories as $index => $category)
-
-                <a
-                    href="{{ $category['target'] }}"
-                    class="ak-feature-category-item {{ $index === 0 ? 'active' : '' }}">
-
-                    <i class="bi {{ $category['icon'] }}"></i>
-
-                    <span>
-                        {{ $category['title'] }}
-                    </span>
-
-                </a>
-
-            @endforeach
-
-        </div>
-
-    </div>
-
-</section>
-
 
 @php
     $highlightSlides = [
@@ -666,6 +634,8 @@
 
 
 
+
+
 {{-- =====================================================
     ALL FEATURES
 ===================================================== --}}
@@ -693,6 +663,37 @@
 
         </div>
 
+        {{-- =====================================================
+            CATEGORY
+        ===================================================== --}}
+
+        <section class="ak-feature-category">
+
+            <div class="container">
+
+                <div class="ak-feature-category-box">
+
+                    @foreach($categories as $index => $category)
+
+                        <a
+                            href="{{ $category['target'] }}"
+                            class="ak-feature-category-item {{ $index === 0 ? 'active' : '' }}">
+
+                            <i class="bi {{ $category['icon'] }}"></i>
+
+                            <span>
+                                {{ $category['title'] }}
+                            </span>
+
+                        </a>
+
+                    @endforeach
+
+                </div>
+
+            </div>
+
+        </section>
 
         <div class="row g-3">
 
@@ -810,9 +811,7 @@
                             {{ $item['text'] }}
                         </p>
 
-                        <span class="ak-setting-arrow">
-                            →
-                        </span>
+                        
 
                     </a>
 
@@ -1102,7 +1101,7 @@ let isAnimating = false;
 
             changeSlide(currentSlide + 1);
 
-        }, 5500);
+        }, 3500);
 
     }
 
