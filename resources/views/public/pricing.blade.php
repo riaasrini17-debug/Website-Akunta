@@ -159,18 +159,7 @@
                         alt="Dashboard Akunta"
                         class="ak-pricing-hero-image">
 
-                    <div class="ak-pricing-float-card">
-
-                        <span class="float-icon">
-                            ▥
-                        </span>
-
-                        <div>
-                            <strong>10.000+</strong>
-                            <small>Bisnis sudah berkembang bersama Akunta</small>
-                        </div>
-
-                    </div>
+                    
 
                     <div class="ak-pricing-note">
                         Kelola bisnis<br>
