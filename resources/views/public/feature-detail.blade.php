@@ -42,10 +42,10 @@
             </div>
 
 
-            <div class="row align-items-center gy-4 gx-lg-5">
+            <div class="row align-items-center gy-4 gx-lg-4">
 
                 {{-- LEFT --}}
-                <div class="col-lg-5">
+                <div class="col-lg-6">
 
                     <div class="ak-fd-hero-copy">
 
@@ -125,7 +125,7 @@
 
 
                 {{-- RIGHT --}}
-                <div class="col-lg-7">
+                <div class="col-lg-6">
 
                     <div class="ak-fd-hero-visual">
 
@@ -143,11 +143,6 @@
                         </div>
 
 
-                        <div class="ak-fd-float-icon {{ $feature['color'] }}">
-
-                            <i class="bi {{ $feature['icon'] }}"></i>
-
-                        </div>
 
                     </div>
 
@@ -244,7 +239,7 @@
 
         <div class="container">
 
-            <div class="ak-fd-section-heading left">
+            <div class="ak-fd-section-heading">
 
                 <span>
                     FITUR DI DALAMNYA

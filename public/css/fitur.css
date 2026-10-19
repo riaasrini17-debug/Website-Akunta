@@ -496,6 +496,8 @@ html {
 
     padding: 0;
 
+    margin-bottom: 28px;
+
     background: #fff;
 }
 
@@ -1535,49 +1537,82 @@ html {
 
 
 /* =========================================================
-   ADVANTAGES
+   ADVANTAGES / MENGAPA MEMILIH AKUNTA
 ========================================================= */
 
 .ak-feature-advantages {
-    padding: 29px 0 31px;
+    position: relative;
+
+    width: 100%;
+    margin: 0;
+
+    padding: 38px 0 42px;
 
     background:
         radial-gradient(
             circle at 3% 50%,
-            rgba(255,122,26,.07),
-            transparent 18%
+            rgba(255, 122, 26, .09),
+            transparent 19%
         ),
         radial-gradient(
-            circle at 96% 30%,
-            rgba(255,122,26,.07),
-            transparent 18%
+            circle at 97% 30%,
+            rgba(255, 122, 26, .09),
+            transparent 20%
         ),
         linear-gradient(
             105deg,
-            #fffaf7,
-            #fff2ea
+            #fffaf7 0%,
+            #fff1e8 100%
         );
 }
 
+.ak-feature-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.ak-feature-advantages {
+    left: 0;
+    right: 0;
+    max-width: none;
+}
+
+
+/* =========================
+   HEADING
+========================= */
 
 .ak-advantages-heading {
-    max-width: 720px;
+    max-width: 760px;
 
     margin:
-        0 auto 18px;
+        0 auto 25px;
 
     text-align: center;
 }
 
 
+.ak-advantages-heading .ak-feature-eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: .16em;
+}
+
+
 .ak-advantages-heading h2 {
-    margin: 0 0 5px;
+    margin: 0 0 8px;
 
     color: var(--fitur-navy);
 
-    font-size: 25px;
+    font-size: 30px;
+    line-height: 1.15;
 
     font-weight: 800;
+
+    letter-spacing: -.4px;
 }
 
 
@@ -1589,11 +1624,16 @@ html {
 .ak-advantages-heading p {
     margin: 0;
 
-    color: #6b7e9c;
+    color: #617697;
 
-    font-size: 9.5px;
+    font-size: 11.5px;
+    line-height: 1.55;
 }
 
+
+/* =========================
+   GRID
+========================= */
 
 .ak-advantages-grid {
     display: grid;
@@ -1601,43 +1641,56 @@ html {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 9px;
+    gap: 12px;
 }
 
+
+/* =========================
+   CARD
+========================= */
 
 .ak-advantage-card {
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 13px;
 
-    min-height: 79px;
+    min-height: 96px;
 
-    padding: 12px 13px;
+    padding: 16px 17px;
 
     border:
-        1px solid #efe4dc;
+        1px solid #eadfd8;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
-    background: rgba(255,255,255,.95);
+    background:
+        rgba(255, 255, 255, .96);
+
+    box-shadow:
+        0 6px 18px
+        rgba(11, 43, 120, .035);
 }
 
+
+/* =========================
+   ICON
+========================= */
 
 .ak-advantage-icon {
     display: grid;
 
     place-items: center;
 
-    width: 39px;
-    height: 39px;
+    width: 45px;
+    height: 45px;
 
-    flex: 0 0 39px;
+    flex: 0 0 45px;
 
     border-radius: 50%;
 
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -1665,12 +1718,17 @@ html {
 }
 
 
+/* =========================
+   TEXT CARD
+========================= */
+
 .ak-advantage-card h3 {
-    margin: 0 0 3px;
+    margin: 0 0 5px;
 
     color: var(--fitur-navy);
 
-    font-size: 10px;
+    font-size: 12.5px;
+    line-height: 1.3;
 
     font-weight: 800;
 }
@@ -1679,13 +1737,11 @@ html {
 .ak-advantage-card p {
     margin: 0;
 
-    color: #6d809f;
+    color: #667b9c;
 
-    font-size: 8px;
-
-    line-height: 1.4;
+    font-size: 9.5px;
+    line-height: 1.5;
 }
-
 
 
 /* =========================================================
@@ -1980,33 +2036,9 @@ html {
         rgba(11, 43, 120, .08);
 }
 
-.ak-setting-card:hover .ak-setting-arrow {
-    background: var(--fitur-orange);
-    color: #fff;
-    transform: translateX(3px);
-}
 
-.ak-setting-arrow {
-    position: absolute;
 
-    left: 12px;
-    bottom: 9px;
 
-    display: grid;
-    place-items: center;
-
-    width: 22px;
-    height: 22px;
-
-    border: 1px solid #ffbfa8;
-    border-radius: 50%;
-
-    color: var(--fitur-orange);
-
-    font-size: 11px;
-
-    transition: .2s ease;
-}
 
 .ak-feature-card-link-wrapper {
     display: block;
