@@ -18,7 +18,8 @@
     --detail-soft-2: #fffaf7;
     --detail-blue-soft: #f5f8ff;
 
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 
     color: var(--detail-text);
 
@@ -820,8 +821,10 @@
 
 .ak-detail-sidebar {
     position: sticky;
+    top: 110px;
 
-    top: 95px;
+    height: fit-content;
+    align-self: flex-start;
 }
 
 
@@ -1016,146 +1019,21 @@
         rgba(255,75,18,.17);
 }
 
+.ak-detail-help-card {
+    margin-bottom: 20px;
+    padding: 20px;
 
-/* =========================================================
-   POPULAR ARTICLE
-========================================================= */
+    border: 1px solid #ffd8c5;
+    border-radius: 20px;
 
-/* =========================================================
-   FAQ SIDEBAR
-========================================================= */
-
-.ak-detail-faq {
-    padding: 22px 24px;
+    background:
+        linear-gradient(
+            145deg,
+            #fff8f3,
+            #fff1e7
+        );
 }
 
-
-/* LIST */
-
-.ak-detail-faq-list {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* ITEM */
-
-.ak-detail-faq-item {
-    border-bottom: 1px solid #e7edf5;
-}
-
-.ak-detail-faq-item:last-child {
-    border-bottom: none;
-}
-
-
-/* QUESTION */
-
-.ak-detail-faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 18px;
-
-    width: 100%;
-
-    padding: 15px 0;
-
-    border: none;
-
-    background: transparent;
-
-    color: var(--detail-navy);
-
-    font-size: 13px;
-    line-height: 1.4;
-
-    font-weight: 700;
-
-    text-align: left;
-
-    cursor: pointer;
-}
-
-
-/* PLUS */
-
-.ak-detail-faq-plus {
-    display: grid;
-    place-items: center;
-
-    width: 32px;
-    height: 32px;
-
-    flex: 0 0 32px;
-
-    border-radius: 50%;
-
-    background: #f2f6fd;
-
-    color: var(--detail-navy);
-
-    font-size: 18px;
-    line-height: 1;
-
-    font-weight: 500;
-
-    transition: .25s ease;
-}
-
-
-/* ANSWER */
-
-.ak-detail-faq-answer {
-    max-height: 0;
-
-    overflow: hidden;
-
-    opacity: 0;
-
-    transition:
-        max-height .3s ease,
-        opacity .25s ease,
-        padding .3s ease;
-}
-
-.ak-detail-faq-answer p {
-    margin: 0;
-
-    color: #607596;
-
-    font-size: 12px;
-    line-height: 1.65;
-}
-
-
-/* ACTIVE */
-
-.ak-detail-faq-item.active
-.ak-detail-faq-answer {
-    max-height: 180px;
-
-    padding-bottom: 15px;
-
-    opacity: 1;
-}
-
-.ak-detail-faq-item.active
-.ak-detail-faq-plus {
-    background: #fff0e7;
-
-    color: var(--detail-orange);
-
-    transform: rotate(45deg);
-}
-
-
-/* HOVER */
-
-.ak-detail-faq-question:hover {
-    color: var(--detail-orange);
-}
 
 
 /* =========================================================
@@ -1243,7 +1121,7 @@
     color:
         var(--detail-navy);
 
-    font-size: 9px;
+    font-size: 12px;
 
     font-weight: 800;
 
