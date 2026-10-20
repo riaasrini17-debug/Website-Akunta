@@ -782,29 +782,24 @@ class SiteController extends Controller
         $data = $request->validate([
             'name' => 'required|string|max:100',
             'email' => 'required|email|max:150',
+            'business_type' => 'nullable|in:umkm,retail,jasa,lainnya',
             'phone' => 'required|string|max:30',
-            'subject' => 'required|string|max:100',
             'message' => 'required|string|max:1500',
         ]);
 
-
         $messages = session('contact_messages', []);
-
 
         $data['created_at'] = now()->format('d M Y H:i');
 
-
         $messages[] = $data;
-
 
         session([
             'contact_messages' => $messages
         ]);
 
-
         return back()->with(
             'success',
-            'Pesan berhasil disimpan sementara di session.'
+            'Pesan berhasil dikirim.'
         );
     }
 
