@@ -63,20 +63,60 @@
 
 
             {{-- KONTAK --}}
-            <div class="col-lg-2 col-md-4 col-12">
+            <div class="col-lg-2 col-md-4 col-12 footer-contact">
+
                 <h6>Hubungi Kami</h6>
 
-                <a href="tel:+6281234567890">
-                    +62 812-3456-7890
+                <a
+                    href="tel:+6281234567890"
+                    class="footer-contact-item">
+
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </span>
+
+                    <span>+62 812-3456-7890</span>
+
                 </a>
 
-                <a href="mailto:halo@akunta.id">
-                    halo@akunta.id
+
+                <a
+                    href="mailto:halo@akunta.id"
+                    class="footer-contact-item">
+
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+
+                    <span>halo@akunta.id</span>
+
                 </a>
 
-                <p>Jakarta, Indonesia</p>
-                <p>09.00 - 18.00 WIB</p>
+
+                <div class="footer-contact-item">
+
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </span>
+
+                    <span>Jakarta, Indonesia</span>
+
+                </div>
+
+
+                <div class="footer-contact-item">
+
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-clock"></i>
+                    </span>
+
+                    <span>09.00 - 18.00 WIB</span>
+
+                </div>
+
             </div>
+
+            
 
         </div>
 
