@@ -43,6 +43,8 @@
                     'pricing' => 'Harga',
                     'portfolio' => 'Portofolio',
                     'blog' => 'Blog',
+                    'faq' => 'FAQ',
+                    'contact' => 'Kontak'
                 ] as $r => $label)
 
                     <li class="nav-item">
@@ -59,37 +61,6 @@
 
                 @endforeach
 
-
-
-                {{-- FAQ --}}
-                <li class="nav-item">
-
-                    <a
-                        id="navFaq"
-                        class="nav-link"
-                        href="{{ route('faq') }}#faq">
-
-                        FAQ
-
-                    </a>
-
-                </li>
-
-
-
-                {{-- KONTAK --}}
-                <li class="nav-item">
-
-                    <a
-                        id="navContact"
-                        class="nav-link"
-                        href="{{ route('faq') }}#contact">
-
-                        Kontak
-
-                    </a>
-
-                </li>
 
 
             </ul>
@@ -162,82 +133,4 @@
 
 
 
-{{-- =====================================================
-    ACTIVE FAQ / CONTACT NAVBAR
-===================================================== --}}
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-    const faqLink =
-        document.getElementById('navFaq');
-
-    const contactLink =
-        document.getElementById('navContact');
-
-
-    function updateHelpNavigation() {
-
-        if (!faqLink || !contactLink) {
-            return;
-        }
-
-
-        faqLink.classList.remove('active-akunta');
-        contactLink.classList.remove('active-akunta');
-
-
-        /*
-         * Hanya berlaku saat berada
-         * di halaman /faq
-         */
-        if (window.location.pathname !== '/faq') {
-            return;
-        }
-
-
-        const hash =
-            window.location.hash;
-
-
-        /* FAQ */
-        if (hash === '#faq') {
-
-            faqLink.classList.add('active-akunta');
-
-        }
-
-        /* KONTAK */
-        else if (
-            hash === '#contact' ||
-            hash === '#contactName'
-        ) {
-
-            contactLink.classList.add('active-akunta');
-
-        }
-
-        /*
-         * Kalau buka /faq tanpa hash,
-         * karena section pertama adalah Kontak,
-         * maka Kontak dibuat aktif.
-         */
-        else {
-
-            contactLink.classList.add('active-akunta');
-
-        }
-
-    }
-
-
-    updateHelpNavigation();
-
-
-    window.addEventListener(
-        'hashchange',
-        updateHelpNavigation
-    );
-
-});
-</script>
+    
