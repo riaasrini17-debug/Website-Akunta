@@ -63,14 +63,9 @@
                         <div class="ak-detail-meta">
 
                             <span>
-                                <i>▣</i>
                                 {{ $article['date'] }}
                             </span>
 
-                            <span>
-                                <i>◉</i>
-                                {{ $article['views'] }} views
-                            </span>
 
                             <span>
                                 <i>◷</i>
@@ -127,32 +122,6 @@
                             <img
                                 src="{{ asset('assets/blog/' . $article['image']) }}"
                                 alt="{{ $article['title'] }}">
-                        </div>
-
-
-                        <div class="ak-detail-float-icon">
-                            ▥
-                        </div>
-
-
-                        <div class="ak-detail-float-card">
-
-                            <div class="ak-detail-float-bulb">
-                                ◉
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Kelola Keuangan
-                                </strong>
-
-                                <span>
-                                    Lebih Mudah
-                                </span>
-
-                            </div>
-
                         </div>
 
 
@@ -323,35 +292,7 @@
                     <aside class="ak-detail-sidebar">
 
 
-                        {{-- TABLE OF CONTENT --}}
-                        <div class="ak-detail-sidebar-card ak-detail-toc">
-
-                            <div class="ak-detail-sidebar-heading">
-
-                                <h3>
-                                    Daftar Isi
-                                </h3>
-
-                            </div>
-
-
-                            <nav>
-
-                                @foreach($article['content'] as $index => $content)
-
-                                    <a
-                                        class="{{ $index === 0 ? 'active' : '' }}"
-                                        href="#artikel-{{ $index + 1 }}">
-
-                                        {{ $index + 1 }}. {{ $content['heading'] }}
-
-                                    </a>
-
-                                @endforeach
-
-                            </nav>
-
-                        </div>
+                        
 
 
 
@@ -381,112 +322,6 @@
                                 <span>→</span>
 
                             </button>
-
-                        </div>
-
-
-
-                        {{-- POPULAR --}}
-                        {{-- FAQ SIDEBAR --}}
-                        <div class="ak-detail-sidebar-card ak-detail-faq">
-
-                            <div class="ak-detail-sidebar-heading">
-
-                                <span class="ak-detail-sidebar-icon">
-                                    ?
-                                </span>
-
-                                <h3>Pertanyaan Umum</h3>
-
-                            </div>
-
-
-                            <div class="ak-detail-faq-list">
-
-                                <div class="ak-detail-faq-item">
-
-                                    <button type="button" class="ak-detail-faq-question">
-                                        <span>
-                                            Kapan bisnis perlu menggunakan software akuntansi?
-                                        </span>
-
-                                        <span class="ak-detail-faq-plus">+</span>
-                                    </button>
-
-                                    <div class="ak-detail-faq-answer">
-                                        <p>
-                                            Software akuntansi mulai dibutuhkan ketika transaksi bisnis
-                                            semakin banyak dan pencatatan manual mulai sulit dikelola
-                                            secara konsisten.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="ak-detail-faq-item">
-
-                                    <button type="button" class="ak-detail-faq-question">
-                                        <span>
-                                            Seberapa sering arus kas perlu dipantau?
-                                        </span>
-
-                                        <span class="ak-detail-faq-plus">+</span>
-                                    </button>
-
-                                    <div class="ak-detail-faq-answer">
-                                        <p>
-                                            Arus kas sebaiknya dipantau secara rutin agar pemasukan,
-                                            pengeluaran, dan kebutuhan operasional bisnis tetap
-                                            terkendali.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="ak-detail-faq-item">
-
-                                    <button type="button" class="ak-detail-faq-question">
-                                        <span>
-                                            Kenapa keuangan pribadi dan bisnis harus dipisah?
-                                        </span>
-
-                                        <span class="ak-detail-faq-plus">+</span>
-                                    </button>
-
-                                    <div class="ak-detail-faq-answer">
-                                        <p>
-                                            Pemisahan rekening membuat pencatatan lebih jelas,
-                                            mempermudah evaluasi bisnis, dan menghindari tercampurnya
-                                            transaksi pribadi dengan transaksi usaha.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="ak-detail-faq-item">
-
-                                    <button type="button" class="ak-detail-faq-question">
-                                        <span>
-                                            Apa manfaat teknologi digital untuk keuangan bisnis?
-                                        </span>
-
-                                        <span class="ak-detail-faq-plus">+</span>
-                                    </button>
-
-                                    <div class="ak-detail-faq-answer">
-                                        <p>
-                                            Teknologi digital membantu mempercepat pencatatan,
-                                            pemantauan transaksi, pembuatan laporan, dan pengambilan
-                                            keputusan berdasarkan data.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                         </div>
 
@@ -610,7 +445,7 @@
                                 <div class="ak-detail-related-meta">
 
                                     <span>
-                                        ▣ {{ $item['date'] }}
+                                        {{ $item['date'] }}
                                     </span>
 
                                     <span>
@@ -648,36 +483,7 @@
 
 @include('public.partials.cta')
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
 
-    const faqItems =
-        document.querySelectorAll('.ak-detail-faq-item');
-
-    faqItems.forEach(function (item) {
-
-        const button =
-            item.querySelector('.ak-detail-faq-question');
-
-        button.addEventListener('click', function () {
-
-            const isActive =
-                item.classList.contains('active');
-
-            faqItems.forEach(function (faq) {
-                faq.classList.remove('active');
-            });
-
-            if (!isActive) {
-                item.classList.add('active');
-            }
-
-        });
-
-    });
-
-});
-</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

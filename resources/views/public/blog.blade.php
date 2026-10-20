@@ -19,7 +19,6 @@
             'category' => 'Akuntansi',
             'image' => 'artikel 1.png',
             'date' => '12 Apr 2024',
-            'views' => '1.2K',
             'excerpt' => 'Pelajari insight praktis untuk membantu bisnis berkembang lebih terstruktur dan efisien di era digital.',
         ],
 
@@ -29,7 +28,6 @@
             'category' => 'Keuangan',
             'image' => 'artikel 2.png',
             'date' => '12 Apr 2024',
-            'views' => '1.2K',
             'excerpt' => 'Pelajari strategi efektif dalam mengelola arus kas agar bisnis tetap sehat dan siap berkembang.',
         ],
 
@@ -39,7 +37,6 @@
             'category' => 'Pajak',
             'image' => 'artikel 3.png',
             'date' => '10 Apr 2024',
-            'views' => '950',
             'excerpt' => 'Pelajari langkah-langkah praktis dalam melaporkan pajak usaha dengan benar dan lebih mudah.',
         ],
 
@@ -56,7 +53,6 @@
             'category' => 'Keuangan',
             'image' => 'artikel 2.png',
             'date' => '12 Apr 2024',
-            'views' => '1.2K',
             'excerpt' => 'Pelajari strategi efektif dalam mengelola arus kas agar bisnis tetap sehat dan siap berkembang.',
         ],
 
@@ -66,7 +62,6 @@
             'category' => 'Pajak',
             'image' => 'artikel 3.png',
             'date' => '10 Apr 2024',
-            'views' => '950',
             'excerpt' => 'Pelajari langkah-langkah praktis dalam melaporkan pajak usaha dengan benar dan lebih mudah.',
         ],
 
@@ -76,7 +71,6 @@
             'category' => 'Tips Bisnis',
             'image' => 'artikel 4.png',
             'date' => '08 Apr 2024',
-            'views' => '870',
             'excerpt' => 'Temukan strategi efektif untuk mempertahankan dan mengembangkan bisnis di tengah persaingan.',
         ],
 
@@ -86,7 +80,6 @@
             'category' => 'Produk',
             'image' => 'artikel 5.png',
             'date' => '06 Apr 2024',
-            'views' => '825',
             'excerpt' => 'Kenali berbagai fitur Akunta yang dirancang untuk membuat pengelolaan bisnis menjadi lebih praktis.',
         ],
 
@@ -96,7 +89,6 @@
             'category' => 'Panduan',
             'image' => 'artikel 6.png',
             'date' => '04 Apr 2024',
-            'views' => '790',
             'excerpt' => 'Panduan menyusun rencana bisnis yang realistis dan terukur untuk mendukung pertumbuhan usaha.',
         ],
 
@@ -106,7 +98,6 @@
             'category' => 'Akuntansi',
             'image' => 'artikel 1.png',
             'date' => '02 Apr 2024',
-            'views' => '760',
             'excerpt' => 'Kenali kesalahan umum dalam pembukuan dan langkah sederhana untuk menghindarinya.',
         ],
 
@@ -208,18 +199,7 @@
                         class="ak-blog-hero-image">
 
 
-                    <div class="ak-blog-float-card">
-
-                        <div class="ak-blog-float-icon">
-                            <i class="bi bi-journal-text"></i>
-                        </div>
-
-                        <div>
-                            <strong>Pengetahuan</strong>
-                            <span>untuk bisnis yang lebih maju</span>
-                        </div>
-
-                    </div>
+                   
 
                 </div>
 
@@ -233,58 +213,7 @@
 
 
 
-{{-- =====================================================
-    SEARCH + CATEGORY
-===================================================== --}}
 
-<section class="ak-blog-filter">
-
-    <div class="container">
-
-
-        <form class="ak-blog-search" action="#" method="GET">
-
-            <span class="ak-search-icon">
-                ⌕
-            </span>
-
-            <input
-                type="search"
-                name="search"
-                placeholder="Cari artikel, topik, atau kata kunci..."
-                aria-label="Cari artikel">
-
-            <button type="submit">
-                Cari
-            </button>
-
-        </form>
-
-
-
-        <div class="ak-blog-category">
-
-            @foreach($categories as $index => $category)
-
-                <button
-                    type="button"
-                    class="ak-category-button {{ $index === 0 ? 'active' : '' }}">
-
-                    <span class="ak-category-icon">
-                        <i class="bi {{ $category['icon'] }}"></i>
-                    </span>
-
-                    {{ $category['name'] }}
-
-                </button>
-
-            @endforeach
-
-        </div>
-
-    </div>
-
-</section>
 
 
 
@@ -353,11 +282,7 @@
                         <div class="ak-featured-meta">
 
                             <span id="featuredDate">
-                                ◫ {{ $featured['date'] }}
-                            </span>
-
-                            <span id="featuredViews">
-                                ◉ {{ $featured['views'] }} views
+                                {{ $featured['date'] }}
                             </span>
 
                             <span>
@@ -438,6 +363,39 @@
 
         </div>
 
+        {{-- =====================================================
+            SEARCH + CATEGORY
+        ===================================================== --}}
+
+        <section class="ak-blog-filter">
+
+            <div class="container">
+
+
+
+                <div class="ak-blog-category">
+
+                    @foreach($categories as $index => $category)
+
+                        <button
+                            type="button"
+                            class="ak-category-button {{ $index === 0 ? 'active' : '' }}">
+
+                            <span class="ak-category-icon">
+                                <i class="bi {{ $category['icon'] }}"></i>
+                            </span>
+
+                            {{ $category['name'] }}
+
+                        </button>
+
+                    @endforeach
+
+                </div>
+
+            </div>
+
+        </section>
 
 
         <div class="row g-4">
@@ -487,12 +445,10 @@
                                 <div class="ak-article-meta">
 
                                     <span>
-                                        ▣ {{ $blog['date'] }}
+                                        {{ $blog['date'] }}
                                     </span>
 
-                                    <span>
-                                        ◉ {{ $blog['views'] }}
-                                    </span>
+                                    
 
                                 </div>
 
@@ -634,7 +590,6 @@
         const excerpt = document.getElementById('featuredExcerpt');
         const category = document.getElementById('featuredCategory');
         const date = document.getElementById('featuredDate');
-        const views = document.getElementById('featuredViews');
         const readMore = document.getElementById('featuredReadMore');
         const dots = document.querySelectorAll('#featuredDots button');
 
@@ -645,7 +600,6 @@
             !excerpt ||
             !category ||
             !date ||
-            !views ||
             !readMore ||
             posts.length === 0
         ) {
@@ -685,11 +639,8 @@
                 excerpt.textContent = post.excerpt;
                 category.textContent = post.category;
 
-                date.textContent =
-                    '▣ ' + post.date;
+                date.textContent = post.date;
 
-                views.textContent =
-                    '◉ ' + post.views + ' views';
 
                 const articleUrl =
                     "{{ url('/blog') }}/" + post.slug;
@@ -733,7 +684,7 @@
 
                 nextSlide();
 
-            }, 7000);
+            }, 5000);
 
         }
 
