@@ -2073,6 +2073,45 @@ and
 
 @media (max-width: 767.98px) {
 
+    @media (max-width: 767.98px) {
+
+    .ak-home-hero .row {
+        display: flex;
+        flex-direction: column;
+
+        /* hilangkan gap bawaan Bootstrap g-4 */
+        --bs-gutter-y: 0;
+    }
+
+    /* GAMBAR */
+    .ak-home-hero .row > div:nth-child(2) {
+        order: 1;
+        margin-top: 0 !important;
+    }
+
+    /* TEKS */
+    .ak-home-hero .row > div:nth-child(1) {
+        order: 2;
+
+        /* tarik teks mendekati gambar */
+        margin-top: -30px !important;
+    }
+
+    .ak-home-hero .hero-visual {
+        margin: 0 auto;
+        min-height: 0;
+        transform: none;
+    }
+
+    .ak-home-hero .hero-dashboard-img {
+        display: block;
+        width: 90%;
+        max-width: 390px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
     .home-faq-section {
         padding:
             44px 0;
@@ -2592,17 +2631,78 @@ and
         font-size: 13.5px;
     }
 
-    .ak-feature-grid {
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-    }
-
+/* CARD LEBIH KECIL */
     .ak-feature-card {
-        min-height: 0;
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        grid-template-rows: auto auto;
 
-        padding: 15px;
+        align-items: center;
+
+        column-gap: 8px;
+        row-gap: 8px;
+
+        min-height: 125px;
+
+        padding: 12px 11px;
+
+        border-radius: 10px;
     }
+
+
+    /* Supaya h3 & p bisa ikut grid utama */
+    .ak-feature-card > div {
+        display: contents;
+    }
+
+
+    /* ICON KIRI */
+    .ak-feature-icon {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 34px;
+        height: 34px;
+
+        flex: none;
+
+        margin: 0;
+
+        border-radius: 50%;
+    }
+
+    .ak-feature-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* JUDUL DI SAMPING ICON */
+    .ak-feature-card h3 {
+        grid-column: 2;
+        grid-row: 1;
+
+        align-self: center;
+
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.15;
+        font-weight: 800;
+    }
+
+
+    /* DESKRIPSI DI BAWAH */
+    .ak-feature-card p {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        margin: 0;
+
+        font-size: 11.2px;
+        line-height: 1.45;
+    }
+
 
     .trusted-intro h2 {
         font-size: 30px;
@@ -2657,11 +2757,173 @@ and
         transform-origin: center;
     }
 
-    .blog-heading {
-        flex-direction: column;
-        align-items: flex-start;
+    /* SECTION BLOG */
+    .ak-blog-section {
+        padding: 42px 0 44px;
+    }
 
-        gap: 10px;
+    /* HEADING */
+    .blog-heading {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .blog-heading > div {
+        width: 100%;
+    }
+
+    .blog-heading .ak-eyebrow {
+        display: block;
+        margin-bottom: 7px;
+
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .blog-heading h2 {
+        max-width: 330px;
+        margin: 0 auto;
+
+        font-size: 25px;
+        line-height: 1.08;
+        text-align: center;
+    }
+
+    /* Kalau mau link "Lihat Semua Artikel" disembunyikan
+       karena nanti tombol ditaruh di bawah */
+    .blog-heading .blog-all-link {
+        display: none;
+    }
+
+
+    /* GRID */
+    .ak-blog-section .row {
+        --bs-gutter-y: 10px;
+    }
+
+    .ak-blog-section .row > div {
+        width: 100%;
+    }
+
+
+    /* CARD HORIZONTAL */
+    .blog-card {
+        display: grid;
+
+        grid-template-columns: 115px minmax(0, 1fr);
+
+        min-height: 130px;
+        height: auto;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+    }
+
+
+    /* GAMBAR KIRI */
+    .blog-card-image {
+        width: 115px;
+        height: 100%;
+        min-height: 130px;
+
+        margin: 0;
+
+        border-radius: 0;
+    }
+
+    .blog-card-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* CATEGORY */
+    .blog-category {
+        position: static;
+
+        display: inline-flex;
+
+        width: fit-content;
+
+        min-height: 20px;
+
+        margin-bottom: 6px;
+
+        padding: 3px 7px;
+
+        border-radius: 999px;
+
+        font-size: 8px;
+    }
+
+
+    /* BODY KANAN */
+    .blog-card-body {
+        min-height: 0;
+
+        padding: 11px 12px 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* JUDUL */
+    .blog-card h3 {
+        margin: 0 0 5px;
+
+        font-size: 12px;
+        line-height: 1.2;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+    }
+
+
+    /* EXCERPT */
+    .blog-card-excerpt {
+        margin: 0;
+
+        font-size: 9px;
+        line-height: 1.4;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+    }
+
+
+    /* BOTTOM */
+    .blog-card-footer {
+        align-items: center;
+
+        margin-top: auto;
+
+        padding-top: 8px;
+    }
+
+    .blog-meta {
+        font-size: 8px;
+    }
+
+
+    /* ARROW */
+    .blog-card-arrow {
+        width: 26px;
+        height: 26px;
+
+        flex: 0 0 26px;
+
+        font-size: 12px;
     }
 
     
