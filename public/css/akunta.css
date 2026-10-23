@@ -317,3 +317,306 @@ height:35px;
     flex-direction: column;
     align-items: flex-start;
 }
+
+/* =====================================================
+   FOOTER MOBILE ONLY
+   Desktop tetap seperti sekarang
+===================================================== */
+
+@media (max-width: 767.98px) {
+
+    .footer-akunta {
+        margin-top: 0;
+        padding: 28px 0 14px;
+
+        background: #ffffff;
+        border-top: 1px solid var(--line);
+    }
+
+    /* CONTAINER */
+    .footer-akunta .footer-inner {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    /* =====================================
+       GRID FOOTER
+    ====================================== */
+
+    .footer-akunta .row {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 34px;
+        row-gap: 0;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        padding-left: 0 !important;
+    }
+
+    .footer-akunta .row > * {
+        width: 100%;
+        max-width: 100%;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        margin: 0;
+    }
+
+    /* =====================================
+       BRAND
+    ====================================== */
+
+    .footer-akunta .row > *:first-child {
+        grid-column: 1 / -1;
+
+        margin-bottom: 18px;
+        padding-bottom: 17px;
+
+        border-bottom: 1px solid #e7ebf2;
+    }
+
+    .footer-akunta .fw-bold.fs-3 {
+        margin: 0 0 7px;
+
+        font-size: 27px !important;
+        line-height: 1;
+    }
+
+    .footer-akunta .brand-a {
+        color: var(--orange) !important;
+    }
+
+    .footer-akunta .brand-kunta {
+        color: var(--navy) !important;
+    }
+
+    .footer-akunta p {
+        margin: 0;
+
+        color: #516a91;
+
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    /* =====================================
+       MENU 2 KOLOM
+    ====================================== */
+
+    .footer-akunta .row > *:nth-child(2),
+    .footer-akunta .row > *:nth-child(3) {
+        margin-bottom: 24px;
+    }
+
+    .footer-akunta .row > *:nth-child(4),
+    .footer-akunta .row > *:nth-child(5) {
+        margin-bottom: 21px;
+    }
+
+    /* KOLOM KANAN */
+    .footer-akunta .row > *:nth-child(3),
+    .footer-akunta .row > *:nth-child(5) {
+        padding-left: 6px;
+    }
+
+    /* JUDUL */
+    .footer-akunta h6 {
+        margin: 0 0 8px;
+
+        color: var(--navy);
+
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 1.3;
+    }
+
+    /* LINK */
+    .footer-akunta a {
+        display: block;
+
+        margin: 0 0 4px;
+
+        color: #516a91 !important;
+
+        font-size: 11px;
+        line-height: 1.45;
+
+        text-decoration: none !important;
+    }
+
+    /* =====================================
+       HUBUNGI KAMI
+    ====================================== */
+
+    .footer-akunta .row > *:last-child {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 16px 0 13px;
+
+        border-top: 1px solid #e7ebf2;
+    }
+
+    .footer-akunta .footer-contact {
+        position: static !important;
+
+        left: auto !important;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        transform: none !important;
+    }
+
+    .footer-akunta .footer-contact h6 {
+        margin: 0 0 9px !important;
+
+        color: var(--navy);
+
+        font-size: 13px;
+    }
+
+    .footer-akunta .footer-contact-item {
+        display: flex !important;
+        align-items: center;
+
+        gap: 9px;
+
+        width: fit-content;
+
+        margin: 0 0 5px;
+
+        color: #516a91 !important;
+
+        font-size: 10.5px;
+        line-height: 1.4;
+    }
+
+    .footer-akunta .footer-contact-icon {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 18px;
+        height: 18px;
+
+        flex: 0 0 18px;
+
+        color: var(--orange);
+
+        font-size: 13px;
+    }
+
+    /* =====================================
+       GARIS BAWAH
+    ====================================== */
+
+    .footer-akunta hr {
+        margin: 0 0 11px;
+
+        border: 0;
+        border-top: 1px solid #e7ebf2;
+
+        opacity: 1;
+    }
+
+    /* =====================================
+       COPYRIGHT
+    ====================================== */
+
+    .footer-akunta .footer-bottom {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        width: 100%;
+
+        padding-left: 0 !important;
+        margin: 0;
+
+        gap: 10px;
+
+        color: #516a91;
+
+        font-size: 8px;
+        line-height: 1.3;
+    }
+
+    .footer-akunta .footer-bottom span {
+        width: auto !important;
+
+        margin: 0;
+
+        color: #516a91;
+
+        font-size: 8px;
+
+        white-space: nowrap;
+    }
+
+    /* =====================================
+       WHATSAPP FLOATING
+    ====================================== */
+
+    .floating-wa {
+        right: 18px;
+        bottom: 20px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+    .floating-wa img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* HP KECIL */
+@media (max-width: 420px) {
+
+    .footer-akunta .footer-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .footer-akunta .row {
+        column-gap: 26px;
+    }
+
+    .footer-akunta h6 {
+        font-size: 12px;
+    }
+
+    .footer-akunta a {
+        font-size: 10px;
+    }
+
+    .footer-akunta .footer-bottom,
+    .footer-akunta .footer-bottom span {
+        font-size: 7.5px;
+    }
+}
