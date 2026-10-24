@@ -834,3 +834,320 @@ html {
 
     border: 0;
 }
+
+/* =========================================================
+   CONTACT HERO MOBILE - FINAL
+   Breadcrumb -> Image -> Title -> Description
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    
+
+    .ak-contact-hero-circle {
+        width: 135px;
+        height: 135px;
+
+        right: -8px;
+        top: -22px;
+    }
+
+
+    .ak-contact-hero {
+        padding: 20px 0 30px;
+    }
+
+    /* RESET ROW BOOTSTRAP SUPAYA TIDAK KE-POTONG */
+    .ak-contact-hero .row {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        margin: 0 !important;
+
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+    }
+
+    /* buka wrapper copy */
+    .ak-contact-hero .row > div:first-child,
+    .ak-contact-hero-copy {
+        display: contents;
+    }
+
+
+    /* =========================
+       1. BREADCRUMB
+    ========================= */
+
+    .ak-contact-breadcrumb {
+        order: 1;
+
+        width: 100%;
+
+        margin: 0 0 14px;
+        padding: 0 16px;
+
+        justify-content: flex-start;
+
+        font-size: 9px;
+        text-align: left;
+    }
+
+
+    /* =========================
+       2. GAMBAR
+    ========================= */
+
+    .ak-contact-hero .row > div:nth-child(2) {
+        order: 2;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0 14px;
+    }
+
+    .ak-contact-hero-visual {
+        position: relative;
+
+        width: 100%;
+        min-height: 0;
+
+        margin: 0 auto 22px;
+    }
+
+    .ak-contact-hero-image {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        display: block;
+
+        width: 100%;
+        height: 215px;
+
+        margin: 0;
+
+        object-fit: cover;
+        object-position: center 38%;
+
+        border-radius: 18px;
+    }
+
+
+    /* DECORATION */
+    .ak-contact-hero-circle {
+        width: 105px;
+        height: 105px;
+
+        right: 5px;
+        top: -18px;
+    }
+
+    .ak-contact-chat-bubble {
+        right: 8%;
+        top: 16%;
+
+        width: 58px;
+        height: 42px;
+
+        border-radius: 15px 15px 15px 5px;
+    }
+
+    .ak-contact-chat-bubble span {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    /* =========================
+       3. JUDUL
+    ========================= */
+
+    .ak-contact-hero-copy h1 {
+        order: 3;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0 0 10px;
+        padding: 0 16px;
+
+        font-size: 30px;
+        line-height: 1.05;
+        letter-spacing: -.6px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       4. DESKRIPSI
+    ========================= */
+
+    .ak-contact-hero-copy > p {
+        order: 4;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+        padding: 0 16px;
+
+        font-size: 13px;
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+    /* =========================================
+    CONTACT INFO MOBILE
+    ========================================= */
+
+    .ak-contact-info-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    /* 1 KOLOM */
+    .ak-contact-info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    /* SETIAP ITEM JADI MINI CARD */
+    .ak-contact-info-item {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr);
+
+        column-gap: 10px;
+
+        align-items: center;
+
+        width: 100%;
+
+        padding: 11px 12px;
+
+        border: 1px solid #e3ebf5;
+        border-radius: 12px;
+
+        background: #fff;
+    }
+
+    /* ICON */
+    .ak-contact-info-icon {
+        width: 38px;
+        height: 38px;
+
+        flex: none;
+
+        border-radius: 10px;
+
+        font-size: 15px;
+    }
+
+    /* JUDUL */
+    .ak-contact-info-item strong {
+        margin: 0 0 3px;
+
+        font-size: 14.5px;
+        line-height: 1.2;
+    }
+
+    /* VALUE */
+    .ak-contact-info-item span {
+        margin: 0 0 2px;
+
+        font-size: 13px;
+        line-height: 1.35;
+
+        word-break: normal;
+    }
+
+    /* KETERANGAN */
+    .ak-contact-info-item small {
+        margin: 0;
+
+        font-size: 11.5px;
+        line-height: 1.4;
+        white-space: nowrap;
+    }
+
+    /* parent utama */
+    .ak-contact-office-card > .row {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    /* buka wrapper supaya isi bisa di-order */
+    .ak-contact-office-card .col-md-5,
+    .ak-contact-office-card .col-md-7,
+    .ak-contact-office-copy {
+        display: contents !important;
+    }
+
+    /* 1. JUDUL */
+    .ak-contact-office-title {
+        order: 1;
+
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* 2. ALAMAT */
+    .ak-contact-office-copy > p {
+        order: 2;
+
+        width: 100%;
+        margin: 0 0 14px;
+    }
+
+    /* 3. GOOGLE MAPS */
+    .ak-contact-map {
+        order: 3;
+
+        width: 100%;
+        height: 185px;
+        min-height: 185px;
+
+        margin: 0 0 10px;
+
+        border-radius: 13px;
+        overflow: hidden;
+    }
+
+    .ak-contact-map iframe {
+        width: 100% !important;
+        height: 185px !important;
+        min-height: 185px !important;
+    }
+
+    /* 4. BUTTON DI BAWAH MAP */
+    .ak-contact-map-button {
+        order: 4;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        min-height: 40px;
+
+        margin: 0;
+
+        padding: 9px 13px;
+
+        border-radius: 10px;
+
+        font-size: 10px;
+    }
+}
