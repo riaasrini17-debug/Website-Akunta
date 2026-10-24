@@ -848,6 +848,390 @@
             calc((100% - 14px) / 2);
     }
 
+    /* =========================================================
+    PORTFOLIO HERO MOBILE
+    GAMBAR -> BUTTON -> TEXT
+    ========================================================= */
+
+    .ak-portfolio-hero .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        --bs-gutter-y: 0;
+    }
+
+
+    /* BUKA WRAPPER COPY SUPAYA ISINYA BISA DI-ORDER */
+    .ak-portfolio-hero .row > div:first-child,
+    .ak-portfolio-hero-copy {
+        display: contents;
+    }
+
+
+    /* =========================
+    1. GAMBAR
+    ========================= */
+
+    .ak-portfolio-hero .row > div:nth-child(2) {
+        order: 1;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ak-portfolio-hero-visual {
+        width: 100%;
+        max-width: 390px;
+
+        min-height: 270px;
+
+        margin: 0 auto 12px;
+    }
+
+    .ak-portfolio-hero-image {
+        width: 94%;
+        max-width: 360px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+    2. BUTTON
+    ========================= */
+
+    .ak-portfolio-actions {
+        order: 2;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 330px;
+
+        gap: 8px;
+
+        margin: 0 auto 22px;
+    }
+
+    .ak-portfolio-actions .ak-btn-primary,
+    .ak-portfolio-actions .ak-btn-outline {
+        width: 100%;
+
+        min-height: 40px;
+
+        margin: 0;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+    3. EYEBROW
+    ========================= */
+
+    .ak-portfolio-eyebrow {
+        order: 3;
+
+        display: block;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 auto 8px;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+    4. JUDUL
+    ========================= */
+
+    .ak-portfolio-hero-copy h1 {
+        order: 4;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 auto 12px;
+
+        font-size: 31px;
+        line-height: 1.05;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+    5. DESKRIPSI
+    ========================= */
+
+    .ak-portfolio-hero-copy > p {
+        order: 5;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 auto;
+
+        font-size: 11px;
+        line-height: 1.55;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+    6. POINT
+    ========================= */
+
+    .ak-portfolio-points {
+        order: 6;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 12px;
+
+        margin: 16px auto 0;
+    }
+
+    .ak-portfolio-points span {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 5px;
+
+        white-space: nowrap;
+
+        font-size: 8.5px;
+        text-align: left;
+    }
+
+    .ak-portfolio-points b {
+        width: 17px;
+        height: 17px;
+
+        flex: 0 0 17px;
+
+        font-size: 7px;
+    }
+
+  /* =========================================================
+   INDUSTRY MOBILE - FINAL OVERRIDE
+   WAJIB PALING BAWAH FILE
+========================================================= */
+
+
+
+    /* 1 CARD PER BARIS */
+    .ak-industry-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        gap: 10px !important;
+    }
+
+
+    /* CARD */
+    .ak-industry-card,
+    .ak-industry-card:nth-child(n),
+    .ak-industry-card:nth-child(-n+3),
+    .ak-industry-card:nth-child(n+4) {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
+
+        grid-column: auto !important;
+
+        transform: none !important;
+        justify-self: stretch !important;
+    }
+
+
+    /* GAMBAR DESKTOP HILANG */
+    .ak-industry-image,
+    .ak-industry-card:nth-child(n) .ak-industry-image {
+        display: none !important;
+    }
+
+
+    /* ISI CARD */
+    .ak-industry-content,
+    .ak-industry-card:nth-child(n) .ak-industry-content,
+    .ak-industry-card:nth-child(-n+3) .ak-industry-content,
+    .ak-industry-card:nth-child(n+4) .ak-industry-content {
+        display: grid !important;
+
+        grid-template-columns: 40px minmax(0, 1fr) !important;
+        grid-template-rows: auto auto !important;
+
+        column-gap: 11px !important;
+        row-gap: 8px !important;
+
+        align-items: center !important;
+        align-content: center !important;
+
+        width: 100% !important;
+        min-height: 100px !important;
+
+        padding: 14px 16px !important;
+    }
+
+
+    /* BIAR H3 DAN P LANGSUNG MASUK GRID */
+    .ak-industry-copy {
+        display: contents !important;
+    }
+
+
+    /* ICON */
+    .ak-industry-icon,
+    .ak-industry-card:nth-child(n) .ak-industry-icon,
+    .ak-industry-card:nth-child(-n+3) .ak-industry-icon,
+    .ak-industry-card:nth-child(n+4) .ak-industry-icon {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        margin: 0 !important;
+
+        font-size: 16px !important;
+    }
+
+    .ak-industry-icon i {
+        font-size: 16px !important;
+    }
+
+
+    /* JUDUL */
+    .ak-industry-card h3,
+    .ak-industry-card:nth-child(n) h3,
+    .ak-industry-card:nth-child(-n+3) h3,
+    .ak-industry-card:nth-child(n+4) h3 {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        margin: 0 !important;
+
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+        font-weight: 800 !important;
+
+        text-align: left !important;
+        align-self: center !important;
+    }
+
+
+    /* DESKRIPSI */
+    .ak-industry-card p,
+    .ak-industry-card:nth-child(n) p,
+    .ak-industry-card:nth-child(-n+3) p,
+    .ak-industry-card:nth-child(n+4) p {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+
+        margin: 0 !important;
+
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+
+        color: #667b9d !important;
+
+        text-align: left !important;
+    }
+
+
+    .ak-industry-arrow {
+        display: none !important;
+    }
+
+    /* =========================================================
+   EXPERIENCE STATS MOBILE - FINAL FIX
+========================================================= */
+
+
+
+    .ak-experience-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px;
+    }
+
+    .ak-experience-card {
+        display: grid !important;
+        grid-template-columns: 38px minmax(0, 1fr);
+        grid-template-areas:
+            "icon title"
+            "icon desc";
+
+        column-gap: 9px;
+        row-gap: 3px;
+
+        align-items: center;
+
+        min-height: 88px !important;
+        padding: 12px 11px !important;
+
+        border-radius: 14px;
+    }
+
+    /* ICON */
+    .ak-experience-icon {
+        grid-area: icon;
+
+        display: grid;
+        place-items: center;
+
+        width: 38px !important;
+        height: 38px !important;
+
+        margin: 0;
+        flex: none !important;
+    }
+
+    .ak-experience-icon i {
+        font-size: 15px !important;
+    }
+
+    /* ANGKA / JUDUL */
+    .ak-experience-card h3 {
+        grid-area: title;
+
+        margin: 0 0 2px;
+
+        font-size: 18px;
+        line-height: 1;
+
+        text-align: left;
+        align-self: end;
+    }
+
+    .ak-experience-card p {
+        margin-top: 5px !important;
+        margin-bottom: 0 !important;
+
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
 }
 
 
@@ -1449,9 +1833,7 @@
     }
 
 
-    .ak-industry-grid {
-        grid-template-columns: 1fr;
-    }
+    
 
 
     .ak-industry-card {
@@ -1487,11 +1869,7 @@
     }
 
 
-    .ak-industry-card {
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-    }
+    
 
 
     .ak-industry-content {
@@ -2220,10 +2598,7 @@ and
     }
 
 
-    .ak-experience-card {
-        min-height:
-            82px;
-    }
+    
 
 
     .ak-testimonial-slider::before,
