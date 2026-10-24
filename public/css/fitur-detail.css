@@ -2132,6 +2132,155 @@
 
 @media (max-width: 767.98px) {
 
+    .ak-fd-hero .row {
+    display: flex;
+    flex-direction: column;
+    --bs-gutter-y: 0;
+    }
+    .ak-fd-hero .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        --bs-gutter-y: 0;
+    }
+
+
+    /* buka wrapper supaya child bisa di-order */
+    .ak-fd-hero .row > div:first-child,
+    .ak-fd-hero-copy {
+        display: contents;
+    }
+
+
+    /* =========================
+    1. GAMBAR
+    ========================= */
+
+    .ak-fd-hero .row > div:nth-child(2) {
+        order: 1;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ak-fd-hero-visual {
+        width: 100%;
+        min-height: 240px;
+
+        margin: 0 auto 10px;
+    }
+
+    .ak-fd-dashboard {
+        width: 94%;
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+    2. BUTTON
+    ========================= */
+
+    .ak-fd-actions {
+        order: 2;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 350px;
+
+        gap: 8px;
+
+        margin: 0 auto 22px;
+    }
+
+    .ak-fd-btn-primary,
+    .ak-fd-btn-outline {
+        width: 100%;
+        min-height: 40px;
+
+        padding: 9px 16px;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+    3. LABEL
+    ========================= */
+
+    .ak-fd-label {
+        order: 3;
+
+        justify-content: center;
+
+        width: 100%;
+
+        margin: 0 auto 10px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+    4. JUDUL
+    ========================= */
+
+    .ak-fd-hero-copy h1 {
+        order: 4;
+
+        width: 100%;
+        max-width: 340px;
+
+        margin: 0 auto 12px;
+
+        font-size: 30px;
+        line-height: 1.05;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+    5. DESKRIPSI
+    ========================= */
+
+    .ak-fd-description {
+        order: 5;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 auto;
+
+        font-size: 11px;
+        line-height: 1.55;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+    6. CHECKLIST
+    ========================= */
+
+    .ak-fd-check-list {
+        order: 6;
+
+        width: 100%;
+        max-width: 300px;
+
+        margin: 16px auto 0;
+
+        text-align: left;
+    }
+
+    .ak-fd-check-list li {
+        font-size: 10.5px;
+    }
     .ak-fd-hero {
         padding:
             24px 0 34px;
@@ -2178,6 +2327,79 @@
 
     .ak-fd-mini-card {
         display: none;
+    }
+
+    .ak-fd-practical-copy {
+    width: 100%;
+    max-width: 330px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    text-align: left;
+    }
+
+    /* label LEBIH PRAKTIS */
+    .ak-fd-practical-copy .ak-fd-eyebrow {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 0 7px;
+
+        text-align: left;
+    }
+
+    /* JUDUL */
+    .ak-fd-practical-copy h2 {
+        max-width: 320px;
+
+        margin: 0 0 10px;
+
+        font-size: 27px;
+        line-height: 1.07;
+
+        text-align: left;
+    }
+
+    /* DESKRIPSI */
+    .ak-fd-practical-copy > p {
+        width: 100%;
+        max-width: 320px;
+
+        margin: 0 0 15px;
+
+        font-size: 10.5px;
+        line-height: 1.55;
+
+        text-align: left;
+    }
+
+    /* CHECKLIST */
+    .ak-fd-practical-copy ul {
+        display: grid !important;
+
+        width: 100%;
+        max-width: 320px;
+
+        margin: 0;
+        padding: 0;
+
+        gap: 7px;
+
+        text-align: left;
+        justify-items: start;
+    }
+
+    .ak-fd-practical-copy li {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 10px;
+        line-height: 1.4;
+
+        text-align: left;
     }
 
 

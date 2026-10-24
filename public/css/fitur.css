@@ -1884,6 +1884,488 @@ html {
 
 @media (max-width: 767.98px) {
 
+    .ak-feature-hero .row {
+    display: flex;
+    flex-direction: column;
+    --bs-gutter-y: 0;
+    }
+
+    /* KOLOM GAMBAR JADI PERTAMA */
+    .ak-feature-hero .row > div:nth-child(2) {
+        order: 1;
+    }
+
+    /* KOLOM TEKS JADI KEDUA */
+    .ak-feature-hero .row > div:nth-child(1) {
+        order: 2;
+    }
+
+
+    /* =========================
+    HERO MEDIA
+    ========================= */
+
+    .ak-feature-hero-media {
+        order: 1;
+
+        min-height: 255px;
+
+        margin: 0 auto 18px;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ak-feature-hero-image {
+        width: 92%;
+        max-width: 360px;
+
+        margin: 0 auto;
+    }
+
+
+    /* BLOB */
+    .ak-feature-hero-blob.blob-one {
+        width: 320px;
+        height: 210px;
+
+        left: 50%;
+        right: auto;
+        top: 16%;
+
+        transform: translateX(-50%);
+    }
+
+    .ak-feature-hero-blob.blob-two {
+        width: 150px;
+        height: 130px;
+
+        right: 4%;
+        bottom: 6%;
+    }
+
+
+    /* DOT */
+    .ak-feature-dots.dots-one {
+        left: 4%;
+        top: 20%;
+    }
+
+    .ak-feature-dots.dots-two {
+        right: 2%;
+        bottom: 12%;
+    }
+
+
+    /* =========================
+    FLOAT CARD SAMPING GAMBAR
+    ========================= */
+
+    .ak-feature-float-card {
+        min-width: 118px;
+        padding: 7px 9px;
+        border-radius: 11px;
+    }
+
+    .ak-feature-float-card > span {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .ak-feature-float-card p {
+        font-size: 8px;
+        line-height: 1.2;
+    }
+
+    .ak-feature-float-card small {
+        font-size: 6.5px;
+    }
+
+    /* kiri atas gambar */
+    .ak-feature-float-card.float-one {
+        left: 2%;
+        top: 10%;
+    }
+
+    /* kanan tengah gambar */
+    .ak-feature-float-card.float-two {
+        right: 2%;
+        top: 0%;
+    }
+
+    /* kanan bawah gambar */
+    .ak-feature-float-card.float-three {
+        right: 30%;
+        bottom: 0%;
+    }
+
+
+    /* =========================
+    HERO COPY
+    ========================= */
+
+    .ak-feature-hero-copy {
+        order: 2;
+
+        max-width: 100%;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .ak-feature-breadcrumb {
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .ak-feature-eyebrow {
+        margin-bottom: 8px;
+    }
+
+    .ak-feature-hero-copy h1 {
+        max-width: 100%;
+
+        margin: 0 0 12px;
+
+        font-size: 30px;
+        line-height: 1.05;
+        letter-spacing: -.7px;
+    }
+
+    .ak-feature-hero-copy > p {
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .ak-feature-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-top: 16px;
+    }
+
+    .ak-feature-primary,
+    .ak-feature-secondary {
+        min-height: 40px;
+        padding: 9px 16px;
+        font-size: 10px;
+    }
+
+    .ak-feature-highlight .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        --bs-gutter-y: 0;
+    }
+
+    /* KOLOM GAMBAR */
+    .ak-feature-highlight .col-lg-6:first-child {
+        order: 1;
+
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .ak-highlight-media {
+        min-height: 230px;
+
+        margin: 0 auto 10px;
+
+        justify-content: center;
+    }
+
+    .ak-highlight-media img {
+        width: 88%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       BUKA WRAPPER COPY SUPAYA ISINYA BISA DI-ORDER
+    ====================================================== */
+
+    .ak-feature-highlight .col-lg-6:last-child,
+    .ak-highlight-copy {
+        display: contents;
+    }
+
+
+    /* BUTTON LANGSUNG DI BAWAH GAMBAR */
+    .ak-highlight-button {
+        order: 2;
+
+        margin: 4px auto 10px;
+
+        min-height: 39px;
+        padding: 9px 18px;
+
+        font-size: 9.5px;
+    }
+
+
+    /* SLIDER CONTROL DI BAWAH BUTTON */
+    .ak-highlight-controls {
+        order: 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        margin: 0 auto 18px;
+    }
+
+
+    /* =====================================================
+       BARU TEKS
+    ====================================================== */
+
+    .ak-highlight-copy .ak-feature-eyebrow {
+        order: 4;
+
+        width: 100%;
+
+        margin: 0 auto 7px;
+
+        text-align: center;
+    }
+
+    .ak-highlight-copy h2 {
+        order: 5;
+
+        width: 100%;
+        max-width: 310px;
+
+        margin: 0 auto 10px;
+
+        font-size: 27px;
+        line-height: 1.05;
+
+        text-align: left;
+    }
+
+    .ak-highlight-copy > p {
+        order: 6;
+
+        width: 100%;
+        max-width: 310px;
+
+        margin: 0 auto 14px;
+
+        font-size: 11px;
+        line-height: 1.55;
+
+        text-align: left;
+    }
+
+    .ak-highlight-copy ul {
+    order: 7;
+
+    display: grid !important;
+
+    width: 100%;
+    max-width: 310px;
+
+    margin: 0 auto 8px;
+    padding: 0;
+
+    text-align: left;
+
+    justify-items: start;
+    }
+    
+    .ak-feature-category {
+        margin-bottom: 22px;
+    }
+
+    .ak-feature-category-box {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 7px;
+
+        margin-top: 0;
+
+        padding: 9px;
+
+        border: 1px solid #e7edf5;
+        border-radius: 14px;
+
+        background: #fff;
+
+        box-shadow:
+            0 5px 16px rgba(11, 43, 120, .05);
+    }
+
+    .ak-feature-category-item {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+
+        min-width: 0;
+        min-height: 58px;
+
+        padding: 7px 3px;
+
+        border-radius: 9px;
+
+        font-size: 8px;
+        line-height: 1.15;
+
+        font-weight: 700;
+
+        text-align: center;
+
+        white-space: normal;
+    }
+
+    /* ICON */
+    .ak-feature-category-item i {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    /* ACTIVE */
+    .ak-feature-category-item.active {
+        background:
+            linear-gradient(
+                135deg,
+                #ff4b12,
+                #ff7a1a
+            );
+
+        color: #fff;
+
+        box-shadow:
+            0 5px 12px rgba(255, 75, 18, .16);
+    }
+
+    .ak-feature-settings {
+        padding: 30px 0 34px;
+    }
+
+    .ak-settings-wrap {
+        padding: 22px 12px 16px;
+
+        border-radius: 16px;
+    }
+
+
+    /* HEADING */
+    .ak-settings-heading {
+        max-width: 340px;
+
+        margin: 0 auto 18px;
+
+        text-align: center;
+    }
+
+    .ak-settings-heading h2 {
+        margin-bottom: 7px;
+
+        font-size: 24px;
+        line-height: 1.08;
+    }
+
+    .ak-settings-heading p {
+        font-size: 10.5px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       GRID 2 KOLOM
+    ========================== */
+
+    .ak-settings-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+
+    /* =========================
+       CARD
+    ========================== */
+
+    .ak-setting-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 145px;
+
+        padding: 12px 11px 30px;
+
+        border-radius: 12px;
+
+        background: #fff;
+    }
+
+
+    /* ICON */
+    .ak-setting-icon {
+        display: grid;
+        place-items: center;
+
+        width: 36px;
+        height: 36px;
+
+        margin-bottom: 9px;
+
+        border-radius: 50%;
+
+        font-size: 16px;
+    }
+
+
+    /* TITLE */
+    .ak-setting-card h3 {
+        margin: 0 0 5px;
+
+        font-size: 11.5px;
+        line-height: 1.2;
+    }
+
+
+    /* DESCRIPTION */
+    .ak-setting-card p {
+        margin: 0;
+
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* ARROW */
+    .ak-setting-arrow {
+        left: 11px;
+        bottom: 9px;
+
+        width: 20px;
+        height: 20px;
+
+        font-size: 9px;
+    }
+
     .ak-feature-highlight {
         padding: 32px 0;
     }
@@ -1938,15 +2420,7 @@ html {
     }
 
 
-    .ak-feature-card-preview {
-        height: 160px;
-    }
-
-
-    .ak-settings-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
+    
 
 
     .ak-advantages-grid {
@@ -1991,14 +2465,7 @@ html {
     }
 
 
-    .ak-settings-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .ak-setting-card {
-        min-height: 105px;
-    }
+    
 
 }
 
