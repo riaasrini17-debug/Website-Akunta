@@ -1715,13 +1715,72 @@ and (
 
 /* MOBILE */
 
-@media (
-    max-width: 767.98px
-) {
+@media (max-width: 767.98px) {
+    .ak-pricing-hero .row {
+        display: flex;
+        flex-direction: column;
+        --bs-gutter-y: 0;
+    }
 
-    .ak-pricing-hero {
-        padding:
-            34px 0;
+    /* KOLOM GAMBAR JADI PERTAMA */
+    .ak-pricing-hero .row > div:nth-child(2) {
+        order: 1;
+    }
+
+    /* KOLOM TEKS JADI KEDUA */
+    .ak-pricing-hero .row > div:nth-child(1) {
+        order: 2;
+    }
+
+
+    /* GAMBAR */
+    .ak-pricing-hero-visual {
+        order: 1;
+
+        max-width: 100%;
+        min-height: 230px;
+
+        margin: 0 auto 18px;
+    }
+
+    .ak-pricing-hero-image {
+        width: 94%;
+        max-width: 390px;
+
+        margin: 0 auto;
+    }
+
+
+    /* TEKS */
+    .ak-pricing-hero-copy {
+        order: 2;
+
+        max-width: 100%;
+        margin: 0 auto;
+
+        text-align: left;
+    }
+
+    .ak-pricing-hero-copy h1 {
+        margin-bottom: 12px;
+    }
+
+    .ak-pricing-hero-copy > p {
+        margin: 0 auto;
+    }
+
+    .ak-pricing-benefits {
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+    max-width: 330px;
+
+    gap: 10px;
+
+    margin: 16px 0 0;
     }
 
 
@@ -1742,7 +1801,7 @@ and (
             column;
 
         align-items:
-            center;
+            left;
     }
 
 
@@ -1791,6 +1850,70 @@ and (
     .ak-pricing-faq {
         padding-bottom:
             40px;
+    }
+
+    /* =========================================
+    COMPARISON TABLE MOBILE - TANPA SCROLL SAMPING
+    ========================================= */
+
+    .ak-comparison-table-wrap {
+        overflow-x: visible;
+        border-radius: 12px;
+    }
+
+    .ak-comparison-table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        font-size: 9px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    /* semua cell */
+    .ak-comparison-table th,
+    .ak-comparison-table td {
+        padding: 9px 6px;
+        font-size: 8.5px;
+        line-height: 1.3;
+        text-align: center;
+        vertical-align: middle;
+        word-break: break-word;
+    }
+
+    /* kolom fitur */
+    .ak-comparison-table th:first-child,
+    .ak-comparison-table td:first-child {
+        width: 42%;
+        text-align: left;
+        font-size: 8.5px;
+        font-weight: 600;
+    }
+
+    /* kolom paket */
+    .ak-comparison-table th:not(:first-child),
+    .ak-comparison-table td:not(:first-child) {
+        width: 19.33%;
+    }
+
+    /* header */
+    .ak-comparison-table thead th {
+        font-size: 8px;
+        line-height: 1.25;
+        padding: 10px 6px;
+    }
+
+    /* kolom highlight tetap ada */
+    .ak-comparison-table .highlight-column {
+        background: #fff5ef;
+    }
+
+    /* icon check */
+    .compare-check {
+        width: 16px;
+        height: 16px;
+        font-size: 8px;
+        margin: 0 auto;
     }
 
 }
