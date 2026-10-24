@@ -823,24 +823,110 @@ and
 
     /* CATEGORY HORIZONTAL */
 
+    /* =========================================
+    FAQ CATEGORY MOBILE
+    ========================================= */
+
     .ak-contact-faq-category {
-        justify-content: flex-start;
+        display: grid;
 
-        flex-wrap: nowrap;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
 
-        overflow-x: auto;
+        gap: 8px;
 
-        padding-bottom: 6px;
+        width: 100%;
 
-        scrollbar-width: none;
+        margin: 16px auto 22px;
+        padding: 0;
+
+        /* HILANGKAN KOTAK BESAR */
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+
+        overflow: visible;
     }
 
-    .ak-contact-faq-category::-webkit-scrollbar {
-        display: none;
-    }
+
+    /* =========================
+       SETIAP KATEGORI = CARD
+    ========================= */
 
     .ak-contact-faq-category button {
-        flex: 0 0 auto;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-width: 0;
+        min-height: 46px;
+
+        padding: 8px 6px;
+
+        border: 1px solid #e3e9f2;
+        border-radius: 11px;
+
+        background: #fff;
+
+        color: var(--ak-navy);
+
+        font-size: 8.5px;
+        line-height: 1.25;
+        font-weight: 700;
+
+        text-align: center;
+        white-space: normal;
+
+        box-shadow:
+            0 4px 12px
+            rgba(11, 43, 120, .035);
+    }
+
+
+    /* ACTIVE */
+    .ak-contact-faq-category button.active {
+        border-color: transparent;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--ak-orange),
+                var(--ak-orange-2)
+            );
+
+        color: #fff;
+
+        box-shadow:
+            0 6px 15px
+            rgba(255, 75, 18, .18);
+    }
+
+
+    /* HOVER */
+    .ak-contact-faq-category button:hover {
+        transform: none;
+
+        border-color: #ffc8b3;
+
+        background: #fff7f2;
+
+        color: var(--ak-orange);
+    }
+
+    .ak-contact-faq-category button.active:hover {
+        border-color: transparent;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--ak-orange),
+                var(--ak-orange-2)
+            );
+
+        color: #fff;
     }
 
 
