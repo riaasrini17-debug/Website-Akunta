@@ -1808,29 +1808,100 @@ and
     }
 
 
-    .ak-blog-hero-copy h1 {
-        font-size:
-            33px;
+
+    /* =========================================
+    BLOG HERO MOBILE
+    EYEBROW -> GAMBAR -> JUDUL -> DESKRIPSI
+    ========================================= */
+
+    .ak-blog-hero .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        --bs-gutter-y: 0;
     }
 
+
+    /* buka wrapper copy supaya isi bisa di-order */
+    .ak-blog-hero .row > div:first-child,
+    .ak-blog-hero-copy {
+        display: contents;
+    }
+
+
+    /* 1. BLOG & INSIGHT TETAP PALING ATAS */
+    .ak-blog-eyebrow {
+        order: 1;
+
+        display: block;
+
+        width: 100%;
+        max-width: 340px;
+
+        margin: 0 auto 14px;
+
+        text-align: center;
+    }
+
+
+    /* 2. GAMBAR */
+    .ak-blog-hero .row > div:nth-child(2) {
+        order: 2;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ak-blog-hero-visual {
+        width: 100%;
+        max-width: 390px;
+
+        min-height: 240px;
+
+        margin: 0 auto 18px;
+    }
 
     .ak-blog-hero-image {
-        width:
-            95%;
+        width: 95%;
+        max-width: 360px;
 
-        height:
-            220px;
+        height: 220px;
+
+        margin: 0 auto;
     }
 
 
-    .ak-blog-float-card {
-        left:
-            7%;
+    /* 3. JUDUL */
+    .ak-blog-hero-copy h1 {
+        order: 3;
 
-        transform:
-            scale(.9);
+        width: 100%;
+        max-width: 340px;
+
+        margin: 0 auto 12px;
+
+        font-size: 30px;
+        line-height: 1.08;
+
+        text-align: center;
     }
 
+
+    /* 4. DESKRIPSI */
+    .ak-blog-hero-copy > p {
+        order: 4;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 auto;
+
+        font-size: 11px;
+        line-height: 1.6;
+
+        text-align: center;
+    }
 
     /* FILTER */
 
@@ -1848,34 +1919,64 @@ and
 
     /* CATEGORY */
 
-    .ak-blog-category {
-        justify-content:
-            flex-start;
+    /* =========================================
+   BLOG CATEGORY MOBILE
+   TANPA HORIZONTAL SCROLL
+========================================= */
 
-        flex-wrap:
-            nowrap;
+.ak-blog-category {
+    display: grid;
 
-        overflow-x:
-            auto;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-        padding-bottom:
-            7px;
+    gap: 8px;
 
-        scrollbar-width:
-            none;
-    }
+    width: 100%;
 
+    margin: 16px 0 20px;
+    padding: 0;
 
-    .ak-blog-category::-webkit-scrollbar {
-        display:
-            none;
-    }
+    overflow: visible;
+}
 
 
-    .ak-category-button {
-        flex:
-            0 0 auto;
-    }
+/* BUTTON */
+.ak-category-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+
+    gap: 6px;
+
+    padding: 7px 8px;
+
+    border-radius: 11px;
+
+    font-size: 8.5px;
+
+    white-space: nowrap;
+}
+
+
+/* ICON */
+.ak-category-icon {
+    width: 27px;
+    height: 27px;
+
+    flex: 0 0 27px;
+
+    border-radius: 8px;
+}
+
+.ak-category-icon i {
+    font-size: 11px;
+}
 
 
     /* FEATURED */
