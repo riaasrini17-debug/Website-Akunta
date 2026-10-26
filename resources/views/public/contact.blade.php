@@ -80,7 +80,7 @@
 
 
                     <img
-                        src="{{ asset('assets/contak-hero.png') }}"
+                        src="{{ asset('assets/contak-hero.webp') }}"
                         alt="Tim Akunta siap membantu Anda"
                         class="ak-contact-hero-image">
 
