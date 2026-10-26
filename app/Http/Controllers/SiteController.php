@@ -478,7 +478,7 @@ class SiteController extends Controller
                 'category' => 'Akuntansi',
                 'date' => '12 Apr 2024',
                 'views' => '1.2K',
-                'image' => 'artikel 1.png',
+                'image' => 'artikel 1.webp',
                 'excerpt' => 'Pelajari insight praktis untuk membantu bisnis berkembang lebih terstruktur di era digital.',
 
                 'content' => [
@@ -515,7 +515,7 @@ class SiteController extends Controller
                 'category' => 'Keuangan',
                 'date' => '12 Apr 2024',
                 'views' => '1.2K',
-                'image' => 'artikel 2.png',
+                'image' => 'artikel 2.webp',
                 'excerpt' => 'Pelajari strategi efektif untuk menjaga arus kas bisnis tetap sehat dan mendukung pertumbuhan bisnis.',
 
                 'content' => [
@@ -552,7 +552,7 @@ class SiteController extends Controller
                 'category' => 'Pajak',
                 'date' => '10 Apr 2024',
                 'views' => '950',
-                'image' => 'artikel 3.png',
+                'image' => 'artikel 3.webp',
                 'excerpt' => 'Pelajari langkah praktis pelaporan pajak untuk membantu UMKM memenuhi kewajiban perpajakan.',
 
                 'content' => [
@@ -589,7 +589,7 @@ class SiteController extends Controller
                 'category' => 'Tips Bisnis',
                 'date' => '08 Apr 2024',
                 'views' => '870',
-                'image' => 'artikel 4.png',
+                'image' => 'artikel 4.webp',
                 'excerpt' => 'Temukan strategi yang dapat membantu bisnis tetap berkembang di tengah persaingan.',
 
                 'content' => [
@@ -626,7 +626,7 @@ class SiteController extends Controller
                 'category' => 'Produk',
                 'date' => '06 Apr 2024',
                 'views' => '825',
-                'image' => 'artikel 5.png',
+                'image' => 'artikel 5.webp',
                 'excerpt' => 'Kenali berbagai fitur Akunta yang membantu pengelolaan bisnis menjadi lebih praktis dan terstruktur.',
 
                 'content' => [
@@ -663,7 +663,7 @@ class SiteController extends Controller
                 'category' => 'Panduan',
                 'date' => '04 Apr 2024',
                 'views' => '790',
-                'image' => 'artikel 6.png',
+                'image' => 'artikel 6.webp',
                 'excerpt' => 'Panduan membuat rencana bisnis yang lebih terarah dan terukur.',
 
                 'content' => [
@@ -704,7 +704,7 @@ class SiteController extends Controller
                 'category' => 'Akuntansi',
                 'date' => '02 Apr 2024',
                 'views' => '760',
-                'image' => 'artikel 1.png',
+                'image' => 'artikel 1.webp',
                 'excerpt' => 'Kenali kesalahan umum dalam pembukuan dan langkah sederhana untuk menghindarinya.',
 
                 'content' => [
