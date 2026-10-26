@@ -138,8 +138,10 @@
 
                             <img
                                 src="{{ asset('assets/fitur-baru/' . $feature['image']) }}"
-                                alt="{{ $feature['name'] }} Akunta">
-
+                                alt="{{ $feature['name'] }} Akunta"
+                                loading="eager"
+                                fetchpriority="high"
+                                decoding="async">
                         </div>
 
 
@@ -322,7 +324,9 @@
 
                             <img
                                 src="{{ asset('assets/fitur-baru/' . $feature['image']) }}"
-                                alt="{{ $feature['name'] }} Akunta">
+                                alt="{{ $feature['name'] }} Akunta"
+                                loading="lazy"
+                                decoding="async">
 
                         </div>
 
