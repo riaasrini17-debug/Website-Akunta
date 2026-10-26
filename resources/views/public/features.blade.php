@@ -68,7 +68,7 @@
             'title' => 'Dashboard',
             'icon' => 'bi-house-door-fill',
             'class' => 'orange',
-            'image' => 'ft-1.png',
+            'image' => 'ft-1.webp',
             'description' =>
                 'Pantau ringkasan informasi penting bisnis dalam satu tampilan yang mudah dipahami.',
         ],
@@ -79,7 +79,7 @@
             'title' => 'Buku Besar',
             'icon' => 'bi-journal-bookmark-fill',
             'class' => 'blue',
-            'image' => 'ft-2.png',
+            'image' => 'ft-2.webp',
             'description' =>
                 'Kelola akun perkiraan, jurnal umum, saldo akun, dan histori transaksi secara lebih lengkap.',
         ],
@@ -90,7 +90,7 @@
             'title' => 'Kas & Bank',
             'icon' => 'bi-wallet-fill',
             'class' => 'green',
-            'image' => 'ft-3.png',
+            'image' => 'ft-3.webp',
             'description' =>
                 'Kelola kas, rekening bank, penerimaan, pembayaran, transfer, dan rekonsiliasi bank.',
         ],
@@ -101,7 +101,7 @@
             'title' => 'Persediaan',
             'icon' => 'bi-box-seam-fill',
             'class' => 'yellow',
-            'image' => 'ft-4.png',
+            'image' => 'ft-4.webp',
             'description' =>
                 'Pantau barang, gudang, mutasi stok, stok minimum, dan penyesuaian persediaan secara real-time.',
         ],
@@ -112,7 +112,7 @@
             'title' => 'Pembelian',
             'icon' => 'bi-cart-fill',
             'class' => 'purple',
-            'image' => 'ft-5.png',
+            'image' => 'ft-5.webp',
             'description' =>
                 'Kelola pemasok, pesanan pembelian, penerimaan barang, faktur, pembayaran, dan retur.',
         ],
@@ -123,7 +123,7 @@
             'title' => 'Penjualan',
             'icon' => 'bi-tag-fill',
             'class' => 'red',
-            'image' => 'ft-6.png',
+            'image' => 'ft-6.webp',
             'description' =>
                 'Kelola pelanggan, pesanan, pengiriman, faktur penjualan, penerimaan, dan retur penjualan.',
         ],
@@ -134,7 +134,7 @@
             'title' => 'Aset Tetap',
             'icon' => 'bi-building-fill',
             'class' => 'cyan',
-            'image' => 'ft-7.png',
+            'image' => 'ft-7.webp',
             'description' =>
                 'Kelola data aset, kategori aset, nilai perolehan, penyusutan, dan perubahan aset.',
         ],
@@ -145,7 +145,7 @@
             'title' => 'Manajemen Perusahaan',
             'icon' => 'bi-people-fill',
             'class' => 'violet',
-            'image' => 'ft-8.png',
+            'image' => 'ft-8.webp',
             'description' =>
                 'Kelola profil perusahaan, cabang, pengguna, tim, hak akses, dan pengaturan perusahaan.',
         ],
@@ -156,7 +156,7 @@
             'title' => 'Laporan',
             'icon' => 'bi-bar-chart-fill',
             'class' => 'green',
-            'image' => 'ft-9.png',
+            'image' => 'ft-9.webp',
             'description' =>
                 'Akses laporan keuangan, persediaan, utang, piutang, penjualan, aset, dan buku besar.',
         ],
@@ -334,10 +334,12 @@
 
 
                     <img
-                        src="{{ asset('assets/fitur-baru/hero-2.png') }}"
+                        src="{{ asset('assets/fitur-baru/hero-2.webp') }}"
                         alt="Dashboard Akunta"
-                        class="ak-feature-hero-image">
-
+                        class="ak-feature-hero-image"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async">
 
                     <div class="ak-feature-float-card float-one">
 
@@ -400,7 +402,7 @@
             'name' => 'Dashboard',
             'title' => 'Dashboard Bisnis<br>dalam Satu Tampilan',
             'description' => 'Pantau seluruh aktivitas bisnis Anda secara real-time dengan dashboard yang informatif, ringkas, dan mudah dipahami.',
-            'image' => asset('assets/fitur-baru/ft-1.png'),
+            'image' => asset('assets/fitur-baru/ft-1.webp'),
             'slug' => 'dashboard',
             'bullets' => [
                 'Ringkasan keuangan real-time',
@@ -414,7 +416,7 @@
             'name' => 'Buku Besar',
             'title' => 'Pencatatan Keuangan<br>Lebih Terstruktur',
             'description' => 'Kelola akun perkiraan, jurnal umum, saldo akun, dan histori transaksi secara lebih lengkap.',
-            'image' => asset('assets/fitur-baru/ft-2.png'),
+            'image' => asset('assets/fitur-baru/ft-2.webp'),
             'slug' => 'buku-besar',
             'bullets' => [
                 'Kelola akun perkiraan',
@@ -428,7 +430,7 @@
             'name' => 'Kas & Bank',
             'title' => 'Kelola Arus Kas<br>dengan Lebih Mudah',
             'description' => 'Kelola kas, rekening bank, penerimaan, pembayaran, transfer, dan rekonsiliasi bank dalam satu sistem.',
-            'image' => asset('assets/fitur-baru/ft-3.png'),
+            'image' => asset('assets/fitur-baru/ft-3.webp'),
             'slug' => 'kas-bank',
             'bullets' => [
                 'Pantau kas dan rekening bank',
@@ -442,7 +444,7 @@
             'name' => 'Persediaan',
             'title' => 'Pantau Persediaan<br>Secara Real-time',
             'description' => 'Pantau barang, gudang, pergerakan stok, dan kebutuhan persediaan bisnis secara lebih mudah.',
-            'image' => asset('assets/fitur-baru/ft-4.png'),
+            'image' => asset('assets/fitur-baru/ft-4.webp'),
             'slug' => 'persediaan',
             'bullets' => [
                 'Pantau stok barang',
@@ -456,7 +458,7 @@
             'name' => 'Pembelian',
             'title' => 'Kelola Pembelian<br>Lebih Terstruktur',
             'description' => 'Kelola pemasok, pesanan pembelian, penerimaan barang, faktur, pembayaran, dan retur.',
-            'image' => asset('assets/fitur-baru/ft-5.png'),
+            'image' => asset('assets/fitur-baru/ft-5.webp'),
             'slug' => 'pembelian',
             'bullets' => [
                 'Kelola informasi pemasok',
@@ -470,7 +472,7 @@
             'name' => 'Penjualan',
             'title' => 'Kelola Penjualan<br>dalam Satu Sistem',
             'description' => 'Kelola pelanggan, pesanan, pengiriman, faktur, dan penerimaan pembayaran dengan lebih terstruktur.',
-            'image' => asset('assets/fitur-baru/ft-6.png'),
+            'image' => asset('assets/fitur-baru/ft-6.webp'),
             'slug' => 'penjualan',
             'bullets' => [
                 'Kelola data pelanggan',
@@ -484,7 +486,7 @@
             'name' => 'Aset Tetap',
             'title' => 'Kelola Aset Perusahaan<br>dengan Lebih Rapi',
             'description' => 'Pantau aset tetap perusahaan mulai dari informasi aset, penyusutan, perubahan hingga lokasi aset.',
-            'image' => asset('assets/fitur-baru/ft-7.png'),
+            'image' => asset('assets/fitur-baru/ft-7.webp'),
             'slug' => 'aset-tetap',
             'bullets' => [
                 'Kelola informasi aset',
@@ -498,7 +500,7 @@
             'name' => 'Laporan',
             'title' => 'Laporan Bisnis<br>Lebih Lengkap',
             'description' => 'Akses berbagai laporan bisnis untuk membantu proses evaluasi dan pengambilan keputusan.',
-            'image' => asset('assets/fitur-baru/ft-9.png'),
+            'image' => asset('assets/fitur-baru/ft-9.webp'),
             'slug' => 'laporan',
             'bullets' => [
                 'Laporan keuangan',
@@ -537,7 +539,9 @@
                     <img
                         id="highlightImage"
                         src="{{ $highlightSlides[0]['image'] }}"
-                        alt="{{ $highlightSlides[0]['name'] }} Akunta">
+                        alt="{{ $highlightSlides[0]['name'] }} Akunta"
+                        loading="lazy"
+                        decoding="async">
 
                 </div>
 
@@ -735,7 +739,8 @@
                                 <img
                                     src="{{ asset('assets/fitur-baru/' . $feature['image']) }}"
                                     alt="{{ $feature['title'] }} Akunta"
-                                    loading="lazy">
+                                    loading="lazy"
+                                    decoding="async">
 
                             </div>
 
@@ -890,13 +895,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const slides = @json($highlightSlides);
 
-
 /* PRELOAD SEMUA GAMBAR */
 slides.forEach(function (slide) {
 
     const preloadImage = new Image();
 
     preloadImage.src = slide.image;
+
 
 });
 
