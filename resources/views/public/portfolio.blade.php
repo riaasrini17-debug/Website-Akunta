@@ -13,7 +13,7 @@
 
         $clients = [
             [
-                'logo' => 'luxe.png',
+                'logo' => 'luxe (1).webp',
                 'name' => 'Luxe Fashion',
             ],
             [
@@ -29,15 +29,15 @@
                 'name' => 'Maju Bersama',
             ],
             [
-                'logo' => 'kopi-senja.png',
+                'logo' => 'kopi-senja.webp',
                 'name' => 'Kopi Senja',
             ],
             [
-                'logo' => 'chuyu.png',
+                'logo' => 'chuyu.webp',
                 'name' => 'Chuyu',
             ],
             [
-                'logo' => 'bali.png',
+                'logo' => 'bali.webp',
                 'name' => 'Bali District',
             ],
             [
@@ -149,19 +149,19 @@
             [
                 'name' => 'Andi Pratama',
                 'role' => 'CEO, Kopi Senja',
-                'image' => 'testi-andi.png',
+                'image' => 'testi-andi.webp',
                 'text' => 'Akunta sangat membantu kami dalam mengelola keuangan. Laporannya lengkap dan mudah dipahami.',
             ],
             [
                 'name' => 'Sari Melati',
                 'role' => 'Founder, Bloom Studio',
-                'image' => 'testi-sari.png',
+                'image' => 'testi-sari.webp',
                 'text' => 'Tampilannya simpel dan fiturnya lengkap. Proses pencatatan keuangan menjadi jauh lebih mudah dan efisien.',
             ],
             [
                 'name' => 'Budi Santoso',
                 'role' => 'Owner, Santoso Teknik',
-                'image' => 'testi-budi.png',
+                'image' => 'testi-budi.webp',
                 'text' => 'Tim support-nya responsif dan sangat membantu. Bisnis kami sekarang jauh lebih teratur dan efisien.',
             ],
             [
@@ -274,10 +274,12 @@
 
 
                         <img
-                            src="{{ asset('assets/portofolio-hero.png') }}"
+                            src="{{ asset('assets/portofolio-hero.webp') }}"
                             alt="Bisnis yang menggunakan Akunta"
-                            class="ak-portfolio-hero-image">
-
+                            class="ak-portfolio-hero-image"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async">
 
                         
                         
@@ -332,7 +334,8 @@
                     <img
                         src="{{ asset('assets/logo/' . $client['logo']) }}"
                         alt="{{ $client['name'] }}"
-                        loading="lazy">
+                        loading="lazy"
+                        decoding="async">
 
                     <h3>
                         {{ $client['name'] }}
@@ -431,7 +434,8 @@
                         <img
                             src="{{ asset('assets/industry/' . $industry['image']) }}"
                             alt="{{ $industry['title'] }}"
-                            loading="lazy">
+                            loading="lazy"
+                            decoding="async">
 
                     </div>
 
@@ -552,7 +556,8 @@
                                     <img
                                         src="{{ asset('assets/testi/' . $testi['image']) }}"
                                         alt="{{ $testi['name'] }}"
-                                        loading="lazy">
+                                        loading="lazy"
+                                        decoding="async">
 
 
                                     <div>
