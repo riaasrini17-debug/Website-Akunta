@@ -60,9 +60,12 @@
                     <span class="hero-shape hero-shape-two"></span>
 
                     <img
-                        src="{{ asset('assets/home-dasboard.png') }}"
+                        src="{{ asset('assets/home-dasboard.webp') }}"
                         alt="Dashboard Akunta pada laptop dan mobile"
-                        class="hero-dashboard-img">
+                        class="hero-dashboard-img"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async">
                 </div>
             </div>
             
@@ -196,13 +199,13 @@
 
         @php
             $trustedLogos = [
-                ['logo' => 'kopi-senja.png', 'name' => 'Kopi Senja'],
-                ['logo' => 'luxe.png', 'name' => 'Luxe Fashion'],
+                ['logo' => 'kopi-senja.webp', 'name' => 'Kopi Senja'],
+                ['logo' => 'luxe (1).webp', 'name' => 'Luxe Fashion'],
                 ['logo' => 'karya-indah.png', 'name' => 'Karya Indah'],
                 ['logo' => 'solusi-kreatif.png', 'name' => 'Solusi Kreatif'],
                 ['logo' => 'maju-bersama.png', 'name' => 'Maju Bersama'],
-                ['logo' => 'chuyu-logo.png', 'name' => 'Chuyu'],
-                ['logo' => 'bali-district-logo.png', 'name' => 'Bali District'],
+                ['logo' => 'chuyu.webp', 'name' => 'Chuyu'],
+                ['logo' => 'bali.webp', 'name' => 'Bali District'],
                 ['logo' => 'oris.png', 'name' => 'Oris Cake'],
                 ['logo' => 'getup.jpg', 'name' => 'Get Up'],
                 ['logo' => 'roti.png', 'name' => 'Roti Manis'],
@@ -216,7 +219,9 @@
                         <div class="trusted-logo-card">
                             <img
                                 src="{{ asset('assets/logo/' . $logo['logo']) }}"
-                                alt="{{ $logo['name'] }}">
+                                alt="{{ $logo['name'] }}"
+                                loading="lazy"
+                                decoding="async">
                         </div>
                     @endforeach
                 </div>
@@ -226,7 +231,9 @@
                         <div class="trusted-logo-card">
                             <img
                                 src="{{ asset('assets/logo/' . $logo['logo']) }}"
-                                alt="">
+                                alt=""
+                                loading="lazy"
+                                decoding="async">
                         </div>
                     @endforeach
                 </div>
@@ -245,9 +252,11 @@
             <div class="col-lg-6">
                 <div class="about-home-image">
                     <img
-                        src="{{ asset('assets/tentangkami.png') }}"
+                        src="{{ asset('assets/tentangkami.webp') }}"
                         alt="Tim Akunta sedang berdiskusi"
-                        class="img-fluid">
+                        class="img-fluid"
+                        loading="lazy"
+                        decoding="async">
 
                 </div>
             </div>
@@ -370,19 +379,19 @@
                 [
                     'name' => 'Andi Pratama',
                     'role' => 'CEO, Kopi Senja',
-                    'photo' => 'assets/testi/testi-andi.png',
+                    'photo' => 'assets/testi/testi-andi.webp',
                     'quote' => 'Akunta sangat membantu tim kami dalam mengelola keuangan. Laporannya jelas dan mudah dipahami.',
                 ],
                 [
                     'name' => 'Sari Melati',
                     'role' => 'Founder, Bloom Studio',
-                    'photo' => 'assets/testi/testi-sari.png',
+                    'photo' => 'assets/testi/testi-sari.webp',
                     'quote' => 'Tampilannya simpel dan fiturnya lengkap. Sekarang urusan pembukuan jadi jauh lebih mudah.',
                 ],
                 [
                     'name' => 'Budi Santoso',
                     'role' => 'Owner, Santoso Teknik',
-                    'photo' => 'assets/testi/testi-budi.png',
+                    'photo' => 'assets/testi/testi-budi.webp',
                     'quote' => 'Tim support responsif dan sangat membantu. Bisnis kami sekarang lebih teratur dan efisien.',
                 ],
             ];
@@ -394,7 +403,10 @@
                     @foreach ($testimonials as $item)
                         <article class="ak-testimonial-card">
                             <div class="ak-testimonial-top">
-                                <img src="{{ asset($item['photo']) }}" alt="{{ $item['name'] }}">
+                                <img src="{{ asset($item['photo']) }}"
+                                alt="{{ $item['name'] }}" 
+                                loading="lazy" 
+                                decoding="async">
                                 <div>
                                     <h3>{{ $item['name'] }}</h3>
                                     <span>{{ $item['role'] }}</span>
@@ -411,7 +423,10 @@
                     @foreach ($testimonials as $item)
                         <article class="ak-testimonial-card">
                             <div class="ak-testimonial-top">
-                                <img src="{{ asset($item['photo']) }}" alt="">
+                                <img src="{{ asset($item['photo']) }}" 
+                                alt="{{ $item['name'] }}" 
+                                loading="lazy" 
+                                decoding="async">
                                 <div>
                                     <h3>{{ $item['name'] }}</h3>
                                     <span>{{ $item['role'] }}</span>
@@ -461,7 +476,7 @@
         @php
             $articles = [
                 [
-                    'image' => 'artikel 1.png',
+                    'image' => 'artikel 1.webp',
                     'category' => 'Akuntansi',
                     'title' => '5 Tips Mengelola Cash Flow untuk UMKM',
                     'excerpt' => 'Pelajari tips praktis mengelola arus kas agar keuangan bisnis tetap sehat dan terkontrol.',
@@ -469,7 +484,7 @@
                     'slug' => '5-tips-mengelola-keuangan-bisnis-di-era-digital',
                 ],
                 [
-                    'image' => 'artikel 2.png',
+                    'image' => 'artikel 2.webp',
                     'category' => 'Keuangan',
                     'title' => 'Pentingnya Laporan Keuangan untuk Pertumbuhan Bisnis',
                     'excerpt' => 'Pahami pentingnya laporan keuangan dalam membantu bisnis berkembang secara lebih terarah.',
@@ -477,7 +492,7 @@
                     'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
                 ],
                 [
-                    'image' => 'artikel 3.png',
+                    'image' => 'artikel 3.webp',
                     'category' => 'Tips Bisnis',
                     'title' => 'Cara Efektif Mengatur Pengeluaran Bisnis',
                     'excerpt' => 'Pelajari cara mengatur pengeluaran bisnis agar lebih efisien dan kondisi keuangan tetap stabil.',
@@ -508,7 +523,9 @@
 
                             <img
                                 src="{{ asset('assets/blog/' . $article['image']) }}"
-                                alt="{{ $article['title'] }}">
+                                alt="{{ $article['title'] }}"
+                                loading="lazy"
+                                decoding="async">
 
                             <span class="blog-category">
                                 {{ $article['category'] }}
