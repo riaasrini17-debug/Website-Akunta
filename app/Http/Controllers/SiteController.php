@@ -34,7 +34,7 @@ class SiteController extends Controller
                 'name' => 'Dashboard',
                 'title' => 'Pantau Bisnis dalam Satu Tampilan',
                 'description' => 'Pantau ringkasan informasi penting bisnis melalui dashboard yang informatif, ringkas, dan mudah dipahami.',
-                'image' => 'ft-1.png',
+                'image' => 'ft-1.webp',
                 'icon' => 'bi-house-door-fill',
                 'color' => 'orange',
 
@@ -74,7 +74,7 @@ class SiteController extends Controller
                 'name' => 'Buku Besar',
                 'title' => 'Pencatatan Keuangan Lebih Terstruktur',
                 'description' => 'Kelola akun, jurnal, dan histori transaksi bisnis secara lebih terstruktur dalam satu sistem.',
-                'image' => 'ft-2.png',
+                'image' => 'ft-2.webp',
                 'icon' => 'bi-journal-bookmark-fill',
                 'color' => 'blue',
 
@@ -114,7 +114,7 @@ class SiteController extends Controller
                 'name' => 'Kas & Bank',
                 'title' => 'Kelola Arus Kas dengan Lebih Mudah',
                 'description' => 'Kelola transaksi kas dan rekening bank perusahaan secara lebih teratur dan terintegrasi.',
-                'image' => 'ft-3.png',
+                'image' => 'ft-3.webp',
                 'icon' => 'bi-wallet-fill',
                 'color' => 'green',
 
@@ -159,7 +159,7 @@ class SiteController extends Controller
                 'name' => 'Persediaan',
                 'title' => 'Pantau Persediaan Secara Real-time',
                 'description' => 'Kelola barang, stok, gudang, dan pergerakan persediaan dalam satu sistem.',
-                'image' => 'ft-4.png',
+                'image' => 'ft-4.webp',
                 'icon' => 'bi-box-seam-fill',
                 'color' => 'yellow',
 
@@ -199,7 +199,7 @@ class SiteController extends Controller
                 'name' => 'Pembelian',
                 'title' => 'Kelola Proses Pembelian Lebih Terstruktur',
                 'description' => 'Kelola proses pembelian mulai dari pemasok, pesanan, penerimaan barang hingga pembayaran.',
-                'image' => 'ft-5.png',
+                'image' => 'ft-5.webp',
                 'icon' => 'bi-cart-fill',
                 'color' => 'purple',
 
@@ -249,7 +249,7 @@ class SiteController extends Controller
                 'name' => 'Penjualan',
                 'title' => 'Kelola Penjualan dalam Satu Sistem',
                 'description' => 'Kelola pelanggan, pesanan, pengiriman, faktur, dan penerimaan pembayaran dalam satu sistem.',
-                'image' => 'ft-6.png',
+                'image' => 'ft-6.webp',
                 'icon' => 'bi-tag-fill',
                 'color' => 'red',
 
@@ -299,7 +299,7 @@ class SiteController extends Controller
                 'name' => 'Aset Tetap',
                 'title' => 'Kelola Aset Perusahaan dengan Lebih Rapi',
                 'description' => 'Kelola aset tetap, nilai perolehan, penyusutan, perubahan, dan lokasi aset perusahaan.',
-                'image' => 'ft-7.png',
+                'image' => 'ft-7.webp',
                 'icon' => 'bi-building-fill',
                 'color' => 'blue',
 
@@ -339,7 +339,7 @@ class SiteController extends Controller
                 'name' => 'Manajemen Perusahaan',
                 'title' => 'Kelola Operasional Perusahaan Lebih Efisien',
                 'description' => 'Kelola profil, pengguna, hak akses, serta berbagai kebutuhan administrasi perusahaan.',
-                'image' => 'ft-8.png',
+                'image' => 'ft-8.webp',
                 'icon' => 'bi-people-fill',
                 'color' => 'violet',
 
@@ -379,7 +379,7 @@ class SiteController extends Controller
                 'name' => 'Laporan',
                 'title' => 'Informasi Bisnis dalam Laporan yang Lengkap',
                 'description' => 'Akses berbagai laporan bisnis untuk membantu proses evaluasi dan pengambilan keputusan.',
-                'image' => 'ft-9.png',
+                'image' => 'ft-9.webp',
                 'icon' => 'bi-bar-chart-fill',
                 'color' => 'green',
 
