@@ -64,9 +64,12 @@
                     <span class="ak-about-hero-blob"></span>
 
                     <img
-                        src="{{ asset('assets/tentangkami.png') }}"
+                        src="{{ asset('assets/tentangkami.webp') }}"
                         alt="Tim Akunta"
-                        class="ak-about-hero-image">
+                        class="ak-about-hero-image"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async">
 
                     <div class="ak-about-hero-message">
 
@@ -287,8 +290,10 @@
                     <span class="ak-about-intro-bg"></span>
 
                     <img
-                        src="{{ asset('assets/tentangkami.png') }}"
-                        alt="Tim Akunta">
+                        src="{{ asset('assets/tentangkami.webp') }}"
+                        alt="Tim Akunta"
+                        loading="lazy"
+                        decoding="async">
 
                     <span class="ak-about-intro-dots"></span>
 
