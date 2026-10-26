@@ -121,7 +121,9 @@
 
                             <img
                                 src="{{ asset('assets/blog/' . $article['image']) }}"
-                                alt="{{ $article['title'] }}">
+                                alt="{{ $article['title'] }}"
+                                loading="lazy"
+                                decoding="async">
                         </div>
 
 
@@ -383,7 +385,7 @@
                     [
                         'title' => 'Cara Meningkatkan Cash Flow untuk Pertumbuhan Bisnis',
                         'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
-                        'image' => 'artikel 2.png',
+                        'image' => 'artikel 2.webp',
                         'category' => 'Keuangan',
                         'date' => '5 Apr 2024',
                         'read' => '6 menit baca'
@@ -392,7 +394,7 @@
                     [
                         'title' => '7 Strategi Mengembangkan Bisnis di Tengah Persaingan',
                         'slug' => 'strategi-mengembangkan-bisnis-di-tengah-persaingan',
-                        'image' => 'artikel 4.png',
+                        'image' => 'artikel 4.webp',
                         'category' => 'Tips Bisnis',
                         'date' => '18 Mar 2024',
                         'read' => '5 menit baca'
@@ -401,7 +403,7 @@
                     [
                         'title' => 'Panduan Lengkap Lapor Pajak untuk UMKM di 2024',
                         'slug' => 'panduan-lengkap-lapor-pajak-untuk-umkm-2024',
-                        'image' => 'artikel 3.png',
+                        'image' => 'artikel 3.webp',
                         'category' => 'Pajak',
                         'date' => '12 Mar 2024',
                         'read' => '7 menit baca'
@@ -426,7 +428,9 @@
 
                                 <img
                                     src="{{ asset('assets/blog/'.$item['image']) }}"
-                                    alt="{{ $item['title'] }}">
+                                    alt="{{ $item['title'] }}"
+                                    loading="lazy"
+                                    decoding="async">
 
                                 <span>
                                     {{ $item['category'] }}
