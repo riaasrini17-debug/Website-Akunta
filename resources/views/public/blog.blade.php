@@ -17,7 +17,7 @@
             'title' => '5 Tips Mengelola Keuangan Bisnis di Era Digital',
             'slug' => '5-tips-mengelola-keuangan-bisnis-di-era-digital',
             'category' => 'Akuntansi',
-            'image' => 'artikel 1.png',
+            'image' => 'artikel 1.webp',
             'date' => '12 Apr 2024',
             'excerpt' => 'Pelajari insight praktis untuk membantu bisnis berkembang lebih terstruktur dan efisien di era digital.',
         ],
@@ -26,7 +26,7 @@
             'title' => 'Cara Meningkatkan Cash Flow untuk Pertumbuhan Bisnis',
             'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
             'category' => 'Keuangan',
-            'image' => 'artikel 2.png',
+            'image' => 'artikel 2.webp',
             'date' => '12 Apr 2024',
             'excerpt' => 'Pelajari strategi efektif dalam mengelola arus kas agar bisnis tetap sehat dan siap berkembang.',
         ],
@@ -35,7 +35,7 @@
             'title' => 'Panduan Lengkap Lapor Pajak untuk UMKM di 2024',
             'slug' => 'panduan-lengkap-lapor-pajak-untuk-umkm-2024',
             'category' => 'Pajak',
-            'image' => 'artikel 3.png',
+            'image' => 'artikel 3.webp',
             'date' => '10 Apr 2024',
             'excerpt' => 'Pelajari langkah-langkah praktis dalam melaporkan pajak usaha dengan benar dan lebih mudah.',
         ],
@@ -51,7 +51,7 @@
             'title' => 'Cara Meningkatkan Cash Flow untuk Pertumbuhan Bisnis',
             'slug' => 'cara-meningkatkan-cash-flow-untuk-pertumbuhan-bisnis',
             'category' => 'Keuangan',
-            'image' => 'artikel 2.png',
+            'image' => 'artikel 2.webp',
             'date' => '12 Apr 2024',
             'excerpt' => 'Pelajari strategi efektif dalam mengelola arus kas agar bisnis tetap sehat dan siap berkembang.',
         ],
@@ -60,7 +60,7 @@
             'title' => 'Panduan Lengkap Lapor Pajak untuk UMKM di 2024',
             'slug' => 'panduan-lengkap-lapor-pajak-untuk-umkm-2024',
             'category' => 'Pajak',
-            'image' => 'artikel 3.png',
+            'image' => 'artikel 3.webp',
             'date' => '10 Apr 2024',
             'excerpt' => 'Pelajari langkah-langkah praktis dalam melaporkan pajak usaha dengan benar dan lebih mudah.',
         ],
@@ -69,7 +69,7 @@
             'title' => '7 Strategi Mengembangkan Bisnis di Tengah Persaingan',
             'slug' => 'strategi-mengembangkan-bisnis-di-tengah-persaingan',
             'category' => 'Tips Bisnis',
-            'image' => 'artikel 4.png',
+            'image' => 'artikel 4.webp',
             'date' => '08 Apr 2024',
             'excerpt' => 'Temukan strategi efektif untuk mempertahankan dan mengembangkan bisnis di tengah persaingan.',
         ],
@@ -78,7 +78,7 @@
             'title' => 'Mengenal Fitur Akunta yang Memudahkan Bisnis Anda',
             'slug' => 'mengenal-fitur-akunta-yang-memudahkan-bisnis',
             'category' => 'Produk',
-            'image' => 'artikel 5.png',
+            'image' => 'artikel 5.webp',
             'date' => '06 Apr 2024',
             'excerpt' => 'Kenali berbagai fitur Akunta yang dirancang untuk membuat pengelolaan bisnis menjadi lebih praktis.',
         ],
@@ -87,7 +87,7 @@
             'title' => 'Cara Membuat Rencana Bisnis yang Efektif',
             'slug' => 'cara-membuat-rencana-bisnis-yang-efektif',
             'category' => 'Panduan',
-            'image' => 'artikel 6.png',
+            'image' => 'artikel 6.webp',
             'date' => '04 Apr 2024',
             'excerpt' => 'Panduan menyusun rencana bisnis yang realistis dan terukur untuk mendukung pertumbuhan usaha.',
         ],
@@ -96,7 +96,7 @@
             'title' => 'Kesalahan Umum dalam Pembukuan dan Cara Menghindarinya',
             'slug' => 'kesalahan-umum-dalam-pembukuan',
             'category' => 'Akuntansi',
-            'image' => 'artikel 1.png',
+            'image' => 'artikel 1.webp',
             'date' => '02 Apr 2024',
             'excerpt' => 'Kenali kesalahan umum dalam pembukuan dan langkah sederhana untuk menghindarinya.',
         ],
@@ -194,7 +194,7 @@
                     <span class="ak-blog-orange-mark">‹</span>
 
                     <img
-                        src="{{ asset('assets/blog-hero.png') }}"
+                        src="{{ asset('assets/blog-hero.webp') }}"
                         alt="Blog dan Insight Akunta"
                         class="ak-blog-hero-image">
 
