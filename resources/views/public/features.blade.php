@@ -20,42 +20,42 @@
         [
             'title' => 'Semua Fitur',
             'icon' => 'bi-grid-fill',
-            'target' => '#semua-fitur',
+            'category' => 'semua',
         ],
         [
             'title' => 'Keuangan',
             'icon' => 'bi-wallet2',
-            'target' => '#buku-besar',
+            'category' => 'keuangan',
         ],
         [
             'title' => 'Kas & Bank',
             'icon' => 'bi-bank',
-            'target' => '#kas-bank',
+            'category' => 'kas-bank',
         ],
         [
             'title' => 'Persediaan',
             'icon' => 'bi-box-seam',
-            'target' => '#persediaan',
+            'category' => 'persediaan',
         ],
         [
             'title' => 'Pembelian',
             'icon' => 'bi-cart3',
-            'target' => '#pembelian',
+            'category' => 'pembelian',
         ],
         [
             'title' => 'Penjualan',
             'icon' => 'bi-tag',
-            'target' => '#penjualan',
+            'category' => 'penjualan',
         ],
         [
             'title' => 'Aset Tetap',
             'icon' => 'bi-building',
-            'target' => '#aset-tetap',
+            'category' => 'aset-tetap',
         ],
         [
             'title' => 'Laporan',
             'icon' => 'bi-bar-chart-fill',
-            'target' => '#laporan',
+            'category' => 'laporan',
         ],
     ];
 
@@ -68,6 +68,7 @@
             'title' => 'Dashboard',
             'icon' => 'bi-house-door-fill',
             'class' => 'orange',
+            'category' => 'keuangan',
             'image' => 'ft-1.webp',
             'description' =>
                 'Pantau ringkasan informasi penting bisnis dalam satu tampilan yang mudah dipahami.',
@@ -79,6 +80,7 @@
             'title' => 'Buku Besar',
             'icon' => 'bi-journal-bookmark-fill',
             'class' => 'blue',
+            'category' => 'keuangan',
             'image' => 'ft-2.webp',
             'description' =>
                 'Kelola akun perkiraan, jurnal umum, saldo akun, dan histori transaksi secara lebih lengkap.',
@@ -90,6 +92,7 @@
             'title' => 'Kas & Bank',
             'icon' => 'bi-wallet-fill',
             'class' => 'green',
+            'category' => 'kas-bank',
             'image' => 'ft-3.webp',
             'description' =>
                 'Kelola kas, rekening bank, penerimaan, pembayaran, transfer, dan rekonsiliasi bank.',
@@ -101,6 +104,7 @@
             'title' => 'Persediaan',
             'icon' => 'bi-box-seam-fill',
             'class' => 'yellow',
+            'category' => 'persediaan',
             'image' => 'ft-4.webp',
             'description' =>
                 'Pantau barang, gudang, mutasi stok, stok minimum, dan penyesuaian persediaan secara real-time.',
@@ -112,6 +116,7 @@
             'title' => 'Pembelian',
             'icon' => 'bi-cart-fill',
             'class' => 'purple',
+            'category' => 'pembelian',
             'image' => 'ft-5.webp',
             'description' =>
                 'Kelola pemasok, pesanan pembelian, penerimaan barang, faktur, pembayaran, dan retur.',
@@ -123,6 +128,7 @@
             'title' => 'Penjualan',
             'icon' => 'bi-tag-fill',
             'class' => 'red',
+            'category' => 'penjualan',
             'image' => 'ft-6.webp',
             'description' =>
                 'Kelola pelanggan, pesanan, pengiriman, faktur penjualan, penerimaan, dan retur penjualan.',
@@ -134,6 +140,7 @@
             'title' => 'Aset Tetap',
             'icon' => 'bi-building-fill',
             'class' => 'cyan',
+            'category' => 'aset-tetap',
             'image' => 'ft-7.webp',
             'description' =>
                 'Kelola data aset, kategori aset, nilai perolehan, penyusutan, dan perubahan aset.',
@@ -145,6 +152,7 @@
             'title' => 'Manajemen Perusahaan',
             'icon' => 'bi-people-fill',
             'class' => 'violet',
+            'category' => 'lainnya',
             'image' => 'ft-8.webp',
             'description' =>
                 'Kelola profil perusahaan, cabang, pengguna, tim, hak akses, dan pengaturan perusahaan.',
@@ -156,6 +164,7 @@
             'title' => 'Laporan',
             'icon' => 'bi-bar-chart-fill',
             'class' => 'green',
+            'category' => 'laporan',
             'image' => 'ft-9.webp',
             'description' =>
                 'Akses laporan keuangan, persediaan, utang, piutang, penjualan, aset, dan buku besar.',
@@ -680,8 +689,9 @@
                     @foreach($categories as $index => $category)
 
                         <a
-                            href="{{ $category['target'] }}"
-                            class="ak-feature-category-item {{ $index === 0 ? 'active' : '' }}">
+                                href="#"
+                                class="ak-feature-category-item {{ $index === 0 ? 'active' : '' }}"
+                                data-category="{{ $category['category'] }}">
 
                             <i class="bi {{ $category['icon'] }}"></i>
 
@@ -703,7 +713,8 @@
 
             @foreach($features as $feature)
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 ak-feature-filter-item"
+                     data-category="{{ $feature['category'] }}">
 
                     <a
                         href="{{ route('feature.detail', ['slug' => $feature['slug']]) }}"
@@ -1147,6 +1158,54 @@ let isAnimating = false;
 
         }
     );
+    /* =========================================
+    FILTER FEATURE CATEGORY
+    ========================================= */
+
+    const featureCategoryButtons =
+        document.querySelectorAll('.ak-feature-category-item');
+
+    const featureItems =
+        document.querySelectorAll('.ak-feature-filter-item');
+
+
+    featureCategoryButtons.forEach(function (button) {
+
+        button.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            const selectedCategory =
+                button.dataset.category;
+
+
+            /* ACTIVE BUTTON */
+            featureCategoryButtons.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            button.classList.add('active');
+
+
+            /* FILTER CARD */
+            featureItems.forEach(function (item) {
+
+                const featureCategory =
+                    item.dataset.category;
+
+                if (
+                    selectedCategory === 'semua' ||
+                    featureCategory === selectedCategory
+                ) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+
+            });
+
+        });
+});
 
 });
 </script>
