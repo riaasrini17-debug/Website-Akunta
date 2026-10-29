@@ -379,7 +379,8 @@
 
                         <button
                             type="button"
-                            class="ak-category-button {{ $index === 0 ? 'active' : '' }}">
+                            class="ak-category-button {{ $index === 0 ? 'active' : '' }}"
+                            data-category="{{ strtolower($category['name']) }}">
 
                             <span class="ak-category-icon">
                                 <i class="bi {{ $category['icon'] }}"></i>
@@ -402,7 +403,8 @@
 
             @foreach($blogs as $blog)
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 ak-blog-filter-item"
+                    data-category="{{ strtolower($blog['category']) }}">
 
                     <article class="ak-article-card">
 
@@ -751,6 +753,59 @@
 })();
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const categoryButtons =
+        document.querySelectorAll('.ak-category-button');
+
+    const blogItems =
+        document.querySelectorAll('.ak-blog-filter-item');
+
+
+    categoryButtons.forEach(function (button) {
+
+        button.addEventListener('click', function () {
+
+            const selectedCategory =
+                button.dataset.category;
+
+
+            /* ACTIVE BUTTON */
+            categoryButtons.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            button.classList.add('active');
+
+
+            /* FILTER ARTICLE */
+            blogItems.forEach(function (item) {
+
+                const itemCategory =
+                    item.dataset.category;
+
+                if (
+                    selectedCategory === 'semua' ||
+                    itemCategory === selectedCategory
+                ) {
+
+                    item.style.display = '';
+
+                } else {
+
+                    item.style.display = 'none';
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
+</script>
 
 
 @endsection
