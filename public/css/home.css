@@ -3038,3 +3038,18 @@ and
         transition: none;
     }
 }
+
+/* BLOG HOME - REVISI FONT DESKTOP */
+
+@media (min-width: 992px) {
+
+    .blog-card-excerpt {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .blog-meta {
+        font-size: 11px;
+    }
+
+}
