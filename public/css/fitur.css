@@ -1305,7 +1305,7 @@ html {
 
     color: #657a9a;
 
-    font-size: 12px;
+    font-size: 13px;
 
     line-height: 1.4;
 }
@@ -1436,19 +1436,21 @@ html {
    SETTINGS GRID - 1 BARIS
 ========================================================= */
 
+/* =========================================================
+   SETTINGS GRID - 1 BARIS
+========================================================= */
+
 .ak-settings-grid {
     display: grid;
-
     grid-template-columns: repeat(6, minmax(0, 1fr));
-
     gap: 10px;
 }
 
+/* CARD */
 .ak-setting-card {
     position: relative;
 
     min-height: 138px;
-
     padding: 15px 12px 30px;
 
     border: 1px solid #e1e9f3;
@@ -1457,10 +1459,9 @@ html {
     background: rgba(255, 255, 255, .97);
 }
 
-
+/* ICON */
 .ak-setting-icon {
     display: grid;
-
     place-items: center;
 
     width: 46px;
@@ -1469,48 +1470,41 @@ html {
     margin-bottom: 11px;
 
     border-radius: 50%;
-
     font-size: 19px;
 }
-
-
-
 
 .ak-setting-icon.blue {
     background: #eaf3ff;
     color: #2371e5;
 }
 
-
 .ak-setting-icon.green {
     background: #e6faee;
     color: #18b769;
 }
 
-
+/* JUDUL */
 .ak-setting-card h3 {
     margin: 0 0 5px;
 
     color: var(--fitur-navy);
 
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.25;
-
     font-weight: 800;
 }
 
-
+/* DESKRIPSI */
 .ak-setting-card p {
     margin: 0;
 
     color: #7184a2;
 
-    font-size: 10.5px;
-
-    line-height: 1.45;
+    font-size: 12.5px;
+    line-height: 1.5;
 }
 
-
+/* ARROW */
 .ak-setting-arrow {
     position: absolute;
 
@@ -1518,20 +1512,80 @@ html {
     bottom: 9px;
 
     display: grid;
-
     place-items: center;
 
     width: 19px;
     height: 19px;
 
-    border:
-        1px solid #ffbfa8;
-
+    border: 1px solid #ffbfa8;
     border-radius: 50%;
 
     color: var(--fitur-orange);
-
     font-size: 10px;
+}
+
+/* =========================================================
+   DESKTOP - ICON DAN JUDUL SEJAJAR
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .ak-feature-page .ak-settings-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ak-settings-grid .ak-setting-card {
+        display: grid;
+
+        grid-template-columns: 40px minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+
+        align-items: center;
+
+        column-gap: 9px;
+        row-gap: 10px;
+
+        min-width: 0;
+        min-height: 125px;
+
+        padding: 15px 12px 30px;
+    }
+
+    .ak-settings-grid .ak-setting-icon {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 40px;
+        height: 40px;
+
+        margin: 0;
+
+        font-size: 18px;
+    }
+
+    .ak-settings-grid .ak-setting-card h3 {
+        grid-column: 2;
+        grid-row: 1;
+
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .ak-settings-grid .ak-setting-card p {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        align-self: start;
+
+        margin: 0;
+
+        font-size: 12.8px;
+        line-height: 1.5;
+    }
 }
 
 
@@ -1544,7 +1598,7 @@ html {
     position: relative;
 
     width: 100%;
-    margin: 0;
+    margin: 0 0 40px;
 
     padding: 38px 0 42px;
 
@@ -1596,7 +1650,7 @@ html {
 .ak-advantages-heading .ak-feature-eyebrow {
     margin-bottom: 10px;
 
-    font-size: 11px;
+    font-size: 12.5px;
 
     letter-spacing: .16em;
 }
@@ -1727,7 +1781,7 @@ html {
 
     color: var(--fitur-navy);
 
-    font-size: 12.5px;
+    font-size: 13.5px;
     line-height: 1.3;
 
     font-weight: 800;
@@ -1739,7 +1793,7 @@ html {
 
     color: #667b9c;
 
-    font-size: 9.5px;
+    font-size: 11.2px;
     line-height: 1.5;
 }
 
