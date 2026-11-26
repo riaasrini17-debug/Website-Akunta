@@ -556,15 +556,17 @@
 
 
                                     <p>
-                                        Bali, Indonesia
+                                        Jl. Tukad Anyar 1 No. 1,
                                         <br>
-                                        Lokasi kantor Akunta
+                                        Sanur, Denpasar Selatan,
+                                        <br>
+                                        Bali 80227, Indonesia
                                     </p>
 
 
 
                                     <a
-                                        href="https://maps.google.com"
+                                        href="https://www.google.com/maps/dir/?api=1&destination=RED+SYSTEM+Sanur+Bali&destination_place_id="
                                         target="_blank"
                                         rel="noopener"
                                         class="ak-contact-map-button">
@@ -591,14 +593,14 @@
 
 
                                     <iframe
-                                        src="https://www.google.com/maps?q=Bali,Indonesia&output=embed"
+                                        src="https://www.google.com/maps?q=RED+SYSTEM+Sanur+Bali&ll=-8.6806916,115.2484371&z=17&output=embed"
                                         width="100%"
                                         height="180"
                                         style="border:0;"
                                         allowfullscreen
                                         loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade"
-                                        title="Lokasi Akunta">
+                                        title="Lokasi Kantor - RED SYSTEM">
                                     </iframe>
 
 
