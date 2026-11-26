@@ -3053,3 +3053,22 @@ and
     }
 
 }
+
+/* =========================================
+   DYNAMIC FEATURE ICON - BACK OFFICE
+========================================= */
+
+.ak-feature-icon .bi {
+    font-size: 28px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+@media (max-width: 575.98px) {
+    .ak-feature-icon .bi {
+        font-size: 24px;
+    }
+}

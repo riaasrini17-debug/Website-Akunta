@@ -75,108 +75,89 @@
 
 
 {{-- =====================================================
-    FITUR UTAMA
+    FITUR UTAMA - BACK OFFICE
 ===================================================== --}}
+
+@if ($homeFeatures->isNotEmpty())
+
 <section class="ak-features-section">
     <div class="container">
+
         <div class="ak-section-heading text-center">
+
             <span class="ak-eyebrow">FITUR UTAMA</span>
-            <h2>Satu Platform Lengkap<br>untuk Operasional Bisnis Anda</h2>
+
+            <h2>
+                Satu Platform Lengkap<br>
+                untuk Operasional Bisnis Anda
+            </h2>
+
             <p>
                 Berbagai fitur penting untuk membantu pengelolaan keuangan
                 dan operasional bisnis menjadi lebih efisien.
             </p>
+
         </div>
 
         <div class="ak-feature-grid">
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 3h10a2 2 0 0 1 2 2v16l-3-2-4 2-4-2-3 2V5a2 2 0 0 1 2-2Z"/>
-                        <path d="M9 8h6M9 12h6M9 16h4"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Pembukuan Otomatis</h3>
-                    <p>Catat transaksi secara otomatis dan rapi tanpa ribet.</p>
-                </div>
-            </article>
 
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
-                        <path d="m4 8 5-4 5 5 6-5"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Laporan Keuangan</h3>
-                    <p>Dapatkan laporan keuangan instan dan mudah dipahami.</p>
-                </div>
-            </article>
+            @foreach ($homeFeatures as $feature)
 
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="m3 7 9-4 9 4-9 4-9-4Z"/>
-                        <path d="M3 7v10l9 4 9-4V7M12 11v10"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Manajemen Inventori</h3>
-                    <p>Pantau stok barang secara real-time dan lebih teratur.</p>
-                </div>
-            </article>
+                @php
+                    $icon = $feature->icon ?: 'bi-grid';
 
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M3 4h2l2.3 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 7H6"/>
-                        <circle cx="10" cy="20" r="1"/>
-                        <circle cx="18" cy="20" r="1"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Manajemen Penjualan</h3>
-                    <p>Kelola penjualan dan pelanggan dengan lebih terstruktur.</p>
-                </div>
-            </article>
+                    $color = preg_match(
+                        '/^#[0-9a-fA-F]{6}$/',
+                        $feature->icon_color ?? ''
+                    ) ? $feature->icon_color : '#FF4B12';
+                @endphp
 
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="3" y="5" width="18" height="14" rx="3"/>
-                        <path d="M3 9h18M8 15h3"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Manajemen Pembelian</h3>
-                    <p>Catat pembelian dan pengeluaran dengan lebih akurat.</p>
-                </div>
-            </article>
+                <article class="ak-feature-card">
 
-            <article class="ak-feature-card">
-                <span class="ak-feature-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <circle cx="9" cy="8" r="3"/>
-                        <circle cx="17" cy="9" r="2.5"/>
-                        <path d="M3 20c0-4 2.5-6 6-6s6 2 6 6M14 15c3.7 0 6 1.8 6 5"/>
-                    </svg>
-                </span>
-                <div>
-                    <h3>Multi Pengguna</h3>
-                    <p>Atur akses tim sesuai kebutuhan dan peran di bisnis Anda.</p>
-                </div>
-            </article>
+                    <span
+                        class="ak-feature-icon"
+                        style="
+                            color: {{ $color }};
+                            background-color: {{ $color }}15;
+                        ">
+
+                        <i
+                            class="bi {{ $icon }}"
+                            aria-hidden="true">
+                        </i>
+
+                    </span>
+
+                    <div>
+
+                        <h3>{{ $feature->name }}</h3>
+
+                        <p>{{ $feature->description }}</p>
+
+                    </div>
+
+                </article>
+
+            @endforeach
+
         </div>
 
         <div class="text-center">
-            <a href="{{ route('features') }}" class="ak-text-button">
+
+            <a
+                href="{{ route('features') }}"
+                class="ak-text-button">
+
                 Lihat Semua Fitur <span>→</span>
+
             </a>
+
         </div>
+
     </div>
 </section>
+
+@endif
 
 
 {{-- =====================================================

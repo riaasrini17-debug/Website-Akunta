@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Feature;
 
 class SiteController extends Controller
 {
     public function home()
     {
-        return view('public.home');
+        $homeFeatures = Feature::query()
+            ->where('is_active', true)
+            ->orderBy('sort_order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        return view('public.home', compact('homeFeatures'));
     }
 
     public function about()

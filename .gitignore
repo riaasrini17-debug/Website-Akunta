@@ -18,7 +18,10 @@
 
 # Build
 /public/build/
+/public/css/filament
+/public/fonts/filament
 /public/hot
+/public/js/filament
 /public/storage
 
 # IDE / OS
