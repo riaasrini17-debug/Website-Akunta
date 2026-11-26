@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Pembukuan Otomatis",
+        "slug": "pembukuan-otomatis",
+        "description": "catat transaksi secara otomatis dan rapi tanpa ribet",
+        "icon": "bi-receipt",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 1,
+        "is_active": true
+    },
+    {
+        "name": "Laporan Keuangan",
+        "slug": "laporan-keuangan",
+        "description": "Dapatkan laporan keuangan instan dan mudah dipahami.",
+        "icon": "bi-graph-up-arrow",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 2,
+        "is_active": true
+    },
+    {
+        "name": "Manajemen Inventori",
+        "slug": "manajemen-inventori",
+        "description": "Pantau stok barang secara real-time dan lebih teratur.",
+        "icon": "bi-box-seam",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 3,
+        "is_active": true
+    },
+    {
+        "name": "Multi Pengguna",
+        "slug": "multi-pengguna",
+        "description": "Atur akses tim sesuai kebutuhan dan peran di bisnis Anda.",
+        "icon": "bi-people",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 4,
+        "is_active": true
+    },
+    {
+        "name": "Manajemen Penjualan",
+        "slug": "manajemen-penjualan",
+        "description": "Kelola penjualan dan pelanggan dengan lebih terstruktur.",
+        "icon": "bi-cart3",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 5,
+        "is_active": true
+    },
+    {
+        "name": "Manajemen Pembeliann",
+        "slug": "manajemen-pembelian",
+        "description": "Catat pembelian dan pengeluaran dengan lebih akurat.",
+        "icon": "bi-credit-card",
+        "icon_color": "#FF4B12",
+        "image": null,
+        "sort_order": 6,
+        "is_active": true
+    }
+]
