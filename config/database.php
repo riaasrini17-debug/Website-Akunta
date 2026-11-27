@@ -64,6 +64,35 @@ return [
             ]) : [],
         ],
 
+                /*
+        |--------------------------------------------------------------------------
+        | TiDB Cloud - Akunta Online
+        |--------------------------------------------------------------------------
+        */
+
+        'tidb' => [
+            'driver' => 'mysql',
+            'host' => env('TIDB_HOST'),
+            'port' => env('TIDB_PORT', '4000'),
+            'database' => env('TIDB_DATABASE', 'akunta_db'),
+            'username' => env('TIDB_USER'),
+            'password' => env('TIDB_PASSWORD'),
+            'unix_socket' => '',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? [
+                Mysql::ATTR_SSL_CA => env(
+                    'TIDB_SSL_CA',
+                    base_path('certificates/tidb-ca.pem')
+                ),
+                Mysql::ATTR_SSL_VERIFY_SERVER_CERT => true,
+            ] : [],
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
