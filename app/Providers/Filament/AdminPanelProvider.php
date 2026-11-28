@@ -39,7 +39,10 @@ class AdminPanelProvider extends PanelProvider
                     'bootstrap-icons',
                     'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css'
                 ),
-                Css::make('akunta-backoffice', asset('css/backoffice.css')),
+                Css::make(
+                    'akunta-backoffice',
+                    public_path('css/backoffice.css')
+                ),
             ])
             ->discoverResources(
                 in: app_path('Filament/Resources'),

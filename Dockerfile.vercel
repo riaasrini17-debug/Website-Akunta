@@ -1,7 +1,15 @@
 FROM dunglas/frankenphp:1-php8.4-bookworm AS base
 
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
-    && install-php-extensions intl zip pdo_mysql
+    && install-php-extensions intl zip pdo_mysql opcache
+
+RUN printf '%s\n' \
+    'opcache.enable=1' \
+    'opcache.memory_consumption=128' \
+    'opcache.interned_strings_buffer=16' \
+    'opcache.max_accelerated_files=20000' \
+    'opcache.validate_timestamps=0' \
+    > "$PHP_INI_DIR/conf.d/99-akunta-performance.ini"
 
 WORKDIR /app
 

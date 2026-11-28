@@ -1,0 +1,208 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css');
+
+/* =========================================================
+   AKUNTA BACK OFFICE
+========================================================= */
+
+:root {
+    --ak-orange: #FF4B12;
+    --ak-navy: #0B2B78;
+    --ak-orange-soft: #FFF0E7;
+    --ak-border: #E5E7EB;
+    --ak-text-muted: #64748B;
+}
+
+
+/* =========================================================
+   BACKGROUND UTAMA
+========================================================= */
+
+.fi-body {
+    background: radial-gradient(
+        ellipse at bottom right,
+        #FFE5D4 0%,
+        #FFF5EF 20%,
+        #FFFFFF 55%
+    ) !important;
+
+    background-attachment: fixed !important;
+    min-height: 100vh;
+}
+
+.fi-main-ctn,
+.fi-main {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.fi-topbar {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid var(--ak-border);
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.fi-sidebar {
+    background: #FFFFFF !important;
+    border-right: 1px solid var(--ak-border);
+}
+
+.fi-sidebar-header {
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+.fi-sidebar-item-button {
+    border-radius: 10px !important;
+    transition: background-color 0.2s ease;
+}
+
+.fi-sidebar-item-label {
+    color: var(--ak-navy);
+}
+
+.fi-sidebar-group-label {
+    color: var(--ak-text-muted) !important;
+}
+
+
+/* =========================================================
+   MENU AKTIF
+========================================================= */
+
+.fi-sidebar-item.fi-active .fi-sidebar-item-button {
+    background: var(--ak-orange-soft) !important;
+}
+
+.fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    color: var(--ak-orange) !important;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HOVER MENU
+========================================================= */
+
+.fi-sidebar-item-button:hover {
+    background: #FFF5ED !important;
+}
+
+
+/* =========================================================
+   JUDUL HALAMAN
+========================================================= */
+
+.fi-header-heading {
+    color: var(--ak-navy) !important;
+    font-weight: 700 !important;
+}
+
+.fi-header-subheading {
+    color: var(--ak-text-muted) !important;
+}
+
+
+/* =========================================================
+   AVATAR ADMIN
+========================================================= */
+
+.fi-avatar {
+    background: var(--ak-navy) !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   BRAND AKUNTA
+========================================================= */
+
+.fi-logo {
+    color: var(--ak-navy) !important;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.fi-logo::first-letter {
+    color: var(--ak-orange);
+}
+
+
+/* =========================================================
+   DASHBOARD - STATISTIC CARD
+========================================================= */
+
+.fi-wi-stats-overview-stat {
+    background: #FFFFFF !important;
+    border: 1px solid var(--ak-border);
+    border-radius: 14px !important;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    border-color: #FFBCA5;
+    box-shadow: 0 5px 15px rgba(255, 75, 18, 0.08);
+}
+
+.fi-wi-stats-overview-stat-label {
+    color: var(--ak-text-muted) !important;
+    font-weight: 500;
+}
+
+.fi-wi-stats-overview-stat-value {
+    color: var(--ak-navy) !important;
+    font-weight: 700 !important;
+}
+
+.fi-wi-stats-overview-stat-description,
+.fi-wi-stats-overview-stat-description-icon {
+    color: var(--ak-orange) !important;
+}
+
+/* =========================================================
+   AKUNTA - STYLE OVERRIDE
+========================================================= */
+
+/* BACKGROUND */
+
+.fi-body {
+    background: radial-gradient(
+        ellipse at bottom right,
+        #FFD8BF 0%,
+        #FFF0E5 25%,
+        #FFFFFF 65%
+    ) !important;
+
+    background-attachment: fixed !important;
+}
+
+/* ACTIVE SIDEBAR */
+
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-button,
+.fi-sidebar .fi-sidebar-item-button[aria-current="page"] {
+    background-color: #FFEBDD !important;
+    border-radius: 10px !important;
+}
+
+.fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    color: #FF4B12 !important;
+}
+
+/* STATISTIC CARD */
+
+.fi-wi-stats-overview-stat {
+    border: 1px solid #E5E7EB !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 12px rgba(11, 43, 120, 0.05) !important;
+}
